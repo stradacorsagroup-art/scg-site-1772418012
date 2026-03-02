@@ -74,7 +74,7 @@ function buildDisplay(terms, downByTerm, monthly) {
 }
 
 function toTsFile(inventory) {
-  const body = `export type InventoryItem = {\n  slug: string;\n  car: string;\n  terms: string[];\n  down: Record<string, number>;\n  monthly: number;\n  display: string;\n  location: string;\n  mileage?: string;\n  exterior?: string;\n  interior?: string;\n};\n\nexport const inventory: InventoryItem[] = ${JSON.stringify(inventory, null, 2)};\n\nexport const membershipFee = 1000;\nexport const deposit = 1000;\n\nexport function getInventoryBySlug(slug: string) {\n  return inventory.find((item) => item.slug === slug);\n}\n`;
+  const body = `export type InventoryItem = {\n  slug: string;\n  car: string;\n  terms: string[];\n  down: Record<string, number>;\n  monthly: number;\n  display: string;\n  location: string;\n  mileage?: string;\n  exterior?: string;\n  interior?: string;\n  images?: string[];\n  video?: string;\n};\n\nexport const inventory: InventoryItem[] = ${JSON.stringify(inventory, null, 2)};\n\nexport const membershipFee = 1000;\nexport const deposit = 1000;\n\nexport function getInventoryBySlug(slug: string) {\n  return inventory.find((item) => item.slug === slug);\n}\n`;
   return body;
 }
 

@@ -9,6 +9,8 @@ export type InventoryItem = {
   mileage?: string;
   exterior?: string;
   interior?: string;
+  images?: string[];
+  video?: string;
 };
 
 export const inventory: InventoryItem[] = [
