@@ -12,9 +12,16 @@ export default async function InventoryDetailPage({
 
   if (!vehicle) notFound();
 
-  const defaultTerm = vehicle.terms[0];
-  const startupCost = vehicle.down[defaultTerm] ?? 0;
-  const totalDue = startupCost + vehicle.monthly + membershipFee;
+  const orderedTerms = [...vehicle.terms].sort((a, b) => {
+    const order: Record<string, number> = { "3 mo": 1, "6 mo": 2, "12 mo": 3 };
+    return (order[a] ?? 99) - (order[b] ?? 99);
+  });
+
+  const startupCosts = orderedTerms.map((term) => ({
+    term,
+    startupCost: vehicle.down[term] ?? 0,
+    totalDue: (vehicle.down[term] ?? 0) + vehicle.monthly + membershipFee,
+  }));
 
   return (
     <main className="min-h-screen bg-[#0b0b0c] text-white">
@@ -38,11 +45,11 @@ export default async function InventoryDetailPage({
             </div>
             <div className="rounded-xl border border-white/10 bg-white/5 p-3">
               <p className="text-xs text-white/60">Startup (from)</p>
-              <p className="mt-1 text-lg font-semibold">${startupCost.toLocaleString()}</p>
+              <p className="mt-1 text-lg font-semibold">${Math.min(...startupCosts.map((x) => x.startupCost)).toLocaleString()}</p>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/5 p-3">
               <p className="text-xs text-white/60">Terms</p>
-              <p className="mt-1 text-lg font-semibold">{vehicle.terms.join(" / ")}</p>
+              <p className="mt-1 text-lg font-semibold">{orderedTerms.join(" / ")}</p>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/5 p-3">
               <p className="text-xs text-white/60">Buyout</p>
@@ -59,22 +66,30 @@ export default async function InventoryDetailPage({
           <p className="mt-1 text-sm text-white/60">Estimated drive-off total. Excludes taxes and registration fees.</p>
 
           <div className="mt-4 space-y-3 text-sm">
-            <div className="flex items-center justify-between border-b border-white/10 pb-2">
-              <span>Startup Cost</span>
-              <strong>${startupCost.toLocaleString()}</strong>
-            </div>
-            <div className="flex items-center justify-between border-b border-white/10 pb-2">
-              <span>Membership Fee</span>
-              <strong>${membershipFee.toLocaleString()}</strong>
-            </div>
-            <div className="flex items-center justify-between border-b border-white/10 pb-2">
-              <span>1st Month Subscription</span>
-              <strong>${vehicle.monthly.toLocaleString()}</strong>
-            </div>
-            <div className="flex items-center justify-between text-base font-semibold">
-              <span>Total Due at Signing</span>
-              <strong>${totalDue.toLocaleString()}</strong>
-            </div>
+            {startupCosts.map(({ term, startupCost, totalDue }) => (
+              <div key={term} className="rounded-lg border border-white/10 p-3">
+                <div className="mb-2 flex items-center justify-between text-xs uppercase tracking-wide text-white/60">
+                  <span>{term} option</span>
+                  <span>${vehicle.monthly.toLocaleString()}/mo</span>
+                </div>
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span>Startup Cost</span>
+                  <strong>${startupCost.toLocaleString()}</strong>
+                </div>
+                <div className="mt-2 flex items-center justify-between border-b border-white/10 pb-2">
+                  <span>Membership Fee</span>
+                  <strong>${membershipFee.toLocaleString()}</strong>
+                </div>
+                <div className="mt-2 flex items-center justify-between border-b border-white/10 pb-2">
+                  <span>1st Month Subscription</span>
+                  <strong>${vehicle.monthly.toLocaleString()}</strong>
+                </div>
+                <div className="mt-2 flex items-center justify-between text-base font-semibold">
+                  <span>Total Due at Signing</span>
+                  <strong>${totalDue.toLocaleString()}</strong>
+                </div>
+              </div>
+            ))}
           </div>
 
           <div className="mt-5 rounded-xl border border-white/10 bg-white/5 p-3 text-sm">
