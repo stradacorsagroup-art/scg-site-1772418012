@@ -149,11 +149,11 @@ export const inventory: InventoryItem[] = [
       "12 mo"
     ],
     "down": {
-      "3 mo": 26900,
-      "12 mo": 46900
+      "3 mo": 27900,
+      "12 mo": 47900
     },
     "monthly": 5595,
-    "display": "From $26,900 down • $5,595/mo",
+    "display": "From $27,900 down • $5,595/mo",
     "location": "Atlanta, GA"
   },
   {
