@@ -2,7 +2,7 @@ name: Sync Notion Inventory
 
 on:
   schedule:
-    - cron: "0 14 * * *" # daily 10:00 AM America/New_York (UTC-4 approx)
+    - cron: "*/30 * * * *" # every 30 minutes
   workflow_dispatch:
 
 permissions:
