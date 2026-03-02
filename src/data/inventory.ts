@@ -10,6 +10,7 @@ export type InventoryItem = {
   exterior?: string;
   interior?: string;
   images?: string[];
+  video?: string;
 };
 
 export const inventory: InventoryItem[] = [
@@ -116,11 +117,7 @@ export const inventory: InventoryItem[] = [
     "monthly": 6900,
     "display": "From $26,900 down • $6,900/mo",
     "location": "Atlanta, GA",
-    "images": [
-      "/images/cars/cullinan-white-red/1.jpg",
-      "/images/cars/cullinan-white-red/2.jpg",
-      "/images/cars/cullinan-white-red/3.jpg"
-    ]
+    "video": "/videos/cars/cullinan-white-red.mov"
   },
   {
     "slug": "2018-ferrari-488-spider-yellow",

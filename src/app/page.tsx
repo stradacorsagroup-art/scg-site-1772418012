@@ -78,7 +78,16 @@ export default function Home() {
                 className="group overflow-hidden rounded-2xl border border-white/10 bg-[#131317] transition hover:border-white/25"
               >
                 <div className="relative h-36 border-b border-white/10 bg-gradient-to-br from-zinc-700/40 via-zinc-800/40 to-black">
-                  {item.images?.[0] ? (
+                  {item.video ? (
+                    <video
+                      src={item.video}
+                      className="h-full w-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
+                  ) : item.images?.[0] ? (
                     <Image
                       src={item.images[0]}
                       alt={item.car}
