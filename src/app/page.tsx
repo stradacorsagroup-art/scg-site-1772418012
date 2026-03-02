@@ -23,7 +23,27 @@ function parseCarName(name: string): ParsedCar {
   };
 }
 
+const preferredOrder = [
+  "2022-rolls-royce-ghost-black-badge-whiteblack",
+  "2020-rolls-royce-cullinan-whitered",
+  "2020-rolls-royce-cullinan-bb-whitewhite-forgiatos",
+  "2017-rolls-royce-dawn-white-on-red",
+  "2018-ferrari-488-spider-yellow",
+  "2023-lamborghini-urus-performante-yellow",
+  "2020-mclaren-720s-spyder-satin-black",
+  "2021-mercedes-benz-s580-black-on-peanut-butter",
+  "2022-mercedes-benz-s580",
+];
+
 export default function Home() {
+  const rank = new Map(preferredOrder.map((slug, index) => [slug, index]));
+  const sortedInventory = [...inventory].sort((a, b) => {
+    const aRank = rank.get(a.slug) ?? 999;
+    const bRank = rank.get(b.slug) ?? 999;
+    if (aRank !== bRank) return aRank - bRank;
+    return 0;
+  });
+
   return (
     <main className="min-h-screen bg-[#0b0b0c] text-white">
       <section className="border-b border-white/10 bg-[radial-gradient(circle_at_top,#1a1a1f,transparent_60%)]">
@@ -48,7 +68,7 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {inventory.map((item) => {
+          {sortedInventory.map((item) => {
             const car = parseCarName(item.car);
 
             return (
