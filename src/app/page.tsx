@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { inventory } from "@/data/inventory";
 
 type ParsedCar = {
@@ -71,9 +72,12 @@ export default function Home() {
                   <p className="mt-3 text-sm font-medium text-white/90">{item.display}</p>
                   <p className="mt-1 text-xs text-white/50">Buyout available • Terms subject to verification</p>
 
-                  <button className="mt-4 w-full rounded-lg bg-white/10 px-3 py-2 text-sm font-medium text-white transition group-hover:bg-white group-hover:text-black">
+                  <Link
+                    href={`/inventory/${item.slug}`}
+                    className="mt-4 block w-full rounded-lg bg-white/10 px-3 py-2 text-center text-sm font-medium text-white transition group-hover:bg-white group-hover:text-black"
+                  >
                     View Details
-                  </button>
+                  </Link>
                 </div>
               </article>
             );
