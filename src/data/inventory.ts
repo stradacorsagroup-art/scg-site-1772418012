@@ -115,7 +115,12 @@ export const inventory: InventoryItem[] = [
     },
     "monthly": 6900,
     "display": "From $26,900 down • $6,900/mo",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "images": [
+      "/images/cars/cullinan-white-red/1.jpg",
+      "/images/cars/cullinan-white-red/2.jpg",
+      "/images/cars/cullinan-white-red/3.jpg"
+    ]
   },
   {
     "slug": "2018-ferrari-488-spider-yellow",
