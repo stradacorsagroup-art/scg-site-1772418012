@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { inventory } from "@/data/inventory";
 
@@ -77,8 +78,18 @@ export default function Home() {
                 className="group overflow-hidden rounded-2xl border border-white/10 bg-[#131317] transition hover:border-white/25"
               >
                 <div className="relative h-36 border-b border-white/10 bg-gradient-to-br from-zinc-700/40 via-zinc-800/40 to-black">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.14),transparent_40%)]" />
-                  <div className="absolute bottom-3 left-3 rounded-full border border-white/20 bg-black/40 px-2 py-1 text-[10px] uppercase tracking-wider text-white/80">
+                  {item.images?.[0] ? (
+                    <Image
+                      src={item.images[0]}
+                      alt={item.car}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 25vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.14),transparent_40%)]" />
+                  )}
+                  <div className="absolute bottom-3 left-3 rounded-full border border-white/20 bg-black/60 px-2 py-1 text-[10px] uppercase tracking-wider text-white/90">
                     {item.terms.join(" • ")}
                   </div>
                 </div>

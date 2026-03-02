@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { deposit, getInventoryBySlug, membershipFee } from "@/data/inventory";
@@ -32,8 +33,24 @@ export default async function InventoryDetailPage({
           </Link>
 
           <div className="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-[#131317]">
-            <div className="h-72 bg-gradient-to-br from-zinc-700/40 via-zinc-800/40 to-black sm:h-96" />
+            {vehicle.images?.[0] ? (
+              <div className="relative h-72 sm:h-96">
+                <Image src={vehicle.images[0]} alt={vehicle.car} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 60vw" />
+              </div>
+            ) : (
+              <div className="h-72 bg-gradient-to-br from-zinc-700/40 via-zinc-800/40 to-black sm:h-96" />
+            )}
           </div>
+
+          {vehicle.images && vehicle.images.length > 1 && (
+            <div className="mt-3 grid grid-cols-3 gap-2">
+              {vehicle.images.slice(1, 4).map((img) => (
+                <div key={img} className="relative h-24 overflow-hidden rounded-lg border border-white/10 sm:h-28">
+                  <Image src={img} alt={vehicle.car} fill className="object-cover" sizes="(max-width: 1024px) 33vw, 20vw" />
+                </div>
+              ))}
+            </div>
+          )}
 
           <h1 className="mt-6 text-3xl font-semibold sm:text-4xl">{vehicle.car}</h1>
           <p className="mt-2 text-white/70">Private access structure • {vehicle.location}</p>

@@ -9,6 +9,7 @@ export type InventoryItem = {
   mileage?: string;
   exterior?: string;
   interior?: string;
+  images?: string[];
 };
 
 export const inventory: InventoryItem[] = [
@@ -94,7 +95,12 @@ export const inventory: InventoryItem[] = [
     },
     "monthly": 5595,
     "display": "From $27,900 down • $5,595/mo",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "images": [
+      "/images/cars/ghost-black-badge/3.jpg",
+      "/images/cars/ghost-black-badge/1.jpg",
+      "/images/cars/ghost-black-badge/2.jpg"
+    ]
   },
   {
     "slug": "2020-rolls-royce-cullinan-whitered",
