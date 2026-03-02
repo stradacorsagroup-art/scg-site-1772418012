@@ -13,34 +13,6 @@ export type InventoryItem = {
 
 export const inventory: InventoryItem[] = [
   {
-    "slug": "2017-rolls-royce-dawn-white-on-red",
-    "car": "2017 Rolls Royce Dawn White on Red",
-    "terms": [
-      "3 mo"
-    ],
-    "down": {
-      "3 mo": 26900
-    },
-    "monthly": 6900,
-    "display": "$26,900 down • $6,900/mo",
-    "location": "Atlanta, GA"
-  },
-  {
-    "slug": "2018-ferrari-488-spider-yellow",
-    "car": "2018 Ferrari 488 Spider Yellow",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 26900,
-      "12 mo": 26900
-    },
-    "monthly": 6900,
-    "display": "From $26,900 down • $6,900/mo",
-    "location": "Atlanta, GA"
-  },
-  {
     "slug": "2020-mclaren-720s-spyder-satin-black",
     "car": "2020 McLaren 720s Spyder Satin Black",
     "terms": [
@@ -69,6 +41,32 @@ export const inventory: InventoryItem[] = [
     "location": "Atlanta, GA"
   },
   {
+    "slug": "2017-rolls-royce-dawn-white-on-red",
+    "car": "2017 Rolls Royce Dawn White on Red",
+    "terms": [
+      "3 mo"
+    ],
+    "down": {
+      "3 mo": 26900
+    },
+    "monthly": 6900,
+    "display": "$26,900 down • $6,900/mo",
+    "location": "Atlanta, GA"
+  },
+  {
+    "slug": "2023-lamborghini-urus-performante-yellow",
+    "car": "2023 LAMBORGHINI URUS PERFORMANTE YELLOW",
+    "terms": [
+      "3 mo"
+    ],
+    "down": {
+      "3 mo": 26900
+    },
+    "monthly": 5995,
+    "display": "$26,900 down • $5,995/mo",
+    "location": "Atlanta, GA"
+  },
+  {
     "slug": "2020-rolls-royce-cullinan-bb-whitewhite-forgiatos",
     "car": "2020 Rolls-Royce Cullinan BB White/White Forgiatos",
     "terms": [
@@ -81,64 +79,6 @@ export const inventory: InventoryItem[] = [
     },
     "monthly": 6900,
     "display": "From $26,900 down • $6,900/mo",
-    "location": "Atlanta, GA"
-  },
-  {
-    "slug": "2020-rolls-royce-cullinan-whitered",
-    "car": "2020 Rolls-Royce Cullinan White/Red",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 26900,
-      "12 mo": 49900
-    },
-    "monthly": 6900,
-    "display": "From $26,900 down • $6,900/mo",
-    "location": "Atlanta, GA"
-  },
-  {
-    "slug": "2021-maybach-gls600-blackgold",
-    "car": "2021 Maybach GLS600 Black/Gold",
-    "terms": [
-      "3 mo"
-    ],
-    "down": {
-      "3 mo": 14900
-    },
-    "monthly": 3700,
-    "display": "$14,900 down • $3,700/mo",
-    "location": "Atlanta, GA"
-  },
-  {
-    "slug": "2021-mercedes-benz-s580-black-on-peanut-butter",
-    "car": "2021 Mercedes-Benz S580\nBlack on Peanut Butter",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 10900,
-      "12 mo": 13900
-    },
-    "monthly": 2495,
-    "display": "From $10,900 down • $2,495/mo",
-    "location": "Atlanta, GA"
-  },
-  {
-    "slug": "2022-mercedes-benz-s580",
-    "car": "2022 Mercedes-Benz S580",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "12 mo": 12900,
-      "3 mo": 10900
-    },
-    "monthly": 2695,
-    "display": "From $10,900 down • $2,695/mo",
     "location": "Atlanta, GA"
   },
   {
@@ -157,16 +97,76 @@ export const inventory: InventoryItem[] = [
     "location": "Atlanta, GA"
   },
   {
-    "slug": "2023-lamborghini-urus-performante-yellow",
-    "car": "2023 LAMBORGHINI URUS PERFORMANTE YELLOW",
+    "slug": "2020-rolls-royce-cullinan-whitered",
+    "car": "2020 Rolls-Royce Cullinan White/Red",
+    "terms": [
+      "3 mo",
+      "12 mo"
+    ],
+    "down": {
+      "3 mo": 26900,
+      "12 mo": 49900
+    },
+    "monthly": 6900,
+    "display": "From $26,900 down • $6,900/mo",
+    "location": "Atlanta, GA"
+  },
+  {
+    "slug": "2018-ferrari-488-spider-yellow",
+    "car": "2018 Ferrari 488 Spider Yellow",
+    "terms": [
+      "3 mo",
+      "12 mo"
+    ],
+    "down": {
+      "3 mo": 26900,
+      "12 mo": 26900
+    },
+    "monthly": 6900,
+    "display": "From $26,900 down • $6,900/mo",
+    "location": "Atlanta, GA"
+  },
+  {
+    "slug": "2021-mercedes-benz-s580-black-on-peanut-butter",
+    "car": "2021 Mercedes-Benz S580\nBlack on Peanut Butter",
+    "terms": [
+      "3 mo",
+      "12 mo"
+    ],
+    "down": {
+      "3 mo": 10900,
+      "12 mo": 13900
+    },
+    "monthly": 2495,
+    "display": "From $10,900 down • $2,495/mo",
+    "location": "Atlanta, GA"
+  },
+  {
+    "slug": "2021-maybach-gls600-blackgold",
+    "car": "2021 Maybach GLS600 Black/Gold",
     "terms": [
       "3 mo"
     ],
     "down": {
-      "3 mo": 26900
+      "3 mo": 14900
     },
-    "monthly": 5995,
-    "display": "$26,900 down • $5,995/mo",
+    "monthly": 3700,
+    "display": "$14,900 down • $3,700/mo",
+    "location": "Atlanta, GA"
+  },
+  {
+    "slug": "2022-mercedes-benz-s580",
+    "car": "2022 Mercedes-Benz S580",
+    "terms": [
+      "3 mo",
+      "12 mo"
+    ],
+    "down": {
+      "12 mo": 12900,
+      "3 mo": 10900
+    },
+    "monthly": 2695,
+    "display": "From $10,900 down • $2,695/mo",
     "location": "Atlanta, GA"
   }
 ];

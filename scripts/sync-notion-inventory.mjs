@@ -126,13 +126,11 @@ async function run() {
 
   const order = { "3 mo": 1, "6 mo": 2, "12 mo": 3 };
 
-  const inventory = [...grouped.values()]
-    .map((item) => {
-      item.terms.sort((a, b) => (order[a] || 99) - (order[b] || 99));
-      item.display = buildDisplay(item.terms, item.down, item.monthly);
-      return item;
-    })
-    .sort((a, b) => a.car.localeCompare(b.car));
+  const inventory = [...grouped.values()].map((item) => {
+    item.terms.sort((a, b) => (order[a] || 99) - (order[b] || 99));
+    item.display = buildDisplay(item.terms, item.down, item.monthly);
+    return item;
+  });
 
   const outPath = path.join(process.cwd(), "src", "data", "inventory.ts");
   await fs.writeFile(outPath, toTsFile(inventory), "utf8");
