@@ -30,6 +30,9 @@ jobs:
           NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
         run: npm run sync:inventory
 
+      - name: Verify site build after sync
+        run: npm run build
+
       - name: Commit changes if any
         run: |
           if [[ -n "$(git status --porcelain)" ]]; then

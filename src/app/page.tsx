@@ -2,22 +2,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { inventory } from "@/data/inventory";
 
+function formatPrice(value: number) {
+  return `$${value.toLocaleString()}`;
+}
+
 export default function Home() {
-  const sortedInventory = [...inventory];
+  const sortedInventory = [...inventory].sort((a, b) => a.monthly - b.monthly);
 
   return (
-    <main className="min-h-screen bg-[#f4f6f8] text-zinc-900">
-      <section className="border-b border-zinc-200 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-zinc-500">Strada Corsa Group • UI v2 LIVE</p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-6xl">Your Perfect Car Awaits</h1>
-          <p className="mt-4 max-w-2xl text-base text-zinc-600 sm:text-lg">
-            Browse our curated luxury inventory with 3, 6, and 12-month private access structures.
+    <main className="min-h-screen bg-[#f6f7f9] text-zinc-900">
+      <section className="border-b border-zinc-200/80 bg-gradient-to-b from-white to-[#f6f7f9]">
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-16 lg:py-20">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">Strada Corsa Group • Luxury Inventory</p>
+          <h1 className="mt-3 max-w-3xl text-3xl font-semibold tracking-[-0.02em] text-zinc-900 sm:text-5xl">
+            Browse Elite Inventory Ready for Immediate Delivery
+          </h1>
+          <p className="mt-4 max-w-2xl text-sm text-zinc-600 sm:text-base">
+            Structured private access plans with transparent startup pricing, monthly commitments, and real-time inventory sync.
           </p>
-          <div className="mt-6">
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <a
+              href="#inventory"
+              className="inline-flex h-11 items-center justify-center rounded-xl bg-zinc-900 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800"
+            >
+              View Inventory
+            </a>
             <Link
               href="/apply"
-              className="inline-flex rounded-lg bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-800"
+              className="inline-flex h-11 items-center justify-center rounded-xl border border-zinc-300 bg-white px-5 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-100"
             >
               Apply Now
             </Link>
@@ -25,45 +37,52 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="inventory" className="mx-auto max-w-7xl px-6 py-10 sm:py-14">
-        <div className="mb-8 flex items-end justify-between gap-4">
+      <section id="inventory" className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-12">
+        <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 className="text-2xl font-semibold sm:text-3xl">Inventory</h2>
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Inventory</h2>
             <p className="mt-1 text-sm text-zinc-500">{inventory.length} vehicles currently listed</p>
           </div>
+          <p className="text-xs uppercase tracking-[0.14em] text-zinc-400">Updated from Notion automatically</p>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {sortedInventory.map((item) => (
-            <article
-              key={item.car}
-              className="group overflow-hidden rounded-2xl border border-zinc-200 bg-white transition hover:shadow-lg"
-            >
-              <div className="relative h-44 border-b border-zinc-200 bg-zinc-100">
-                {item.video ? (
-                  <video src={item.video} className="h-full w-full object-cover" autoPlay muted loop playsInline />
-                ) : item.images?.[0] ? (
-                  <Image src={item.images[0]} alt={item.car} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
-                ) : null}
-                <div className="absolute bottom-3 left-3 rounded-full border border-zinc-300 bg-white/90 px-2 py-1 text-[10px] uppercase tracking-wider text-zinc-700">
-                  {item.terms.join(" • ")}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+          {sortedInventory.map((item) => {
+            const lowestDown = Math.min(...Object.values(item.down));
+            return (
+              <article
+                key={item.car}
+                className="group overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(0,0,0,0.08)]"
+              >
+                <div className="relative h-44 border-b border-zinc-200 bg-zinc-100 sm:h-48">
+                  {item.video ? (
+                    <video src={item.video} className="h-full w-full object-cover" autoPlay muted loop playsInline />
+                  ) : item.images?.[0] ? (
+                    <Image src={item.images[0]} alt={item.car} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
+                  ) : (
+                    <div className="flex h-full items-center justify-center text-xs uppercase tracking-[0.12em] text-zinc-500">No media</div>
+                  )}
+                  <div className="absolute left-3 top-3 rounded-full border border-zinc-200 bg-white/95 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-zinc-700">
+                    {item.terms.join(" • ")}
+                  </div>
                 </div>
-              </div>
 
-              <div className="p-4">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-900">{item.car}</h3>
-                <p className="mt-3 text-sm font-medium text-zinc-800">{item.display}</p>
-                <p className="mt-1 text-xs text-zinc-500">Buyout available • Terms subject to verification</p>
+                <div className="p-4 sm:p-5">
+                  <h3 className="min-h-10 text-[13px] font-semibold uppercase tracking-[0.08em] text-zinc-900">{item.car}</h3>
+                  <p className="mt-3 text-sm font-semibold text-zinc-900">{formatPrice(item.monthly)}/mo</p>
+                  <p className="mt-1 text-sm text-zinc-600">From {formatPrice(lowestDown)} down</p>
+                  <p className="mt-3 text-xs text-zinc-500">Buyout available • Terms subject to verification</p>
 
-                <Link
-                  href={`/inventory/${item.slug}`}
-                  className="mt-4 block w-full rounded-lg bg-zinc-900 px-3 py-2 text-center text-sm font-medium text-white transition hover:bg-zinc-800"
-                >
-                  View Details
-                </Link>
-              </div>
-            </article>
-          ))}
+                  <Link
+                    href={`/inventory/${item.slug}`}
+                    className="mt-4 inline-flex h-10 w-full items-center justify-center rounded-xl bg-zinc-900 px-3 text-sm font-semibold text-white transition hover:bg-zinc-800"
+                  >
+                    View Details
+                  </Link>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
     </main>

@@ -83,6 +83,36 @@ async function loadMediaOverrides() {
   }
 }
 
+function validateInventory(inventory) {
+  const issues = [];
+  const seenSlugs = new Set();
+
+  for (const item of inventory) {
+    if (!item.slug || !item.car) issues.push(`Missing slug/car for item: ${JSON.stringify(item)}`);
+    if (seenSlugs.has(item.slug)) issues.push(`Duplicate slug detected: ${item.slug}`);
+    seenSlugs.add(item.slug);
+
+    if (!Array.isArray(item.terms) || item.terms.length === 0) {
+      issues.push(`No terms found for ${item.car}`);
+      continue;
+    }
+
+    for (const term of item.terms) {
+      if (typeof item.down[term] !== "number" || item.down[term] <= 0) {
+        issues.push(`Missing/invalid down payment for ${item.car} (${term})`);
+      }
+    }
+
+    if (typeof item.monthly !== "number" || item.monthly <= 0) {
+      issues.push(`Missing/invalid monthly for ${item.car}`);
+    }
+  }
+
+  if (issues.length > 0) {
+    throw new Error(`Inventory validation failed:\n- ${issues.join("\n- ")}`);
+  }
+}
+
 function toTsFile(inventory) {
   const body = `export type InventoryItem = {\n  slug: string;\n  car: string;\n  terms: string[];\n  down: Record<string, number>;\n  monthly: number;\n  display: string;\n  location: string;\n  mileage?: string;\n  exterior?: string;\n  interior?: string;\n  images?: string[];\n  video?: string;\n};\n\nexport const inventory: InventoryItem[] = ${JSON.stringify(inventory, null, 2)};\n\nexport const membershipFee = 1000;\nexport const deposit = 1000;\n\nexport function getInventoryBySlug(slug: string) {\n  return inventory.find((item) => item.slug === slug);\n}\n`;
   return body;
@@ -131,25 +161,33 @@ async function run() {
     const item = grouped.get(key);
     if (!item.terms.includes(term)) item.terms.push(term);
     item.down[term] = down;
-    if (typeof item.monthly !== "number") item.monthly = monthly;
+
+    if (typeof item.monthly === "number" && item.monthly !== monthly) {
+      console.warn(`Monthly mismatch for ${name}: keeping ${item.monthly}, ignoring ${monthly}`);
+    }
   }
 
   const order = { "3 mo": 1, "6 mo": 2, "12 mo": 3 };
   const mediaOverrides = await loadMediaOverrides();
 
-  const inventory = [...grouped.values()].map((item) => {
-    item.terms.sort((a, b) => (order[a] || 99) - (order[b] || 99));
-    item.display = buildDisplay(item.terms, item.down, item.monthly);
-    const media = mediaOverrides[item.slug];
-    if (media?.images) item.images = media.images;
-    if (media?.video) item.video = media.video;
-    return item;
-  });
+  const inventory = [...grouped.values()]
+    .map((item) => {
+      item.terms.sort((a, b) => (order[a] || 99) - (order[b] || 99));
+      item.display = buildDisplay(item.terms, item.down, item.monthly);
+      const media = mediaOverrides[item.slug];
+      if (media?.images) item.images = media.images;
+      if (media?.video) item.video = media.video;
+      return item;
+    })
+    .sort((a, b) => a.car.localeCompare(b.car));
+
+  validateInventory(inventory);
 
   const outPath = path.join(process.cwd(), "src", "data", "inventory.ts");
   await fs.writeFile(outPath, toTsFile(inventory), "utf8");
 
-  console.log(`Synced ${inventory.length} vehicles to src/data/inventory.ts`);
+  console.log(`Synced ${inventory.length} LIVE vehicles to src/data/inventory.ts`);
+  console.log(`Data source: ${NOTION_DATA_SOURCE_ID}`);
 }
 
 run().catch((err) => {
