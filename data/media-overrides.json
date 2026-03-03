@@ -4,10 +4,9 @@
   },
   "2022-rolls-royce-ghost-black-badge-whiteblack": {
     "images": [
-      "/images/cars/ghost-black-badge/1.png",
-      "/images/cars/ghost-black-badge/2.png",
-      "/images/cars/ghost-black-badge/3.png",
-      "/images/cars/ghost-black-badge/1.jpg"
+      "/images/cars/ghost-black-badge/a.jpg",
+      "/images/cars/ghost-black-badge/b.jpg",
+      "/images/cars/ghost-black-badge/c.jpg"
     ],
     "video": "/videos/cars/ghost-black-badge.mov"
   }

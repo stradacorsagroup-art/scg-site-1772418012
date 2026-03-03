@@ -98,10 +98,9 @@ export const inventory: InventoryItem[] = [
     "display": "From $27,900 down • $5,595/mo",
     "location": "Atlanta, GA",
     "images": [
-      "/images/cars/ghost-black-badge/1.png",
-      "/images/cars/ghost-black-badge/2.png",
-      "/images/cars/ghost-black-badge/3.png",
-      "/images/cars/ghost-black-badge/1.jpg"
+      "/images/cars/ghost-black-badge/a.jpg",
+      "/images/cars/ghost-black-badge/b.jpg",
+      "/images/cars/ghost-black-badge/c.jpg"
     ],
     "video": "/videos/cars/ghost-black-badge.mov"
   },
