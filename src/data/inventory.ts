@@ -100,7 +100,8 @@ export const inventory: InventoryItem[] = [
     "images": [
       "/images/cars/ghost-black-badge/1.png",
       "/images/cars/ghost-black-badge/2.png",
-      "/images/cars/ghost-black-badge/3.png"
+      "/images/cars/ghost-black-badge/3.png",
+      "/images/cars/ghost-black-badge/1.jpg"
     ],
     "video": "/videos/cars/ghost-black-badge.mov"
   },
