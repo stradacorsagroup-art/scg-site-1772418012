@@ -81,7 +81,7 @@ export default function Home() {
                   {item.video ? (
                     <video
                       src={item.video}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain bg-black"
                       autoPlay
                       muted
                       loop
@@ -92,7 +92,7 @@ export default function Home() {
                       src={item.images[0]}
                       alt={item.car}
                       fill
-                      className="object-cover"
+                      className="object-contain bg-black"
                       sizes="(max-width: 768px) 100vw, 25vw"
                     />
                   ) : (

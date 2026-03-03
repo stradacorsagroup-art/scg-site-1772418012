@@ -34,10 +34,10 @@ export default async function InventoryDetailPage({
 
           <div className="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-[#131317]">
             {vehicle.video ? (
-              <video src={vehicle.video} className="h-72 w-full object-cover sm:h-96" controls playsInline />
+              <video src={vehicle.video} className="h-72 w-full object-contain bg-black sm:h-96" controls playsInline />
             ) : vehicle.images?.[0] ? (
               <div className="relative h-72 sm:h-96">
-                <Image src={vehicle.images[0]} alt={vehicle.car} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 60vw" />
+                <Image src={vehicle.images[0]} alt={vehicle.car} fill className="object-contain bg-black" sizes="(max-width: 1024px) 100vw, 60vw" />
               </div>
             ) : (
               <div className="h-72 bg-gradient-to-br from-zinc-700/40 via-zinc-800/40 to-black sm:h-96" />
