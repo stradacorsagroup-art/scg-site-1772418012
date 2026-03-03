@@ -101,7 +101,8 @@ export const inventory: InventoryItem[] = [
       "/images/cars/ghost-black-badge/3.jpg",
       "/images/cars/ghost-black-badge/1.jpg",
       "/images/cars/ghost-black-badge/2.jpg"
-    ]
+    ],
+    "video": "/videos/cars/ghost-black-badge.mov"
   },
   {
     "slug": "2020-rolls-royce-cullinan-whitered",
