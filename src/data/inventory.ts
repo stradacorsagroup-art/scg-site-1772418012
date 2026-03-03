@@ -96,7 +96,12 @@ export const inventory: InventoryItem[] = [
     },
     "monthly": 5595,
     "display": "From $27,900 down • $5,595/mo",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "images": [
+      "/images/cars/ghost-black-badge/3.jpg",
+      "/images/cars/ghost-black-badge/1.jpg",
+      "/images/cars/ghost-black-badge/2.jpg"
+    ]
   },
   {
     "slug": "2020-rolls-royce-cullinan-whitered",
@@ -111,7 +116,8 @@ export const inventory: InventoryItem[] = [
     },
     "monthly": 6900,
     "display": "From $26,900 down • $6,900/mo",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "video": "/videos/cars/cullinan-white-red.mp4"
   },
   {
     "slug": "2018-ferrari-488-spider-yellow",

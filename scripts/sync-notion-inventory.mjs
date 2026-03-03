@@ -73,6 +73,16 @@ function buildDisplay(terms, downByTerm, monthly) {
   return `${formatCurrency(minDown)} down • ${formatCurrency(monthly)}/mo`;
 }
 
+async function loadMediaOverrides() {
+  const p = path.join(process.cwd(), "data", "media-overrides.json");
+  try {
+    const txt = await fs.readFile(p, "utf8");
+    return JSON.parse(txt);
+  } catch {
+    return {};
+  }
+}
+
 function toTsFile(inventory) {
   const body = `export type InventoryItem = {\n  slug: string;\n  car: string;\n  terms: string[];\n  down: Record<string, number>;\n  monthly: number;\n  display: string;\n  location: string;\n  mileage?: string;\n  exterior?: string;\n  interior?: string;\n  images?: string[];\n  video?: string;\n};\n\nexport const inventory: InventoryItem[] = ${JSON.stringify(inventory, null, 2)};\n\nexport const membershipFee = 1000;\nexport const deposit = 1000;\n\nexport function getInventoryBySlug(slug: string) {\n  return inventory.find((item) => item.slug === slug);\n}\n`;
   return body;
@@ -125,10 +135,14 @@ async function run() {
   }
 
   const order = { "3 mo": 1, "6 mo": 2, "12 mo": 3 };
+  const mediaOverrides = await loadMediaOverrides();
 
   const inventory = [...grouped.values()].map((item) => {
     item.terms.sort((a, b) => (order[a] || 99) - (order[b] || 99));
     item.display = buildDisplay(item.terms, item.down, item.monthly);
+    const media = mediaOverrides[item.slug];
+    if (media?.images) item.images = media.images;
+    if (media?.video) item.video = media.video;
     return item;
   });
 
