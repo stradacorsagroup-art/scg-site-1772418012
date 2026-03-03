@@ -44,11 +44,11 @@ export default async function InventoryDetailPage({
             )}
           </div>
 
-          {vehicle.images && vehicle.images.length > 1 && (
+          {vehicle.images && vehicle.images.length > 0 && (
             <div className="mt-3 grid grid-cols-3 gap-2">
-              {vehicle.images.slice(1, 4).map((img) => (
+              {vehicle.images.slice(0, 6).map((img) => (
                 <div key={img} className="relative h-24 overflow-hidden rounded-lg border border-white/10 sm:h-28">
-                  <Image src={img} alt={vehicle.car} fill className="object-cover" sizes="(max-width: 1024px) 33vw, 20vw" />
+                  <Image src={img} alt={vehicle.car} fill className="object-contain bg-black" sizes="(max-width: 1024px) 33vw, 20vw" />
                 </div>
               ))}
             </div>
