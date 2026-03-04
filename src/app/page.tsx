@@ -13,12 +13,12 @@ export default function Home() {
     <main className="min-h-screen bg-[#f6f7f9] text-zinc-900">
       <section className="border-b border-zinc-200/80 bg-gradient-to-b from-white to-[#f6f7f9]">
         <div className="mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-16 lg:py-20">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">Strada Corsa Group • Luxury Inventory</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">Exotic Membership Marketplace • Curated Inventory</p>
           <h1 className="mt-3 max-w-3xl text-3xl font-semibold tracking-[-0.02em] text-zinc-900 sm:text-5xl">
-            Browse Elite Inventory Ready for Immediate Delivery
+            Exotic Car Memberships Made Clear and Simple
           </h1>
           <p className="mt-4 max-w-2xl text-sm text-zinc-600 sm:text-base">
-            Structured private access plans with transparent startup pricing, monthly commitments, and real-time inventory sync.
+            A direct marketplace for exotic vehicle memberships with transparent startup costs, monthly payments, and live inventory.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <a

@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Strada Corsa Group",
-  description: "Luxury inventory with transparent private access terms.",
+  title: "Exotic Membership Marketplace",
+  description: "Exotic car memberships with transparent terms and live inventory.",
 };
 
 export default function RootLayout({
