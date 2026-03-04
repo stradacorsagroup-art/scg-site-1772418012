@@ -43,7 +43,6 @@ export default function Home() {
             <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Inventory</h2>
             <p className="mt-1 text-sm text-zinc-500">{inventory.length} vehicles currently listed</p>
           </div>
-          <p className="text-xs uppercase tracking-[0.14em] text-zinc-400">Updated from Notion automatically</p>
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
