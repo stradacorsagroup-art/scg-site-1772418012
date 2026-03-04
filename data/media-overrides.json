@@ -1,8 +1,32 @@
 {
-  "2020-rolls-royce-cullinan-whitered": {
-    "folder": "cullinan-white-red"
+  "2017-rolls-royce-dawn-white-on-red": {
+    "folder": "2017-rolls-royce-dawn"
+  },
+  "2018-ferrari-488-spider-yellow": {
+    "folder": "2018-ferrari-488-spider"
+  },
+  "2020-mercedes-g63-satin-black": {
+    "folder": "2021-mercedes-g63"
+  },
+  "2023-lamborghini-urus-performante-yellow": {
+    "folder": "2023-lamborghini-urus-performante"
+  },
+  "2020-rolls-royce-cullinan-bb-whitewhite-forgiatos": {
+    "folder": "2020-rolls-royce-cullinan-black-badge"
   },
   "2022-rolls-royce-ghost-black-badge-whiteblack": {
     "folder": "ghost-black-badge"
+  },
+  "2020-rolls-royce-cullinan-whitered": {
+    "folder": "2020-rolls-royce-cullinan"
+  },
+  "2021-mercedes-benz-s580-black-on-peanut-butter": {
+    "folder": "2021-mercedes-benz-s580"
+  },
+  "2022-mercedes-benz-s580": {
+    "folder": "2022-mercedes-benz-s580"
+  },
+  "2021-maybach-gls600-blackgold": {
+    "folder": "2023-maybach-gls600-black-red"
   }
 }

@@ -25,7 +25,12 @@ export const inventory: InventoryItem[] = [
     },
     "monthly": 6900,
     "display": "$26,900 down • $6,900/mo",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "images": [
+      "/images/cars/2017-rolls-royce-dawn/hero.png",
+      "/images/cars/2017-rolls-royce-dawn/2.png",
+      "/images/cars/2017-rolls-royce-dawn/3.png"
+    ]
   },
   {
     "slug": "2018-ferrari-488-spider-yellow",
@@ -40,7 +45,14 @@ export const inventory: InventoryItem[] = [
     },
     "monthly": 6900,
     "display": "From $26,900 down • $6,900/mo",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "images": [
+      "/images/cars/2018-ferrari-488-spider/hero.png",
+      "/images/cars/2018-ferrari-488-spider/2.png",
+      "/images/cars/2018-ferrari-488-spider/3.png",
+      "/images/cars/2018-ferrari-488-spider/4.png",
+      "/images/cars/2018-ferrari-488-spider/5.png"
+    ]
   },
   {
     "slug": "2020-mclaren-720s-spyder-satin-black",
@@ -68,7 +80,13 @@ export const inventory: InventoryItem[] = [
     },
     "monthly": 3400,
     "display": "$19,900 down • $3,400/mo",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "images": [
+      "/images/cars/2021-mercedes-g63/hero.png",
+      "/images/cars/2021-mercedes-g63/2.png",
+      "/images/cars/2021-mercedes-g63/3.png",
+      "/images/cars/2021-mercedes-g63/4.png"
+    ]
   },
   {
     "slug": "2020-rolls-royce-cullinan-bb-whitewhite-forgiatos",
@@ -83,7 +101,13 @@ export const inventory: InventoryItem[] = [
     },
     "monthly": 6900,
     "display": "From $26,900 down • $6,900/mo",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "images": [
+      "/images/cars/2020-rolls-royce-cullinan-black-badge/hero.png",
+      "/images/cars/2020-rolls-royce-cullinan-black-badge/2.png",
+      "/images/cars/2020-rolls-royce-cullinan-black-badge/3.png"
+    ],
+    "video": "/videos/cars/2020-rolls-royce-cullinan-black-badge/hero.mov"
   },
   {
     "slug": "2020-rolls-royce-cullinan-whitered",
@@ -100,11 +124,15 @@ export const inventory: InventoryItem[] = [
     "display": "From $26,900 down • $6,900/mo",
     "location": "Atlanta, GA",
     "images": [
-      "/images/cars/cullinan-white-red/1.jpg",
-      "/images/cars/cullinan-white-red/2.jpg",
-      "/images/cars/cullinan-white-red/3.jpg"
+      "/images/cars/2020-rolls-royce-cullinan/hero.png",
+      "/images/cars/2020-rolls-royce-cullinan/2.png",
+      "/images/cars/2020-rolls-royce-cullinan/3.png",
+      "/images/cars/2020-rolls-royce-cullinan/4.png",
+      "/images/cars/2020-rolls-royce-cullinan/5.png",
+      "/images/cars/2020-rolls-royce-cullinan/6.png",
+      "/images/cars/2020-rolls-royce-cullinan/7.png"
     ],
-    "video": "/videos/cars/cullinan-white-red.mp4"
+    "video": "/videos/cars/2020-rolls-royce-cullinan/hero.mov"
   },
   {
     "slug": "2021-maybach-gls600-blackgold",
@@ -117,7 +145,14 @@ export const inventory: InventoryItem[] = [
     },
     "monthly": 3700,
     "display": "$14,900 down • $3,700/mo",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "images": [
+      "/images/cars/2023-maybach-gls600-black-red/hero.png",
+      "/images/cars/2023-maybach-gls600-black-red/2.png",
+      "/images/cars/2023-maybach-gls600-black-red/3.png",
+      "/images/cars/2023-maybach-gls600-black-red/4.png",
+      "/images/cars/2023-maybach-gls600-black-red/5.png"
+    ]
   },
   {
     "slug": "2021-mercedes-benz-s580-black-on-peanut-butter",
@@ -132,7 +167,13 @@ export const inventory: InventoryItem[] = [
     },
     "monthly": 2495,
     "display": "From $10,900 down • $2,495/mo",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "images": [
+      "/images/cars/2021-mercedes-benz-s580/hero.png",
+      "/images/cars/2021-mercedes-benz-s580/2.png",
+      "/images/cars/2021-mercedes-benz-s580/3.png"
+    ],
+    "video": "/videos/cars/2021-mercedes-benz-s580/hero.mov"
   },
   {
     "slug": "2022-mercedes-benz-s580",
@@ -147,7 +188,15 @@ export const inventory: InventoryItem[] = [
     },
     "monthly": 2695,
     "display": "From $10,900 down • $2,695/mo",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "images": [
+      "/images/cars/2022-mercedes-benz-s580/hero.png",
+      "/images/cars/2022-mercedes-benz-s580/2.png",
+      "/images/cars/2022-mercedes-benz-s580/3.png",
+      "/images/cars/2022-mercedes-benz-s580/4.png",
+      "/images/cars/2022-mercedes-benz-s580/5.png",
+      "/images/cars/2022-mercedes-benz-s580/6.png"
+    ]
   },
   {
     "slug": "2022-rolls-royce-ghost-black-badge-whiteblack",
@@ -165,8 +214,14 @@ export const inventory: InventoryItem[] = [
     "location": "Atlanta, GA",
     "images": [
       "/images/cars/ghost-black-badge/1.jpg",
+      "/images/cars/ghost-black-badge/1.png",
       "/images/cars/ghost-black-badge/2.jpg",
-      "/images/cars/ghost-black-badge/3.jpg"
+      "/images/cars/ghost-black-badge/2.png",
+      "/images/cars/ghost-black-badge/3.jpg",
+      "/images/cars/ghost-black-badge/3.png",
+      "/images/cars/ghost-black-badge/a.jpg",
+      "/images/cars/ghost-black-badge/b.jpg",
+      "/images/cars/ghost-black-badge/c.jpg"
     ],
     "video": "/videos/cars/ghost-black-badge.mov"
   },
@@ -181,7 +236,15 @@ export const inventory: InventoryItem[] = [
     },
     "monthly": 5995,
     "display": "$26,900 down • $5,995/mo",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "images": [
+      "/images/cars/2023-lamborghini-urus-performante/hero.png",
+      "/images/cars/2023-lamborghini-urus-performante/2.png",
+      "/images/cars/2023-lamborghini-urus-performante/3.png",
+      "/images/cars/2023-lamborghini-urus-performante/4.png",
+      "/images/cars/2023-lamborghini-urus-performante/5.png",
+      "/images/cars/2023-lamborghini-urus-performante/6.png"
+    ]
   }
 ];
 
