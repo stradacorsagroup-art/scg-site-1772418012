@@ -83,6 +83,59 @@ async function loadMediaOverrides() {
   }
 }
 
+function byNaturalName(a, b) {
+  return a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" });
+}
+
+async function exists(target) {
+  try {
+    await fs.access(target);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function resolveFolderMedia(folderName) {
+  if (!folderName) return {};
+
+  const imagesDir = path.join(process.cwd(), "public", "images", "cars", folderName);
+  const videosDir = path.join(process.cwd(), "public", "videos", "cars");
+
+  const out = {};
+
+  if (await exists(imagesDir)) {
+    const imageFiles = (await fs.readdir(imagesDir))
+      .filter((f) => /\.(jpg|jpeg|png|webp)$/i.test(f))
+      .sort(byNaturalName);
+
+    if (imageFiles.length > 0) {
+      const hero = imageFiles.find((f) => /^hero\./i.test(f));
+      const ordered = hero ? [hero, ...imageFiles.filter((f) => f !== hero)] : imageFiles;
+      out.images = ordered.map((f) => `/images/cars/${folderName}/${f}`);
+    }
+  }
+
+  const videoCandidates = [
+    `${folderName}.mp4`,
+    `${folderName}.mov`,
+    `${folderName}.webm`,
+    `${folderName}.m4v`,
+    `${folderName}/hero.mp4`,
+    `${folderName}/hero.mov`,
+  ];
+
+  for (const candidate of videoCandidates) {
+    const absolute = path.join(videosDir, candidate);
+    if (await exists(absolute)) {
+      out.video = `/videos/cars/${candidate}`;
+      break;
+    }
+  }
+
+  return out;
+}
+
 function validateInventory(inventory) {
   const issues = [];
   const seenSlugs = new Set();
@@ -170,16 +223,25 @@ async function run() {
   const order = { "3 mo": 1, "6 mo": 2, "12 mo": 3 };
   const mediaOverrides = await loadMediaOverrides();
 
-  const inventory = [...grouped.values()]
-    .map((item) => {
+  const inventory = await Promise.all(
+    [...grouped.values()].map(async (item) => {
       item.terms.sort((a, b) => (order[a] || 99) - (order[b] || 99));
       item.display = buildDisplay(item.terms, item.down, item.monthly);
-      const media = mediaOverrides[item.slug];
-      if (media?.images) item.images = media.images;
+
+      const media = mediaOverrides[item.slug] || {};
+      const folderMedia = await resolveFolderMedia(media.folder);
+
+      if (folderMedia.images?.length) item.images = folderMedia.images;
+      if (folderMedia.video) item.video = folderMedia.video;
+
+      if (media?.images?.length) item.images = media.images;
       if (media?.video) item.video = media.video;
+
       return item;
     })
-    .sort((a, b) => a.car.localeCompare(b.car));
+  );
+
+  inventory.sort((a, b) => a.car.localeCompare(b.car));
 
   validateInventory(inventory);
 

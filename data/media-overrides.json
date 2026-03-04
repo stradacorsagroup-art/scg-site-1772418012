@@ -1,13 +1,8 @@
 {
   "2020-rolls-royce-cullinan-whitered": {
-    "video": "/videos/cars/cullinan-white-red.mp4"
+    "folder": "cullinan-white-red"
   },
   "2022-rolls-royce-ghost-black-badge-whiteblack": {
-    "images": [
-      "/images/cars/ghost-black-badge/a.jpg",
-      "/images/cars/ghost-black-badge/b.jpg",
-      "/images/cars/ghost-black-badge/c.jpg"
-    ],
-    "video": "/videos/cars/ghost-black-badge.mov"
+    "folder": "ghost-black-badge"
   }
 }

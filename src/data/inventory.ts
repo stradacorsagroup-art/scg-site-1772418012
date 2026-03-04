@@ -99,6 +99,11 @@ export const inventory: InventoryItem[] = [
     "monthly": 6900,
     "display": "From $26,900 down • $6,900/mo",
     "location": "Atlanta, GA",
+    "images": [
+      "/images/cars/cullinan-white-red/1.jpg",
+      "/images/cars/cullinan-white-red/2.jpg",
+      "/images/cars/cullinan-white-red/3.jpg"
+    ],
     "video": "/videos/cars/cullinan-white-red.mp4"
   },
   {
@@ -159,9 +164,9 @@ export const inventory: InventoryItem[] = [
     "display": "From $27,900 down • $5,595/mo",
     "location": "Atlanta, GA",
     "images": [
-      "/images/cars/ghost-black-badge/a.jpg",
-      "/images/cars/ghost-black-badge/b.jpg",
-      "/images/cars/ghost-black-badge/c.jpg"
+      "/images/cars/ghost-black-badge/1.jpg",
+      "/images/cars/ghost-black-badge/2.jpg",
+      "/images/cars/ghost-black-badge/3.jpg"
     ],
     "video": "/videos/cars/ghost-black-badge.mov"
   },
