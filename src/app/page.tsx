@@ -29,7 +29,7 @@ export default function Home() {
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-500">Path to ownership</p>
           <div className="mt-2 flex flex-wrap gap-2">
             <a href="#membership-inventory" className="inline-flex h-9 items-center rounded-full border border-zinc-300 bg-white px-4 text-xs font-semibold text-zinc-900 hover:bg-zinc-100">Membership Inventory (No Credit)</a>
-            <a href="#cars-for-sale" className="inline-flex h-9 items-center rounded-full border border-zinc-300 bg-white px-4 text-xs font-semibold text-zinc-900 hover:bg-zinc-100">Cars for Sale (Cash / Financing)</a>
+            <Link href="/cars-for-sale" className="inline-flex h-9 items-center rounded-full border border-zinc-300 bg-white px-4 text-xs font-semibold text-zinc-900 hover:bg-zinc-100">Cars for Sale (Cash / Financing)</Link>
             <Link href="/apply" className="inline-flex h-9 items-center rounded-full border border-zinc-900 bg-zinc-900 px-4 text-xs font-semibold text-white hover:bg-zinc-800">Apply for a specific car</Link>
           </div>
         </div>
@@ -80,10 +80,6 @@ export default function Home() {
           })}
         </div>
 
-        <div id="cars-for-sale" className="mt-10 rounded-2xl border border-dashed border-zinc-300 bg-white p-5">
-          <h3 className="text-lg font-semibold text-zinc-900">Cars for Sale (Cash / Financing)</h3>
-          <p className="mt-1 text-sm text-zinc-600">This lane is being populated now. Cards added here will support cash purchase and standard financing applications.</p>
-        </div>
       </section>
     </main>
   );
