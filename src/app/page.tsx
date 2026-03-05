@@ -38,9 +38,18 @@ export default function Home() {
       </section>
 
       <section id="inventory" className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-12">
-        <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
+        <div className="mb-6">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-500">Path to ownership</p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <a href="#membership-inventory" className="inline-flex h-9 items-center rounded-full border border-zinc-300 bg-white px-4 text-xs font-semibold text-zinc-900 hover:bg-zinc-100">Membership Inventory (No Credit)</a>
+            <a href="#cars-for-sale" className="inline-flex h-9 items-center rounded-full border border-zinc-300 bg-white px-4 text-xs font-semibold text-zinc-900 hover:bg-zinc-100">Cars for Sale (Cash / Financing)</a>
+            <Link href="/apply" className="inline-flex h-9 items-center rounded-full border border-zinc-900 bg-zinc-900 px-4 text-xs font-semibold text-white hover:bg-zinc-800">Apply for a specific car</Link>
+          </div>
+        </div>
+
+        <div id="membership-inventory" className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Inventory</h2>
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Membership Inventory</h2>
             <p className="mt-1 text-sm text-zinc-500">{inventory.length} vehicles currently listed</p>
           </div>
         </div>
@@ -82,6 +91,11 @@ export default function Home() {
               </article>
             );
           })}
+        </div>
+
+        <div id="cars-for-sale" className="mt-10 rounded-2xl border border-dashed border-zinc-300 bg-white p-5">
+          <h3 className="text-lg font-semibold text-zinc-900">Cars for Sale (Cash / Financing)</h3>
+          <p className="mt-1 text-sm text-zinc-600">This lane is being populated now. Cards added here will support cash purchase and standard financing applications.</p>
         </div>
       </section>
     </main>
