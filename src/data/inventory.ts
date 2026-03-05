@@ -11,6 +11,10 @@ export type InventoryItem = {
   interior?: string;
   images?: string[];
   video?: string;
+  ownerDown?: Record<string, number>;
+  ownerMonthly?: number;
+  scgMonthly?: number;
+  milesPerYear?: number;
 };
 
 export const inventory: InventoryItem[] = [
