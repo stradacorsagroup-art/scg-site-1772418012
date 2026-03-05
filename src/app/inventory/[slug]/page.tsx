@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { VehicleGallery } from "@/components/vehicle-gallery";
 import { deposit, getInventoryBySlug, membershipFee } from "@/data/inventory";
 
 export default async function InventoryDetailPage({
@@ -32,32 +32,7 @@ export default async function InventoryDetailPage({
             ← Back to inventory
           </Link>
 
-          <div className="mt-4 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
-            {vehicle.video ? (
-              <video src={vehicle.video} className="h-60 w-full object-cover bg-zinc-100 sm:h-[430px]" controls playsInline />
-            ) : vehicle.images?.[0] ? (
-              <div className="relative h-60 sm:h-[430px]">
-                <Image src={vehicle.images[0]} alt={vehicle.car} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 65vw" />
-              </div>
-            ) : (
-              <div className="h-60 bg-zinc-100 sm:h-[430px]" />
-            )}
-          </div>
-
-          {vehicle.images && vehicle.images.length > 1 && (
-            <div className="mt-3 overflow-x-auto pb-1">
-              <div className="flex min-w-max gap-2">
-                {vehicle.images.slice(0, 10).map((img, idx) => (
-                  <div
-                    key={img}
-                    className={`relative h-16 w-24 overflow-hidden rounded-lg border bg-white sm:h-[72px] sm:w-28 ${idx === 0 ? "border-zinc-900 ring-1 ring-zinc-900/10" : "border-zinc-200"}`}
-                  >
-                    <Image src={img} alt={vehicle.car} fill className="object-cover" sizes="120px" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+          <VehicleGallery car={vehicle.car} images={vehicle.images} video={vehicle.video} />
 
           <h1 className="mt-6 text-2xl font-semibold tracking-[-0.02em] sm:text-[2.45rem]">{vehicle.car}</h1>
           <p className="mt-2 text-sm text-zinc-600 sm:text-[15px]">Private membership inventory • {vehicle.location}</p>
