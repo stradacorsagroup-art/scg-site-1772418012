@@ -1,9 +1,14 @@
 import Link from "next/link";
+import { OwnershipPills } from "@/components/ownership-pills";
 
 export default function CarsForSalePage() {
   return (
     <main className="min-h-screen bg-[#f6f7f9] text-zinc-900">
       <section className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-12">
+        <div className="mb-6">
+          <OwnershipPills active="sale" />
+        </div>
+
         <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">Cars for Sale</h1>

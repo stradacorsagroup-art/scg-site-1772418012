@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { OwnershipPills } from "@/components/ownership-pills";
 import { inventory } from "@/data/inventory";
 
 function formatPrice(value: number) {
@@ -26,12 +27,7 @@ export default function Home() {
 
       <section id="inventory" className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-12">
         <div className="mb-6">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-500">Path to ownership</p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            <a href="#membership-inventory" className="inline-flex h-9 items-center rounded-full border border-zinc-300 bg-white px-4 text-xs font-semibold text-zinc-900 hover:bg-zinc-100">Membership Inventory (No Credit)</a>
-            <Link href="/cars-for-sale" className="inline-flex h-9 items-center rounded-full border border-zinc-300 bg-white px-4 text-xs font-semibold text-zinc-900 hover:bg-zinc-100">Cars for Sale (Cash / Financing)</Link>
-            <Link href="/apply" className="inline-flex h-9 items-center rounded-full border border-zinc-900 bg-zinc-900 px-4 text-xs font-semibold text-white hover:bg-zinc-800">Apply for a specific car</Link>
-          </div>
+          <OwnershipPills active="membership" />
         </div>
 
         <div id="membership-inventory" className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">

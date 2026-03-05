@@ -1,14 +1,14 @@
-import Link from "next/link";
+import { OwnershipPills } from "@/components/ownership-pills";
 
 export default function ApplyPage() {
   return (
     <main className="min-h-screen bg-[#f6f7f9] text-zinc-900">
-      <section className="mx-auto max-w-3xl px-5 py-12 sm:px-6 sm:py-16">
-        <Link href="/" className="text-sm text-zinc-600 hover:text-zinc-900">
-          ← Back to inventory
-        </Link>
+      <section className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-12">
+        <div className="mb-6">
+          <OwnershipPills active="apply" />
+        </div>
 
-        <div className="mt-5 rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
+        <div className="max-w-3xl rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
           <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-zinc-500">Exotic Membership Marketplace</p>
           <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Apply for Private Access</h1>
           <p className="mt-3 text-sm text-zinc-600 sm:text-base">
