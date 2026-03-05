@@ -1,46 +1,13 @@
-name: Sync Notion Inventory
+name: Inventory Sync (Manual Only)
 
 on:
-  schedule:
-    - cron: "0 */6 * * *" # every 6 hours
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  sync:
+  disabled:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Install deps
-        run: npm ci
-
-      - name: Sync inventory from Notion
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
-        run: npm run sync:inventory
-
-      - name: Verify site build after sync
-        run: npm run build
-
-      - name: Commit changes if any
+      - name: Manual mode notice
         run: |
-          if [[ -n "$(git status --porcelain)" ]]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add src/data/inventory.ts
-            git commit -m "chore: sync inventory from notion"
-            git push
-          else
-            echo "No inventory changes"
-          fi
+          echo "Automatic Notion sync has been disabled."
+          echo "Inventory updates are now managed manually."
