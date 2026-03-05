@@ -26,7 +26,7 @@ export default async function InventoryDetailPage({
 
   return (
     <main className="min-h-screen bg-[#f6f7f9] text-zinc-900">
-      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-6 sm:gap-8 sm:px-6 sm:py-10 lg:grid-cols-[1.45fr_1fr]">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-7 px-4 py-7 sm:gap-9 sm:px-6 sm:py-11 lg:grid-cols-[1.5fr_1fr]">
         <div>
           <Link href="/" className="inline-flex text-sm text-zinc-600 hover:text-zinc-900">
             ← Back to inventory
@@ -45,17 +45,22 @@ export default async function InventoryDetailPage({
           </div>
 
           {vehicle.images && vehicle.images.length > 1 && (
-            <div className="mt-3 grid grid-cols-5 gap-2 sm:grid-cols-8">
-              {vehicle.images.slice(0, 8).map((img) => (
-                <div key={img} className="relative h-14 overflow-hidden rounded-md border border-zinc-200 bg-white sm:h-16">
-                  <Image src={img} alt={vehicle.car} fill className="object-cover" sizes="100px" />
-                </div>
-              ))}
+            <div className="mt-3 overflow-x-auto pb-1">
+              <div className="flex min-w-max gap-2">
+                {vehicle.images.slice(0, 10).map((img, idx) => (
+                  <div
+                    key={img}
+                    className={`relative h-16 w-24 overflow-hidden rounded-lg border bg-white sm:h-[72px] sm:w-28 ${idx === 0 ? "border-zinc-900 ring-1 ring-zinc-900/10" : "border-zinc-200"}`}
+                  >
+                    <Image src={img} alt={vehicle.car} fill className="object-cover" sizes="120px" />
+                  </div>
+                ))}
+              </div>
             </div>
           )}
 
-          <h1 className="mt-5 text-2xl font-semibold tracking-tight sm:text-4xl">{vehicle.car}</h1>
-          <p className="mt-2 text-sm text-zinc-600 sm:text-base">Private membership inventory • {vehicle.location}</p>
+          <h1 className="mt-6 text-2xl font-semibold tracking-[-0.02em] sm:text-[2.45rem]">{vehicle.car}</h1>
+          <p className="mt-2 text-sm text-zinc-600 sm:text-[15px]">Private membership inventory • {vehicle.location}</p>
 
           <div className="mt-5 grid grid-cols-2 gap-2.5 sm:grid-cols-4">
             <div className="rounded-xl border border-zinc-200 bg-white p-3">
@@ -116,10 +121,10 @@ export default async function InventoryDetailPage({
             <p className="text-xl font-semibold">${deposit.toLocaleString()}</p>
           </div>
 
-          <button className="mt-5 h-11 w-full rounded-lg bg-zinc-900 px-4 text-sm font-semibold text-white hover:bg-zinc-800">
+          <button className="mt-5 h-12 w-full rounded-xl bg-zinc-900 px-4 text-sm font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.14)] transition hover:-translate-y-0.5 hover:bg-zinc-800">
             Reserve This Vehicle
           </button>
-          <button className="mt-2 h-11 w-full rounded-lg border border-zinc-300 bg-white px-4 text-sm font-semibold text-zinc-900 hover:bg-zinc-50">
+          <button className="mt-2 h-12 w-full rounded-xl border border-zinc-300 bg-white px-4 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-50">
             Speak to SCG
           </button>
         </aside>
