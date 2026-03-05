@@ -20,20 +20,7 @@ export default function Home() {
           <p className="mt-4 max-w-2xl text-sm text-zinc-600 sm:text-base">
             A direct marketplace for exotic vehicle memberships with transparent startup costs, monthly payments, and live inventory.
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            <a
-              href="#inventory"
-              className="inline-flex h-11 items-center justify-center rounded-xl bg-zinc-900 px-5 text-sm font-semibold text-white transition hover:bg-zinc-800"
-            >
-              View Inventory
-            </a>
-            <Link
-              href="/apply"
-              className="inline-flex h-11 items-center justify-center rounded-xl border border-zinc-300 bg-white px-5 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-100"
-            >
-              Apply Now
-            </Link>
-          </div>
+
         </div>
       </section>
 
@@ -41,8 +28,8 @@ export default function Home() {
         <div className="mb-6">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-500">Path to ownership</p>
           <div className="mt-2 flex flex-wrap gap-2">
-            <a href="#membership-inventory" className="inline-flex h-9 items-center rounded-full border border-zinc-300 bg-white px-4 text-xs font-semibold text-zinc-900 hover:bg-zinc-100">Membership Inventory (No Credit)</a>
-            <a href="#cars-for-sale" className="inline-flex h-9 items-center rounded-full border border-zinc-300 bg-white px-4 text-xs font-semibold text-zinc-900 hover:bg-zinc-100">Cars for Sale (Cash / Financing)</a>
+            <Link href="/apply" className="inline-flex h-9 items-center rounded-full border border-zinc-300 bg-white px-4 text-xs font-semibold text-zinc-900 hover:bg-zinc-100">Membership Inventory (No Credit)</Link>
+            <Link href="/apply" className="inline-flex h-9 items-center rounded-full border border-zinc-300 bg-white px-4 text-xs font-semibold text-zinc-900 hover:bg-zinc-100">Cars for Sale (Cash / Financing)</Link>
             <Link href="/apply" className="inline-flex h-9 items-center rounded-full border border-zinc-900 bg-zinc-900 px-4 text-xs font-semibold text-white hover:bg-zinc-800">Apply for a specific car</Link>
           </div>
         </div>
