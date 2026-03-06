@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "sync:inventory": "node scripts/sync-inventory-disabled.mjs",
-    "sync:inventory:force": "node scripts/sync-notion-inventory.mjs"
+    "lint": "eslint"
   },
   "dependencies": {
     "next": "16.1.6",
