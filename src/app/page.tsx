@@ -16,15 +16,42 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [activeTerm, setActiveTerm] = useState<Term | "all">("all");
   const [maxMonthly, setMaxMonthly] = useState<number>(10000);
+  const [maxDown, setMaxDown] = useState<number>(50000);
+  const [brand, setBrand] = useState<string>("all");
+  const [location, setLocation] = useState<string>("all");
   const [sort, setSort] = useState<"featured" | "monthlyAsc" | "monthlyDesc" | "nameAsc">("featured");
+
+  const brandOptions = useMemo(() => {
+    const set = new Set<string>();
+    inventory.forEach((item) => {
+      const tokens = item.car.split(" ");
+      const guess = /^\d{4}$/.test(tokens[0]) ? tokens[1] : tokens[0];
+      if (guess) set.add(guess.toUpperCase());
+    });
+    return ["all", ...Array.from(set).sort((a, b) => a.localeCompare(b))];
+  }, []);
+
+  const locationOptions = useMemo(() => {
+    const set = new Set<string>();
+    inventory.forEach((item) => set.add(item.location || "Unknown"));
+    return ["all", ...Array.from(set).sort((a, b) => a.localeCompare(b))];
+  }, []);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     let out = [...inventory].filter((item) => {
+      const downValues = Object.values(item.down || {}).filter((v) => Number.isFinite(v)) as number[];
+      const minDown = downValues.length ? Math.min(...downValues) : Number.POSITIVE_INFINITY;
+      const tokens = item.car.split(" ");
+      const guessedBrand = (/^\d{4}$/.test(tokens[0]) ? tokens[1] : tokens[0])?.toUpperCase();
+
       const matchQuery = !q || item.car.toLowerCase().includes(q) || item.location.toLowerCase().includes(q);
       const matchTerm = activeTerm === "all" || item.terms.includes(activeTerm);
       const matchMonthly = item.monthly <= maxMonthly;
-      return matchQuery && matchTerm && matchMonthly;
+      const matchDown = minDown <= maxDown;
+      const matchBrand = brand === "all" || guessedBrand === brand;
+      const matchLocation = location === "all" || item.location === location;
+      return matchQuery && matchTerm && matchMonthly && matchDown && matchBrand && matchLocation;
     });
 
     if (sort === "monthlyAsc") out.sort((a, b) => a.monthly - b.monthly);
@@ -32,7 +59,7 @@ export default function Home() {
     if (sort === "nameAsc") out.sort((a, b) => a.car.localeCompare(b.car));
 
     return out;
-  }, [query, activeTerm, maxMonthly, sort]);
+  }, [query, activeTerm, maxMonthly, maxDown, brand, location, sort]);
 
   return (
     <main className="min-h-screen bg-[#f6f7f9] text-zinc-900">
@@ -54,8 +81,8 @@ export default function Home() {
           <p className="mt-1 text-sm text-zinc-500">{filtered.length} shown • {inventory.length} total vehicles</p>
         </div>
 
-        <div className="mb-6 rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm sm:p-4">
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-5">
+        <div className="sticky top-2 z-20 mb-6 rounded-2xl border border-zinc-200 bg-white/95 p-3 shadow-sm backdrop-blur sm:p-4">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-7">
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
@@ -72,6 +99,26 @@ export default function Home() {
               <option value="3 mo">3 Months</option>
               <option value="6 mo">6 Months</option>
               <option value="12 mo">12 Months</option>
+            </select>
+
+            <select
+              value={brand}
+              onChange={(e) => setBrand(e.target.value)}
+              className="h-10 rounded-xl border border-zinc-300 bg-white px-3 text-sm outline-none ring-zinc-300 focus:ring-2"
+            >
+              {brandOptions.map((b) => (
+                <option key={b} value={b}>{b === "all" ? "All Brands" : b}</option>
+              ))}
+            </select>
+
+            <select
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+              className="h-10 rounded-xl border border-zinc-300 bg-white px-3 text-sm outline-none ring-zinc-300 focus:ring-2"
+            >
+              {locationOptions.map((loc) => (
+                <option key={loc} value={loc}>{loc === "all" ? "All Locations" : loc}</option>
+              ))}
             </select>
 
             <select
@@ -93,11 +140,22 @@ export default function Home() {
               <input type="range" min={1000} max={12000} step={100} value={maxMonthly} onChange={(e) => setMaxMonthly(Number(e.target.value))} className="w-full" />
             </div>
 
+            <div className="rounded-xl border border-zinc-300 px-3 py-2">
+              <div className="mb-1 flex items-center justify-between text-[11px] uppercase tracking-[0.08em] text-zinc-500">
+                <span>Max Down</span>
+                <span>{formatPrice(maxDown)}</span>
+              </div>
+              <input type="range" min={5000} max={100000} step={500} value={maxDown} onChange={(e) => setMaxDown(Number(e.target.value))} className="w-full" />
+            </div>
+
             <button
               onClick={() => {
                 setQuery("");
                 setActiveTerm("all");
                 setMaxMonthly(10000);
+                setMaxDown(50000);
+                setBrand("all");
+                setLocation("all");
                 setSort("featured");
               }}
               className="h-10 rounded-xl border border-zinc-300 bg-zinc-50 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
