@@ -29,7 +29,7 @@ export default function CarsForSalePage() {
     const t12 = item.twelveMo || {};
     const monthly = Number(t12.scgMonthly ?? t3.scgMonthly ?? 0);
     const downs = [t3.scgDown, t12.scgDown].filter((v) => typeof v === "number") as number[];
-    const minDown = downs.length ? Math.min(...downs) : 0;
+    const minDown = downs.length ? Math.min(...downs) : null;
     const terms: string[] = [];
     if (typeof t3.scgDown === "number") terms.push("3 mo");
     if (typeof t12.scgDown === "number") terms.push("12 mo");
@@ -77,7 +77,9 @@ export default function CarsForSalePage() {
                 ) : item.image ? (
                   <Image src={item.image} alt={item.car} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
                 ) : (
-                  <div className="flex h-full items-center justify-center text-xs uppercase tracking-[0.12em] text-zinc-500">No media</div>
+                  <div className="flex h-full flex-col items-center justify-center gap-1 text-xs uppercase tracking-[0.12em] text-zinc-500">
+                    <span>Media coming soon</span>
+                  </div>
                 )}
 
                 {!!item.terms.length && (
@@ -90,14 +92,14 @@ export default function CarsForSalePage() {
               <div className="p-4 sm:p-5">
                 <h3 className="min-h-10 text-[13px] font-semibold uppercase tracking-[0.08em] text-zinc-900">{item.car}</h3>
                 <p className="mt-3 text-sm font-semibold text-zinc-900">{money(item.monthly)}/mo</p>
-                <p className="mt-1 text-sm text-zinc-600">From {money(item.minDown)} down</p>
+                <p className="mt-1 text-sm text-zinc-600">{item.minDown != null ? `From ${money(item.minDown)} down` : "Down payment on request"}</p>
                 <p className="mt-3 text-xs text-zinc-500">Cash/Financing • Terms subject to verification</p>
 
                 <Link
                   href={item.detailHref}
                   className="mt-4 inline-flex h-10 w-full items-center justify-center rounded-xl bg-zinc-900 px-3 text-sm font-semibold text-white transition hover:bg-zinc-800"
-                >
-                  View Details
+>
+                  View Sale Details
                 </Link>
               </div>
             </article>

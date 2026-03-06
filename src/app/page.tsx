@@ -39,7 +39,9 @@ export default function Home() {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
           {sortedInventory.map((item) => {
-            const lowestDown = Math.min(...Object.values(item.down));
+            const downValues = Object.values(item.down || {}).filter((v) => Number.isFinite(v)) as number[];
+            const hasDown = downValues.length > 0;
+            const lowestDown = hasDown ? Math.min(...downValues) : null;
             return (
               <article
                 key={item.car}
@@ -51,7 +53,9 @@ export default function Home() {
                   ) : item.images?.[0] ? (
                     <Image src={item.images[0]} alt={item.car} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
                   ) : (
-                    <div className="flex h-full items-center justify-center text-xs uppercase tracking-[0.12em] text-zinc-500">No media</div>
+                    <div className="flex h-full flex-col items-center justify-center gap-1 text-xs uppercase tracking-[0.12em] text-zinc-500">
+                      <span>Media coming soon</span>
+                    </div>
                   )}
                   <div className="absolute left-3 top-3 rounded-full border border-zinc-200 bg-white/95 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-zinc-700">
                     {item.terms.join(" • ")}
@@ -61,7 +65,7 @@ export default function Home() {
                 <div className="p-4 sm:p-5">
                   <h3 className="min-h-10 text-[13px] font-semibold uppercase tracking-[0.08em] text-zinc-900">{item.car}</h3>
                   <p className="mt-3 text-sm font-semibold text-zinc-900">{formatPrice(item.monthly)}/mo</p>
-                  <p className="mt-1 text-sm text-zinc-600">From {formatPrice(lowestDown)} down</p>
+                  <p className="mt-1 text-sm text-zinc-600">{hasDown ? `From ${formatPrice(lowestDown as number)} down` : "Down payment on request"}</p>
                   <p className="mt-3 text-xs text-zinc-500">Buyout available • Terms subject to verification</p>
 
                   <Link
