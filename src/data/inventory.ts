@@ -33,7 +33,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2018-ferrari-488-spider-yellow",
-    "car": "2018 Ferrari 488 Spider Yellow",
+    "car": "2018 Ferrari 488 Spider",
     "terms": [
       "3 mo",
       "12 mo"
@@ -55,7 +55,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2018-rr-dawn-66l-v12",
-    "car": "2018 RR Dawn 6.6L V12",
+    "car": "2018 Rolls-Royce Dawn 6.6L V12",
     "terms": [
       "3 mo",
       "12 mo"
@@ -70,7 +70,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2019-lamborghini-urus-blue",
-    "car": "2019 LAMBORGHINI URUS BLUE",
+    "car": "2019 Lamborghini Urus AWD",
     "terms": [
       "3 mo",
       "12 mo"
@@ -85,7 +85,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2019-white-urus",
-    "car": "2019 White urus",
+    "car": "2019 Lamborghini Urus AWD",
     "terms": [
       "3 mo",
       "12 mo"
@@ -100,7 +100,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2020-mclaren-720s-spyder-satin-black",
-    "car": "2020 McLaren 720s Spyder Satin Black",
+    "car": "2020 McLaren 720S Spider",
     "terms": [
       "12 mo"
     ],
@@ -113,7 +113,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2020-mercedes-g63-satin-black",
-    "car": "2020 Mercedes G63 Satin Black",
+    "car": "2020 Mercedes-Benz G-Class AMG G 63",
     "terms": [
       "12 mo"
     ],
@@ -197,7 +197,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2021-maybach-gls600-blackgold",
-    "car": "2021 Maybach GLS600 Black/Gold",
+    "car": "2021 Mercedes-Benz Maybach GLS 600",
     "terms": [
       "3 mo",
       "12 mo"
@@ -219,7 +219,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2021-mercedes-g63-199-exclusive-edition",
-    "car": "2021 Mercedes G63 1/99 EXCLUSIVE EDITION",
+    "car": "2021 Mercedes-Benz G-Class AMG G 63",
     "terms": [
       "3 mo",
       "12 mo"
@@ -308,7 +308,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2022-rolls-royce-ghost-black-badge-whiteblack",
-    "car": "2022 Rolls-Royce Ghost Black Badge (White/Black)",
+    "car": "2022 Rolls-Royce Ghost Black Badge",
     "terms": [
       "3 mo",
       "12 mo"
@@ -357,7 +357,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2023-mc20-cielo",
-    "car": "2023 MC20 Cielo",
+    "car": "2023 Maserati MC20",
     "terms": [
       "3 mo",
       "12 mo"
@@ -394,7 +394,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2025-rr-spectre",
-    "car": "2025 RR Spectre",
+    "car": "2025 Rolls-Royce Spectre Electric",
     "terms": [
       "3 mo",
       "12 mo"
