@@ -56,7 +56,7 @@ export default async function InventoryDetailPage({
             ← Back to inventory
           </Link>
 
-          <VehicleGallery car={vehicle.car} images={vehicle.images} />
+          <VehicleGallery car={vehicle.car} images={vehicle.images} video={vehicle.video} />
 
           <h1 className="mt-6 text-2xl font-semibold tracking-[-0.02em] sm:text-[2.45rem]">{vehicle.car}</h1>
 
