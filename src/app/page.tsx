@@ -19,7 +19,7 @@ export default function Home() {
   const [maxDown, setMaxDown] = useState<number>(50000);
   const [brand, setBrand] = useState<string>("all");
   const [location, setLocation] = useState<string>("all");
-  const [sort, setSort] = useState<"featured" | "monthlyAsc" | "monthlyDesc" | "nameAsc">("featured");
+  const [sort, setSort] = useState<"monthlyAsc" | "monthlyDesc">("monthlyAsc");
 
   const brandOptions = useMemo(() => {
     const set = new Set<string>();
@@ -39,7 +39,7 @@ export default function Home() {
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    let out = [...inventory].filter((item) => {
+    const out = [...inventory].filter((item) => {
       const downValues = Object.values(item.down || {}).filter((v) => Number.isFinite(v)) as number[];
       const minDown = downValues.length ? Math.min(...downValues) : Number.POSITIVE_INFINITY;
       const tokens = item.car.split(" ");
@@ -56,7 +56,6 @@ export default function Home() {
 
     if (sort === "monthlyAsc") out.sort((a, b) => a.monthly - b.monthly);
     if (sort === "monthlyDesc") out.sort((a, b) => b.monthly - a.monthly);
-    if (sort === "nameAsc") out.sort((a, b) => a.car.localeCompare(b.car));
 
     return out;
   }, [query, activeTerm, maxMonthly, maxDown, brand, location, sort]);
@@ -126,10 +125,8 @@ export default function Home() {
               onChange={(e) => setSort(e.target.value as typeof sort)}
               className="h-10 rounded-xl border border-zinc-300 bg-white px-3 text-sm outline-none ring-zinc-300 focus:ring-2"
             >
-              <option value="featured">Sort: Featured</option>
-              <option value="monthlyAsc">Monthly: Low to High</option>
-              <option value="monthlyDesc">Monthly: High to Low</option>
-              <option value="nameAsc">Name: A–Z</option>
+              <option value="monthlyAsc">Price: Low to High</option>
+              <option value="monthlyDesc">Price: High to Low</option>
             </select>
 
             <div className="rounded-xl border border-zinc-300 px-3 py-2">
@@ -156,7 +153,7 @@ export default function Home() {
                 setMaxDown(50000);
                 setBrand("all");
                 setLocation("all");
-                setSort("featured");
+                setSort("monthlyAsc");
               }}
               className="h-10 rounded-xl border border-zinc-300 bg-zinc-50 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
             >
