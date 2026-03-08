@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Exotic Membership Marketplace",
-  description: "Exotic car memberships with transparent terms and live inventory.",
+  title: "The Exotic Marketplace",
+  description: "Luxury vehicle ownership, redefined for discerning drivers. Curated inventory with transparent terms.",
 };
 
 export default function RootLayout({

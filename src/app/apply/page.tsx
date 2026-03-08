@@ -9,7 +9,7 @@ export default function ApplyPage() {
         </div>
 
         <div className="max-w-3xl rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-zinc-500">Exotic Membership Marketplace</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-zinc-500">The Exotic Marketplace</p>
           <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Apply for Private Access</h1>
           <p className="mt-3 text-sm text-zinc-600 sm:text-base">
             To finalize your subscription structure, contact the SCG team and we’ll match you to available inventory and terms.
