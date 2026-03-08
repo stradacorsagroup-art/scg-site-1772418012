@@ -124,34 +124,30 @@ export default function Home() {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
           {filtered.map((item) => {
-            const downValues = Object.values(item.down || {}).filter((v) => Number.isFinite(v)) as number[];
-            const hasDown = downValues.length > 0;
-            const lowestDown = hasDown ? Math.min(...downValues) : null;
-
             return (
-              <article key={item.car} className="group overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(0,0,0,0.08)]">
-                <div className="relative h-44 border-b border-zinc-200 bg-zinc-100 sm:h-48">
-                  {item.images?.[0] ? (
-                    <Image src={item.images[0]} alt={item.car} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
-                  ) : (
-                    <div className="flex h-full flex-col items-center justify-center gap-1 text-xs uppercase tracking-[0.12em] text-zinc-500">
-                      <span>Media coming soon</span>
-                    </div>
-                  )}
-                  <div className="absolute left-3 top-3 rounded-full border border-zinc-200 bg-white/95 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-zinc-700">{item.terms.join(" • ")}</div>
-                </div>
+              <Link
+                key={item.car}
+                href={`/inventory/${item.slug}`}
+                className="group block overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(0,0,0,0.08)]"
+              >
+                <article>
+                  <div className="relative h-44 border-b border-zinc-200 bg-zinc-100 sm:h-48">
+                    {item.images?.[0] ? (
+                      <Image src={item.images[0]} alt={item.car} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
+                    ) : (
+                      <div className="flex h-full flex-col items-center justify-center gap-1 text-xs uppercase tracking-[0.12em] text-zinc-500">
+                        <span>Media coming soon</span>
+                      </div>
+                    )}
+                    <div className="absolute left-3 top-3 rounded-full border border-zinc-200 bg-white/95 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-zinc-700">{item.terms.join(" • ")}</div>
+                  </div>
 
-                <div className="p-4 sm:p-5">
-                  <h3 className="min-h-10 text-[13px] font-semibold uppercase tracking-[0.08em] text-zinc-900">{item.car}</h3>
-                  <p className="mt-3 text-sm font-semibold text-zinc-900">{formatPrice(item.monthly)}/mo</p>
-                  <p className="mt-1 text-sm text-zinc-600">{hasDown ? `From ${formatPrice(lowestDown as number)} down` : "Down payment on request"}</p>
-                  <p className="mt-3 text-xs text-zinc-500">Buyout available • Terms subject to verification</p>
-
-                  <Link href={`/inventory/${item.slug}`} className="mt-4 inline-flex h-10 w-full items-center justify-center rounded-xl bg-zinc-900 px-3 text-sm font-semibold text-white transition hover:bg-zinc-800">
-                    View Details
-                  </Link>
-                </div>
-              </article>
+                  <div className="p-4 sm:p-5">
+                    <h3 className="min-h-10 text-[13px] font-semibold uppercase tracking-[0.08em] text-zinc-900">{item.car}</h3>
+                    <p className="mt-3 text-sm font-semibold text-zinc-900">{formatPrice(item.monthly)}/mo</p>
+                  </div>
+                </article>
+              </Link>
             );
           })}
         </div>
