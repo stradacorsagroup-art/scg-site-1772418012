@@ -4,6 +4,8 @@ export type InventoryItem = {
   terms: string[];
   down: Record<string, number>;
   monthly: number;
+  scgMonthlyByTerm?: Record<string, number>;
+  scgBuyoutByTerm?: Record<string, number>;
   display: string;
   location: string;
   mileage?: string;

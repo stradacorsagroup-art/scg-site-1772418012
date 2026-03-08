@@ -18,11 +18,19 @@ export default async function InventoryDetailPage({
     return (order[a] ?? 99) - (order[b] ?? 99);
   });
 
-  const startupCosts = orderedTerms.map((term) => ({
-    term,
-    startupCost: vehicle.down[term] ?? 0,
-    totalDue: (vehicle.down[term] ?? 0) + vehicle.monthly + membershipFee,
-  }));
+  const startupCosts = orderedTerms.map((term) => {
+    const scgDown = vehicle.down[term] ?? 0;
+    const scgMonthly = vehicle.scgMonthlyByTerm?.[term] ?? vehicle.monthly;
+    const scgBuyout = vehicle.scgBuyoutByTerm?.[term];
+
+    return {
+      term,
+      scgDown,
+      scgMonthly,
+      scgBuyout,
+      totalDue: scgDown + scgMonthly + membershipFee,
+    };
+  });
 
   return (
     <main className="min-h-screen bg-[#f6f7f9] text-zinc-900">
@@ -44,7 +52,7 @@ export default async function InventoryDetailPage({
             </div>
             <div className="rounded-xl border border-zinc-200 bg-white p-3">
               <p className="text-[11px] uppercase tracking-wide text-zinc-500">Startup (from)</p>
-              <p className="mt-1 text-base font-semibold sm:text-lg">${Math.min(...startupCosts.map((x) => x.startupCost)).toLocaleString()}</p>
+              <p className="mt-1 text-base font-semibold sm:text-lg">${Math.min(...startupCosts.map((x) => x.scgDown)).toLocaleString()}</p>
             </div>
             <div className="rounded-xl border border-zinc-200 bg-white p-3">
               <p className="text-[11px] uppercase tracking-wide text-zinc-500">Terms</p>
@@ -65,23 +73,27 @@ export default async function InventoryDetailPage({
           <p className="mt-1 text-sm text-zinc-500">Estimated drive-off total. Excludes taxes and registration fees.</p>
 
           <div className="mt-4 space-y-3 text-sm">
-            {startupCosts.map(({ term, startupCost, totalDue }) => (
+            {startupCosts.map(({ term, scgDown, scgMonthly, scgBuyout, totalDue }) => (
               <div key={term} className="rounded-lg border border-zinc-200 p-3">
                 <div className="mb-2 flex items-center justify-between text-[11px] uppercase tracking-[0.08em] text-zinc-500">
                   <span>{term} option</span>
-                  <span>${vehicle.monthly.toLocaleString()}/mo</span>
+                  <span>${scgMonthly.toLocaleString()}/mo</span>
                 </div>
                 <div className="flex items-center justify-between border-b border-zinc-100 pb-2">
-                  <span>Startup Cost</span>
-                  <strong>${startupCost.toLocaleString()}</strong>
+                  <span>{term} SCG Down</span>
+                  <strong>${scgDown.toLocaleString()}</strong>
+                </div>
+                <div className="mt-2 flex items-center justify-between border-b border-zinc-100 pb-2">
+                  <span>{term} SCG Monthly</span>
+                  <strong>${scgMonthly.toLocaleString()}</strong>
+                </div>
+                <div className="mt-2 flex items-center justify-between border-b border-zinc-100 pb-2">
+                  <span>{term} SCG Buyout</span>
+                  <strong>{typeof scgBuyout === "number" ? `$${scgBuyout.toLocaleString()}` : "On request"}</strong>
                 </div>
                 <div className="mt-2 flex items-center justify-between border-b border-zinc-100 pb-2">
                   <span>Membership Fee</span>
                   <strong>${membershipFee.toLocaleString()}</strong>
-                </div>
-                <div className="mt-2 flex items-center justify-between border-b border-zinc-100 pb-2">
-                  <span>1st Month Subscription</span>
-                  <strong>${vehicle.monthly.toLocaleString()}</strong>
                 </div>
                 <div className="mt-2 flex items-center justify-between text-base font-semibold">
                   <span>Total Due at Signing</span>
