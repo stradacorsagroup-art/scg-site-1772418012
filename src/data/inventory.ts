@@ -18,7 +18,7 @@ export type InventoryItem = {
 export const inventory: InventoryItem[] = [
   {
     "slug": "2018-amg-gtc-competition",
-    "car": "2018 AMG GTC Competition",
+    "car": "2018 Mercedes-AMG GT C",
     "terms": [
       "3 mo",
       "12 mo"
