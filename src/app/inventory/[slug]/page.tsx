@@ -59,26 +59,7 @@ export default async function InventoryDetailPage({
           <VehicleGallery car={vehicle.car} images={vehicle.images} video={vehicle.video} />
 
           <h1 className="mt-6 text-2xl font-semibold tracking-[-0.02em] sm:text-[2.45rem]">{vehicle.car}</h1>
-          <p className="mt-2 text-sm text-zinc-600 sm:text-[15px]">Private membership inventory • {vehicle.location}</p>
 
-          <div className="mt-5 grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-            <div className="rounded-xl border border-zinc-200 bg-white p-3">
-              <p className="text-[11px] uppercase tracking-wide text-zinc-500">Monthly</p>
-              <p className="mt-1 text-base font-semibold sm:text-lg">${vehicle.monthly.toLocaleString()}</p>
-            </div>
-            <div className="rounded-xl border border-zinc-200 bg-white p-3">
-              <p className="text-[11px] uppercase tracking-wide text-zinc-500">Startup (from)</p>
-              <p className="mt-1 text-base font-semibold sm:text-lg">${Math.min(...startupCosts.map((x) => x.scgDown)).toLocaleString()}</p>
-            </div>
-            <div className="rounded-xl border border-zinc-200 bg-white p-3">
-              <p className="text-[11px] uppercase tracking-wide text-zinc-500">Terms</p>
-              <p className="mt-1 text-sm font-semibold sm:text-base">{orderedTerms.join(" / ") || "—"}</p>
-            </div>
-            <div className="rounded-xl border border-zinc-200 bg-white p-3">
-              <p className="text-[11px] uppercase tracking-wide text-zinc-500">Buyout</p>
-              <p className="mt-1 text-sm font-semibold sm:text-base">Available</p>
-            </div>
-          </div>
         </div>
 
         <aside className="h-fit rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm sm:p-5 lg:sticky lg:top-6">
