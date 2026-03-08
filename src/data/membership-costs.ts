@@ -254,7 +254,7 @@ export const membershipCostsByCarKey: Record<string, MembershipCost> = {
     }
   },
   "2021rs6avant": {
-    "car": "2021 RS6 Avant",
+    "car": "2021 Audi RS 6 Avant",
     "threeMo": {
       "scgDown": 17995,
       "scgMonthly": 2500,

@@ -288,7 +288,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2021-rs6-avant",
-    "car": "2021 RS6 Avant",
+    "car": "2021 Audi RS 6 Avant",
     "terms": [
       "3 mo",
       "12 mo"
@@ -366,19 +366,7 @@ export const inventory: InventoryItem[] = [
     ],
     "video": "/videos/cars/ghost-black-badge.mov"
   },
-  {
-    "slug": "2022-tesla-model-3-performance",
-    "car": "2022 Tesla Model 3 Performance",
-    "terms": [
-      "12 mo"
-    ],
-    "down": {
-      "12 mo": 11990
-    },
-    "monthly": 995,
-    "display": "From $11,990 down • $995/mo",
-    "location": "ATL"
-  },
+
   {
     "slug": "2023-lamborghini-urus-performante-yellow",
     "car": "2023 LAMBORGHINI URUS PERFORMANTE YELLOW",
