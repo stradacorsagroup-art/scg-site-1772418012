@@ -43,7 +43,6 @@ export default function CarsForSalePage() {
       minDown,
       terms,
       image: media?.images?.[0],
-      video: media?.video,
       detailHref: media ? `/inventory/${detailSlug}` : "/apply",
     };
   });
@@ -80,9 +79,7 @@ export default function CarsForSalePage() {
               className="group overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(0,0,0,0.08)]"
             >
               <div className="relative h-44 border-b border-zinc-200 bg-zinc-100 sm:h-48">
-                {item.video ? (
-                  <video src={item.video} className="h-full w-full object-cover" autoPlay muted loop playsInline />
-                ) : item.image ? (
+                {item.image ? (
                   <Image src={item.image} alt={item.car} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
                 ) : (
                   <div className="flex h-full flex-col items-center justify-center gap-1 text-xs uppercase tracking-[0.12em] text-zinc-500">
