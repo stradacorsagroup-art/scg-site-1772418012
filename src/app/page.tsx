@@ -63,7 +63,7 @@ export default function Home() {
         </div>
 
         <div id="membership-inventory" className="mb-5">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Membership Inventory Cards</h2>
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Membership Inventory</h2>
           <p className="mt-1 text-sm text-zinc-500">{filtered.length} shown • {inventory.length} total vehicles</p>
         </div>
 

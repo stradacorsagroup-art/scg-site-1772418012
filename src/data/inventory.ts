@@ -17,24 +17,6 @@ export type InventoryItem = {
 
 export const inventory: InventoryItem[] = [
   {
-    "slug": "2017-rolls-royce-dawn-white-on-red",
-    "car": "2017 Rolls Royce Dawn White on Red",
-    "terms": [
-      "3 mo"
-    ],
-    "down": {
-      "3 mo": 26900
-    },
-    "monthly": 6900,
-    "display": "From $26,900 down • $6,900/mo",
-    "location": "New York, NY, United States",
-    "images": [
-      "/images/cars/2017-rolls-royce-dawn/hero.png",
-      "/images/cars/2017-rolls-royce-dawn/2.png",
-      "/images/cars/2017-rolls-royce-dawn/3.png"
-    ]
-  },
-  {
     "slug": "2018-amg-gtc-competition",
     "car": "2018 AMG GTC Competition",
     "terms": [
@@ -85,21 +67,6 @@ export const inventory: InventoryItem[] = [
     "monthly": 5995,
     "display": "From $19,995 down • $5,995/mo",
     "location": "West Palm FL"
-  },
-  {
-    "slug": "2019-g63-brabus-kit",
-    "car": "2019 G63 Brabus Kit",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 34995,
-      "12 mo": 34995
-    },
-    "monthly": 3500,
-    "display": "From $34,995 down • $3,500/mo",
-    "location": "Atlanta, GA"
   },
   {
     "slug": "2019-lamborghini-urus-blue",
