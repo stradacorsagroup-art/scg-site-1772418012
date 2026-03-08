@@ -280,3 +280,15 @@ export const membershipCostsByCarKey: Record<string, MembershipCost> = {
     }
   }
 };
+
+export function getMembershipCostForCar(car: string): MembershipCost | undefined {
+  const key = normalizeCarKey(car);
+  if (membershipCostsByCarKey[key]) return membershipCostsByCarKey[key];
+
+  // Fallback: tolerate extra descriptors/colors in either dataset name.
+  for (const [k, v] of Object.entries(membershipCostsByCarKey)) {
+    if (k.includes(key) || key.includes(k)) return v;
+  }
+
+  return undefined;
+}

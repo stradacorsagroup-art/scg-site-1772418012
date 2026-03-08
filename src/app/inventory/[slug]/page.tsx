@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { VehicleGallery } from "@/components/vehicle-gallery";
 import { deposit, getInventoryBySlug, membershipFee } from "@/data/inventory";
-import { membershipCostsByCarKey, normalizeCarKey } from "@/data/membership-costs";
+import { getMembershipCostForCar } from "@/data/membership-costs";
 
 export default async function InventoryDetailPage({
   params,
@@ -19,7 +19,7 @@ export default async function InventoryDetailPage({
     return (order[a] ?? 99) - (order[b] ?? 99);
   });
 
-  const costs = membershipCostsByCarKey[normalizeCarKey(vehicle.car)];
+  const costs = getMembershipCostForCar(vehicle.car);
 
   const startupCosts = orderedTerms.map((term) => {
     const isThreeMo = term === "3 mo";
