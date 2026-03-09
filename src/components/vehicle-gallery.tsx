@@ -5,8 +5,25 @@ import { useMemo, useState } from "react";
 
 export function VehicleGallery({ car, images = [], video }: { car: string; images?: string[]; video?: string }) {
   const media = useMemo(() => {
-    const arr: Array<{ type: "image" | "video"; src: string }> = images.map((img) => ({ type: "image", src: img }));
-    if (video) arr.push({ type: "video", src: video }); // keep video at end
+    const seen = new Set<string>();
+    const arr: Array<{ type: "image" | "video"; src: string }> = [];
+
+    for (const img of images) {
+      const key = `image:${img}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        arr.push({ type: "image", src: img });
+      }
+    }
+
+    if (video) {
+      const key = `video:${video}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        arr.push({ type: "video", src: video }); // keep video at end
+      }
+    }
+
     return arr;
   }, [images, video]);
 
@@ -24,7 +41,7 @@ export function VehicleGallery({ car, images = [], video }: { car: string; image
           <video src={current.src} className="h-60 w-full object-contain bg-zinc-100 sm:h-[430px]" controls playsInline />
         ) : (
           <div className="relative h-60 bg-zinc-100 sm:h-[430px]">
-            <Image src={current.src} alt={car} fill className="object-contain" sizes="(max-width: 1024px) 100vw, 65vw" />
+            <Image src={current.src} alt={car} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 65vw" />
           </div>
         )}
       </div>
