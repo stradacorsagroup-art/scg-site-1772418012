@@ -74,7 +74,17 @@ export const inventory: InventoryItem[] = [
       "3 mo": 244900,
       "12 mo": 229900
     },
-    "mileage": "47,000"
+    "mileage": "47,000",
+    "images": [
+      "/images/cars/2020-rolls-royce-cullinan/hero.png",
+      "/images/cars/2020-rolls-royce-cullinan/2.png",
+      "/images/cars/2020-rolls-royce-cullinan/3.png",
+      "/images/cars/2020-rolls-royce-cullinan/4.png",
+      "/images/cars/2020-rolls-royce-cullinan/5.png",
+      "/images/cars/2020-rolls-royce-cullinan/6.png",
+      "/images/cars/2020-rolls-royce-cullinan/7.png"
+    ],
+    "video": "/videos/cars/2020-rolls-royce-cullinan/hero.mov"
   },
   {
     "slug": "2020-rolls-royce-cullinan-black-badge-slatv8c09lu200999",
@@ -98,7 +108,13 @@ export const inventory: InventoryItem[] = [
       "3 mo": 239900,
       "12 mo": 229900
     },
-    "mileage": "51,000"
+    "mileage": "51,000",
+    "images": [
+      "/images/cars/2020-rolls-royce-cullinan-black-badge/hero.png",
+      "/images/cars/2020-rolls-royce-cullinan-black-badge/2.png",
+      "/images/cars/2020-rolls-royce-cullinan-black-badge/3.png"
+    ],
+    "video": "/videos/cars/2020-rolls-royce-cullinan-black-badge/hero.mov"
   },
   {
     "slug": "2018-ferrari-488-spider-yellow",
@@ -109,7 +125,7 @@ export const inventory: InventoryItem[] = [
     ],
     "down": {
       "3 mo": 26900,
-      "12 mo": 26900
+      "12 mo": 49900
     },
     "monthly": 6900,
     "display": "From $26,900 down • $6,900/mo",
@@ -120,7 +136,7 @@ export const inventory: InventoryItem[] = [
     },
     "scgBuyoutByTerm": {
       "3 mo": 250000,
-      "12 mo": 250000
+      "12 mo": 235000
     },
     "mileage": "27,000",
     "images": [
@@ -149,7 +165,15 @@ export const inventory: InventoryItem[] = [
     "scgBuyoutByTerm": {
       "3 mo": 250000
     },
-    "mileage": "38,000"
+    "mileage": "38,000",
+    "images": [
+      "/images/cars/2023-lamborghini-urus-performante/hero.png",
+      "/images/cars/2023-lamborghini-urus-performante/2.png",
+      "/images/cars/2023-lamborghini-urus-performante/3.png",
+      "/images/cars/2023-lamborghini-urus-performante/4.png",
+      "/images/cars/2023-lamborghini-urus-performante/5.png",
+      "/images/cars/2023-lamborghini-urus-performante/6.png"
+    ]
   },
   {
     "slug": "2020-mclaren-720s-spyder-satin-black",

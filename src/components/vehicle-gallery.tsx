@@ -41,7 +41,7 @@ export function VehicleGallery({ car, images = [], video }: { car: string; image
           <video src={current.src} className="h-60 w-full object-contain bg-zinc-100 sm:h-[430px]" controls playsInline />
         ) : (
           <div className="relative h-60 bg-zinc-100 sm:h-[430px]">
-            <Image src={current.src} alt={car} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 65vw" />
+            <Image src={current.src} alt={car} fill className="object-contain" sizes="(max-width: 1024px) 100vw, 65vw" />
           </div>
         )}
       </div>

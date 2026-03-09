@@ -5,6 +5,66 @@ const ROOT = process.cwd();
 const INVENTORY_PATH = path.join(ROOT, "src/data/inventory.ts");
 const SOURCE_URL = "https://scg-command-center-site.vercel.app/data/costs-inventory.json";
 
+const CAR_MEDIA = {
+  "2018 ferrari 488 spider": {
+    images: [
+      "/images/cars/2018-ferrari-488-spider/hero.png",
+      "/images/cars/2018-ferrari-488-spider/2.png",
+      "/images/cars/2018-ferrari-488-spider/3.png",
+      "/images/cars/2018-ferrari-488-spider/4.png",
+      "/images/cars/2018-ferrari-488-spider/5.png",
+    ],
+  },
+  "2020 rolls-royce cullinan": {
+    images: [
+      "/images/cars/2020-rolls-royce-cullinan/hero.png",
+      "/images/cars/2020-rolls-royce-cullinan/2.png",
+      "/images/cars/2020-rolls-royce-cullinan/3.png",
+      "/images/cars/2020-rolls-royce-cullinan/4.png",
+      "/images/cars/2020-rolls-royce-cullinan/5.png",
+      "/images/cars/2020-rolls-royce-cullinan/6.png",
+      "/images/cars/2020-rolls-royce-cullinan/7.png",
+    ],
+    video: "/videos/cars/2020-rolls-royce-cullinan/hero.mov",
+  },
+  "2020 rolls-royce cullinan black badge": {
+    images: [
+      "/images/cars/2020-rolls-royce-cullinan-black-badge/hero.png",
+      "/images/cars/2020-rolls-royce-cullinan-black-badge/2.png",
+      "/images/cars/2020-rolls-royce-cullinan-black-badge/3.png",
+    ],
+    video: "/videos/cars/2020-rolls-royce-cullinan-black-badge/hero.mov",
+  },
+  "2021 mercedes-benz s580 black on peanut butter": {
+    images: [
+      "/images/cars/2021-mercedes-benz-s580/hero.png",
+      "/images/cars/2021-mercedes-benz-s580/2.png",
+      "/images/cars/2021-mercedes-benz-s580/3.png",
+    ],
+    video: "/videos/cars/2021-mercedes-benz-s580/hero.mov",
+  },
+  "2022 mercedes-benz s580": {
+    images: [
+      "/images/cars/2022-mercedes-benz-s580/hero.png",
+      "/images/cars/2022-mercedes-benz-s580/2.png",
+      "/images/cars/2022-mercedes-benz-s580/3.png",
+      "/images/cars/2022-mercedes-benz-s580/4.png",
+      "/images/cars/2022-mercedes-benz-s580/5.png",
+      "/images/cars/2022-mercedes-benz-s580/6.png",
+    ],
+  },
+  "2023 lamborghini urus performante": {
+    images: [
+      "/images/cars/2023-lamborghini-urus-performante/hero.png",
+      "/images/cars/2023-lamborghini-urus-performante/2.png",
+      "/images/cars/2023-lamborghini-urus-performante/3.png",
+      "/images/cars/2023-lamborghini-urus-performante/4.png",
+      "/images/cars/2023-lamborghini-urus-performante/5.png",
+      "/images/cars/2023-lamborghini-urus-performante/6.png",
+    ],
+  },
+};
+
 function slugify(value) {
   return value
     .toLowerCase()
@@ -145,11 +205,11 @@ async function main() {
   const file = await fs.readFile(INVENTORY_PATH, "utf8");
   const oldInventory = parseLocalInventoryFile(file);
 
-  const oldByKey = new Map();
+  const oldByCar = new Map();
   for (const item of oldInventory) {
-    const key = `${normalize(item.car)}|${normalize(item.location)}|${Number(item.monthly) || 0}`;
-    if (!oldByKey.has(key)) oldByKey.set(key, []);
-    oldByKey.get(key).push(item);
+    const key = normalize(item.car);
+    if (!oldByCar.has(key)) oldByCar.set(key, []);
+    oldByCar.get(key).push(item);
   }
 
   const res = await fetch(SOURCE_URL, { headers: { accept: "application/json" } });
@@ -159,9 +219,8 @@ async function main() {
 
   const usedSlugs = new Set();
   const nextInventory = sourceItems.map((src, idx) => {
-    const monthly = pickMonthly(src);
-    const lookupKey = `${normalize(src.car)}|${normalize(src.location)}|${monthly}`;
-    const candidates = oldByKey.get(lookupKey) || [];
+    const lookupKey = normalize(src.car);
+    const candidates = oldByCar.get(lookupKey) || [];
     const matched = candidates.shift();
 
     const baseSlug = matched?.slug || slugify(`${src.car}-${src.vin || idx + 1}`);
@@ -173,6 +232,10 @@ async function main() {
     if (matched?.video) item.video = matched.video;
     if (matched?.exterior) item.exterior = matched.exterior;
     if (matched?.interior) item.interior = matched.interior;
+
+    const mediaPreset = CAR_MEDIA[lookupKey];
+    if (!item.images?.length && mediaPreset?.images?.length) item.images = mediaPreset.images;
+    if (!item.video && mediaPreset?.video) item.video = mediaPreset.video;
 
     return item;
   });
