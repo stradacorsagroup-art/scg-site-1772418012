@@ -10,10 +10,7 @@ function formatPrice(value: number) {
   return `$${value.toLocaleString()}`;
 }
 
-type Term = "3 mo" | "6 mo" | "12 mo";
-
 export default function Home() {
-  const [activeTerm, setActiveTerm] = useState<Term | "all">("all");
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
 
   const brandOptions = useMemo(() => {
@@ -31,12 +28,9 @@ export default function Home() {
       const tokens = item.car.split(" ");
       const guessedBrand = /^\d{4}$/.test(tokens[0]) ? tokens[1] : tokens[0];
 
-      const matchTerm = activeTerm === "all" || item.terms.includes(activeTerm);
-      const matchBrand = selectedBrands.length === 0 || selectedBrands.includes(guessedBrand);
-
-      return matchTerm && matchBrand;
+      return selectedBrands.length === 0 || selectedBrands.includes(guessedBrand);
     });
-  }, [activeTerm, selectedBrands]);
+  }, [selectedBrands]);
 
   const toggleBrand = (brand: string) => {
     setSelectedBrands((prev) =>
@@ -64,28 +58,6 @@ export default function Home() {
       <section className="mx-auto max-w-[1380px] px-6 py-8 sm:px-10">
         <div className="mb-5">
           <OwnershipPills active="membership" />
-        </div>
-
-        <div className="mb-6 flex flex-wrap items-center gap-2">
-          <button
-            onClick={() => setActiveTerm("all")}
-            className={`border px-4 py-2 text-xs uppercase tracking-[0.08em] ${
-              activeTerm === "all" ? "border-black bg-black text-white" : "border-[#cfcfcf] bg-white text-black"
-            }`}
-          >
-            All Terms
-          </button>
-          {(["3 mo", "6 mo", "12 mo"] as const).map((term) => (
-            <button
-              key={term}
-              onClick={() => setActiveTerm(term)}
-              className={`border px-4 py-2 text-xs uppercase tracking-[0.08em] ${
-                activeTerm === term ? "border-black bg-black text-white" : "border-[#cfcfcf] bg-white text-black"
-              }`}
-            >
-              {term}
-            </button>
-          ))}
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[170px_minmax(0,1fr)]">
@@ -121,7 +93,7 @@ export default function Home() {
                     <div className="flex items-start justify-between border-b border-[#cfcfcf] px-3 py-2">
                       <div>
                         <p className="text-[13px] text-[#252525]">{item.car.split(" ")[0]} {item.car.split(" ")[1]}</p>
-                        <h4 className="text-[30px] font-medium uppercase leading-tight tracking-[0.01em] text-[#131313]">
+                        <h4 className="text-[20px] font-medium uppercase leading-tight tracking-[0.01em] text-[#131313]">
                           {item.car.split(" ").slice(2).join(" ")}
                         </h4>
                       </div>
