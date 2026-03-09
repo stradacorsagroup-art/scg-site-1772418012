@@ -244,36 +244,6 @@ export const inventory: InventoryItem[] = [
     "mileage": "36,000"
   },
   {
-    "slug": "2021-maybach-gls600-blackgold",
-    "car": "2021 Mercedes-Benz Maybach GLS 600",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 14900,
-      "12 mo": 24995
-    },
-    "monthly": 3700,
-    "display": "From $14,900 down • $3,700/mo",
-    "location": "New York, NY, United States",
-    "scgMonthlyByTerm": {
-      "3 mo": 3700
-    },
-    "scgBuyoutByTerm": {
-      "3 mo": 125000,
-      "12 mo": 116000
-    },
-    "mileage": "36,000",
-    "images": [
-      "/images/cars/2023-maybach-gls600-black-red/hero.png",
-      "/images/cars/2023-maybach-gls600-black-red/2.png",
-      "/images/cars/2023-maybach-gls600-black-red/3.png",
-      "/images/cars/2023-maybach-gls600-black-red/4.png",
-      "/images/cars/2023-maybach-gls600-black-red/5.png"
-    ]
-  },
-  {
     "slug": "2019-lamborghini-urus-awd-zpbua1zl6kla00922",
     "car": "2019 Lamborghini Urus AWD",
     "terms": [
@@ -330,23 +300,6 @@ export const inventory: InventoryItem[] = [
     "display": "Pricing on request",
     "location": "—",
     "mileage": "9,000"
-  },
-  {
-    "slug": "2026-jeep-wrangler-rubicon",
-    "car": "2026 Jeep Wrangler Rubicon",
-    "terms": [
-      "12 mo"
-    ],
-    "down": {
-      "12 mo": 7990
-    },
-    "monthly": 1995,
-    "display": "From $7,990 down • $1,995/mo",
-    "location": "ATL",
-    "scgMonthlyByTerm": {
-      "12 mo": 1995
-    },
-    "mileage": "630"
   },
   {
     "slug": "2023-maserati-mc20-18",
