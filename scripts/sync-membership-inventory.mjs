@@ -53,6 +53,15 @@ const CAR_MEDIA = {
       "/images/cars/2022-mercedes-benz-s580/6.png",
     ],
   },
+  "2022 rolls-royce ghost black badge": {
+    images: [
+      "/images/cars/ghost-black-badge/1.jpg",
+      "/images/cars/ghost-black-badge/2.jpg",
+      "/images/cars/ghost-black-badge/3.jpg",
+      "/images/cars/ghost-black-badge/a.jpg",
+      "/images/cars/ghost-black-badge/b.jpg",
+    ],
+  },
   "2023 lamborghini urus performante": {
     images: [
       "/images/cars/2023-lamborghini-urus-performante/hero.png",
@@ -234,8 +243,8 @@ async function main() {
     if (matched?.interior) item.interior = matched.interior;
 
     const mediaPreset = CAR_MEDIA[lookupKey];
-    if (!item.images?.length && mediaPreset?.images?.length) item.images = mediaPreset.images;
-    if (!item.video && mediaPreset?.video) item.video = mediaPreset.video;
+    if (mediaPreset?.images?.length) item.images = mediaPreset.images;
+    if (mediaPreset?.video) item.video = mediaPreset.video;
 
     return item;
   });

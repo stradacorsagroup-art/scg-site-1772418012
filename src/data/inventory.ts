@@ -41,14 +41,10 @@ export const inventory: InventoryItem[] = [
     "mileage": "61,000",
     "images": [
       "/images/cars/ghost-black-badge/1.jpg",
-      "/images/cars/ghost-black-badge/1.png",
       "/images/cars/ghost-black-badge/2.jpg",
-      "/images/cars/ghost-black-badge/2.png",
       "/images/cars/ghost-black-badge/3.jpg",
-      "/images/cars/ghost-black-badge/3.png",
       "/images/cars/ghost-black-badge/a.jpg",
-      "/images/cars/ghost-black-badge/b.jpg",
-      "/images/cars/ghost-black-badge/c.jpg"
+      "/images/cars/ghost-black-badge/b.jpg"
     ],
     "video": "/videos/cars/ghost-black-badge.mov"
   },
@@ -432,11 +428,15 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "35,000",
     "images": [
-      "/images/cars/2020-rolls-royce-cullinan-black-badge/hero.png",
-      "/images/cars/2020-rolls-royce-cullinan-black-badge/2.png",
-      "/images/cars/2020-rolls-royce-cullinan-black-badge/3.png"
+      "/images/cars/2020-rolls-royce-cullinan/hero.png",
+      "/images/cars/2020-rolls-royce-cullinan/2.png",
+      "/images/cars/2020-rolls-royce-cullinan/3.png",
+      "/images/cars/2020-rolls-royce-cullinan/4.png",
+      "/images/cars/2020-rolls-royce-cullinan/5.png",
+      "/images/cars/2020-rolls-royce-cullinan/6.png",
+      "/images/cars/2020-rolls-royce-cullinan/7.png"
     ],
-    "video": "/videos/cars/2020-rolls-royce-cullinan-black-badge/hero.mov"
+    "video": "/videos/cars/2020-rolls-royce-cullinan/hero.mov"
   },
   {
     "slug": "2024-rolls-royce-spectre-electric",

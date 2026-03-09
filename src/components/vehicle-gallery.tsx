@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { useMemo, useState } from "react";
 
-export function VehicleGallery({ car, images = [], video }: { car: string; images?: string[]; video?: string }) {
+export function VehicleGallery({ car, images = [] }: { car: string; images?: string[]; video?: string }) {
   const media = useMemo(() => {
     const seen = new Set<string>();
-    const arr: Array<{ type: "image" | "video"; src: string }> = [];
+    const arr: Array<{ type: "image"; src: string }> = [];
 
     for (const img of images) {
       const key = `image:${img}`;
@@ -16,16 +16,8 @@ export function VehicleGallery({ car, images = [], video }: { car: string; image
       }
     }
 
-    if (video) {
-      const key = `video:${video}`;
-      if (!seen.has(key)) {
-        seen.add(key);
-        arr.push({ type: "video", src: video }); // keep video at end
-      }
-    }
-
     return arr;
-  }, [images, video]);
+  }, [images]);
 
   const [active, setActive] = useState(0);
   const current = media[active];
@@ -37,13 +29,9 @@ export function VehicleGallery({ car, images = [], video }: { car: string; image
   return (
     <>
       <div className="mt-4 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
-        {current.type === "video" ? (
-          <video src={current.src} className="h-60 w-full object-contain bg-zinc-100 sm:h-[430px]" controls playsInline />
-        ) : (
-          <div className="relative h-60 bg-zinc-100 sm:h-[430px]">
-            <Image src={current.src} alt={car} fill className="object-contain" sizes="(max-width: 1024px) 100vw, 65vw" />
-          </div>
-        )}
+        <div className="relative h-60 bg-zinc-100 sm:h-[430px]">
+          <Image src={current.src} alt={car} fill className="object-contain" sizes="(max-width: 1024px) 100vw, 65vw" />
+        </div>
       </div>
 
       {media.length > 1 && (
@@ -56,11 +44,7 @@ export function VehicleGallery({ car, images = [], video }: { car: string; image
                 className={`relative h-16 w-24 overflow-hidden rounded-lg border bg-white sm:h-[72px] sm:w-28 ${idx === active ? "border-zinc-900 ring-1 ring-zinc-900/10" : "border-zinc-200"}`}
                 aria-label={`Show media ${idx + 1}`}
               >
-                {m.type === "video" ? (
-                  <div className="flex h-full w-full items-center justify-center bg-zinc-900 text-xs font-semibold text-white">VIDEO</div>
-                ) : (
-                  <Image src={m.src} alt={car} fill className="object-cover" sizes="120px" />
-                )}
+                <Image src={m.src} alt={car} fill className="object-cover" sizes="120px" />
               </button>
             ))}
           </div>
