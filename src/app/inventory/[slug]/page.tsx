@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Script from "next/script";
 import { notFound } from "next/navigation";
 import { VehicleGallery } from "@/components/vehicle-gallery";
 import { deposit, getInventoryBySlug, membershipFee } from "@/data/inventory";
@@ -50,9 +49,7 @@ export default async function InventoryDetailPage({
   });
 
   return (
-    <>
-      <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />
-      <main className="min-h-screen bg-[#f6f7f9] text-zinc-900">
+    <main className="min-h-screen bg-[#f6f7f9] text-zinc-900">
       <section className="mx-auto grid max-w-7xl grid-cols-1 gap-7 px-4 py-7 sm:gap-9 sm:px-6 sm:py-11 lg:grid-cols-[1.5fr_1fr]">
         <div>
           <Link href="/" className="inline-flex text-sm text-zinc-600 hover:text-zinc-900">
@@ -108,23 +105,17 @@ export default async function InventoryDetailPage({
             <p className="text-xl font-semibold">${deposit.toLocaleString()}</p>
           </div>
 
-          <button
-            data-tf-popup="01KKA3DY6M02S2NW3H707ES59Y"
-            data-tf-opacity="100"
-            data-tf-size="80"
-            data-tf-iframe-props="title=SCG Vehicle Reservation"
-            data-tf-transitive-search-params
-            data-tf-medium="snippet"
-            className="mt-5 h-12 w-full rounded-xl bg-zinc-900 px-4 text-sm font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.14)] transition hover:-translate-y-0.5 hover:bg-zinc-800"
+          <Link
+            href={`/apply?car=${encodeURIComponent(vehicle.car)}`}
+            className="mt-5 inline-flex h-12 w-full items-center justify-center rounded-xl bg-zinc-900 px-4 text-sm font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.14)] transition hover:-translate-y-0.5 hover:bg-zinc-800"
           >
             Reserve This Vehicle
-          </button>
+          </Link>
           <button className="mt-2 h-12 w-full rounded-xl border border-zinc-300 bg-white px-4 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-50">
             Speak to SCG
           </button>
         </aside>
       </section>
-      </main>
-    </>
+    </main>
   );
 }
