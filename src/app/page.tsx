@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { OwnershipPills } from "@/components/ownership-pills";
 import { inventory } from "@/data/inventory";
 
 function formatPrice(value: number) {
@@ -61,6 +62,10 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-[1380px] px-6 py-8 sm:px-10">
+        <div className="mb-5">
+          <OwnershipPills active="membership" />
+        </div>
+
         <div className="mb-6 flex flex-wrap items-center gap-2">
           <button
             onClick={() => setActiveTerm("all")}
