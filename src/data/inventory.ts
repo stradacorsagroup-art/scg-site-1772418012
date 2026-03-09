@@ -49,40 +49,6 @@ export const inventory: InventoryItem[] = [
     "video": "/videos/cars/ghost-black-badge.mov"
   },
   {
-    "slug": "2020-rolls-royce-cullinan-slatv4c0xlu201507",
-    "car": "2020 Rolls-Royce Cullinan",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 26900,
-      "12 mo": 49900
-    },
-    "monthly": 6900,
-    "display": "From $26,900 down • $6,900/mo",
-    "location": "New York, NY, United States",
-    "scgMonthlyByTerm": {
-      "3 mo": 6900,
-      "12 mo": 6900
-    },
-    "scgBuyoutByTerm": {
-      "3 mo": 244900,
-      "12 mo": 229900
-    },
-    "mileage": "47,000",
-    "images": [
-      "/images/cars/2020-rolls-royce-cullinan/hero.png",
-      "/images/cars/2020-rolls-royce-cullinan/2.png",
-      "/images/cars/2020-rolls-royce-cullinan/3.png",
-      "/images/cars/2020-rolls-royce-cullinan/4.png",
-      "/images/cars/2020-rolls-royce-cullinan/5.png",
-      "/images/cars/2020-rolls-royce-cullinan/6.png",
-      "/images/cars/2020-rolls-royce-cullinan/7.png"
-    ],
-    "video": "/videos/cars/2020-rolls-royce-cullinan/hero.mov"
-  },
-  {
     "slug": "2020-rolls-royce-cullinan-black-badge-slatv8c09lu200999",
     "car": "2020 Rolls-Royce Cullinan Black Badge",
     "terms": [
@@ -407,56 +373,6 @@ export const inventory: InventoryItem[] = [
       "12 mo": 1995
     },
     "mileage": "630"
-  },
-  {
-    "slug": "2020-rolls-royce-cullinan",
-    "car": "2020 Rolls-Royce Cullinan",
-    "terms": [
-      "12 mo"
-    ],
-    "down": {
-      "12 mo": 31900
-    },
-    "monthly": 4900,
-    "display": "From $31,900 down • $4,900/mo",
-    "location": "Miami, FL",
-    "scgMonthlyByTerm": {
-      "12 mo": 4900
-    },
-    "scgBuyoutByTerm": {
-      "12 mo": 229900
-    },
-    "mileage": "35,000",
-    "images": [
-      "/images/cars/2020-rolls-royce-cullinan/hero.png",
-      "/images/cars/2020-rolls-royce-cullinan/2.png",
-      "/images/cars/2020-rolls-royce-cullinan/3.png",
-      "/images/cars/2020-rolls-royce-cullinan/4.png",
-      "/images/cars/2020-rolls-royce-cullinan/5.png",
-      "/images/cars/2020-rolls-royce-cullinan/6.png",
-      "/images/cars/2020-rolls-royce-cullinan/7.png"
-    ],
-    "video": "/videos/cars/2020-rolls-royce-cullinan/hero.mov"
-  },
-  {
-    "slug": "2024-rolls-royce-spectre-electric",
-    "car": "2024 Rolls-Royce Spectre Electric",
-    "terms": [
-      "12 mo"
-    ],
-    "down": {
-      "12 mo": 44900
-    },
-    "monthly": 6400,
-    "display": "From $44,900 down • $6,400/mo",
-    "location": "Miami, FL",
-    "scgMonthlyByTerm": {
-      "12 mo": 6400
-    },
-    "scgBuyoutByTerm": {
-      "12 mo": 421900
-    },
-    "mileage": "1,096"
   },
   {
     "slug": "2023-maserati-mc20-18",
