@@ -40,18 +40,11 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#f4f4f4] text-[#111]">
-      <section className="border-b border-[#d9d9d9] bg-white">
-        <div className="mx-auto max-w-[1380px] px-6 py-6 sm:px-10">
-          <h1 className="text-[42px] font-light leading-none tracking-[-0.02em]">Inventory</h1>
-        </div>
-      </section>
-
-      <section className="border-b border-[#1f1f1f] bg-black text-white">
-        <div className="mx-auto grid max-w-[1380px] grid-cols-1 gap-2 px-6 py-2 text-[12px] sm:grid-cols-2 sm:px-10 lg:grid-cols-4 lg:gap-4">
-          <span>No Long Term commitment</span>
-          <span>Upgrade whenever</span>
-          <span>Delivery included within 25-mile radius</span>
-          <span>Eliminate hassles with maintenance or resell</span>
+      <section className="border-b border-zinc-200/80 bg-gradient-to-b from-white to-[#f6f7f9]">
+        <div className="mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py-12 lg:py-14">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">The Exotic Marketplace</p>
+          <h1 className="mt-3 max-w-4xl text-3xl font-semibold tracking-[-0.02em] text-zinc-900 sm:text-5xl">Luxury Vehicle Ownership, Redefined for Discerning Drivers.</h1>
+          <p className="mt-4 max-w-2xl text-sm text-zinc-600 sm:text-base">Curated inventory. Transparent terms. Zero guesswork. Browse live inventory—with flexible ownership built for a lifestyle that moves with you.</p>
         </div>
       </section>
 
