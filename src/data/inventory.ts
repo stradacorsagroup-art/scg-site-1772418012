@@ -475,26 +475,6 @@ export const inventory: InventoryItem[] = [
     "mileage": "19,780"
   },
   {
-    "slug": "2022-bentley-gt-20",
-    "car": "2022 Bentley GT",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 17995,
-      "12 mo": 17995
-    },
-    "monthly": 3200,
-    "display": "From $17,995 down • $3,200/mo",
-    "location": "—",
-    "scgMonthlyByTerm": {
-      "3 mo": 3200,
-      "12 mo": 3500
-    },
-    "mileage": "9,000"
-  },
-  {
     "slug": "2018-mercedes-amg-gt-c-21",
     "car": "2018 Mercedes-AMG GT C",
     "terms": [
