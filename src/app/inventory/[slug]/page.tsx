@@ -105,16 +105,29 @@ export default async function InventoryDetailPage({
             <p className="text-xl font-semibold">${deposit.toLocaleString()}</p>
           </div>
 
-          <Link
-            href={`/apply?car=${encodeURIComponent(vehicle.car)}`}
+          <a
+            href="#reserve-form"
             className="mt-5 inline-flex h-12 w-full items-center justify-center rounded-xl bg-zinc-900 px-4 text-sm font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.14)] transition hover:-translate-y-0.5 hover:bg-zinc-800"
           >
             Reserve This Vehicle
-          </Link>
+          </a>
           <button className="mt-2 h-12 w-full rounded-xl border border-zinc-300 bg-white px-4 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-50">
             Speak to SCG
           </button>
         </aside>
+      </section>
+
+      <section id="reserve-form" className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 sm:pb-14">
+        <div className="rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm sm:p-4">
+          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-zinc-500">Reserve This Vehicle</p>
+          <iframe
+            title="SCG Vehicle Reservation"
+            src={`https://form.typeform.com/to/01KKA3DY6M02S2NW3H707ES59Y?typeform-medium=embed-snippet&car=${encodeURIComponent(vehicle.car)}`}
+            className="h-[640px] w-full rounded-xl border border-zinc-200"
+            loading="lazy"
+            allow="camera; microphone; autoplay; encrypted-media;"
+          />
+        </div>
       </section>
     </main>
   );
