@@ -244,32 +244,6 @@ export const inventory: InventoryItem[] = [
     "mileage": "36,000"
   },
   {
-    "slug": "2020-mercedes-g63-satin-black",
-    "car": "2020 Mercedes-Benz G-Class AMG G 63",
-    "terms": [
-      "12 mo"
-    ],
-    "down": {
-      "12 mo": 19900
-    },
-    "monthly": 3400,
-    "display": "From $19,900 down • $3,400/mo",
-    "location": "New York, NY, United States",
-    "scgMonthlyByTerm": {
-      "12 mo": 3400
-    },
-    "scgBuyoutByTerm": {
-      "12 mo": 107000
-    },
-    "mileage": "56,000",
-    "images": [
-      "/images/cars/2021-mercedes-g63/hero.png",
-      "/images/cars/2021-mercedes-g63/2.png",
-      "/images/cars/2021-mercedes-g63/3.png",
-      "/images/cars/2021-mercedes-g63/4.png"
-    ]
-  },
-  {
     "slug": "2021-maybach-gls600-blackgold",
     "car": "2021 Mercedes-Benz Maybach GLS 600",
     "terms": [
