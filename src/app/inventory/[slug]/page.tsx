@@ -81,15 +81,15 @@ export default async function InventoryDetailPage({
                   <span>${scgMonthly.toLocaleString()}/mo</span>
                 </div>
                 <div className="flex items-center justify-between border-b border-zinc-100 pb-2">
-                  <span>{term} SCG Down</span>
+                  <span>{term} Down</span>
                   <strong>${scgDown.toLocaleString()}</strong>
                 </div>
                 <div className="mt-2 flex items-center justify-between border-b border-zinc-100 pb-2">
-                  <span>{term} SCG Monthly</span>
+                  <span>{term} Monthly</span>
                   <strong>${scgMonthly.toLocaleString()}</strong>
                 </div>
                 <div className="mt-2 flex items-center justify-between border-b border-zinc-100 pb-2">
-                  <span>{term} SCG Buyout</span>
+                  <span>{term} Buyout</span>
                   <strong>{typeof scgBuyout === "number" ? `$${scgBuyout.toLocaleString()}` : "On request"}</strong>
                 </div>
                 <div className="mt-2 flex items-center justify-between border-b border-zinc-100 pb-2">
