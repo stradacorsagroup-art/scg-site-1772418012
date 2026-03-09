@@ -9,9 +9,21 @@ function formatPrice(value: number) {
   return `$${value.toLocaleString()}`;
 }
 
+function normalizeBrand(value: string) {
+  return value.trim().toUpperCase();
+}
+
+function displayBrand(value: string) {
+  return value
+    .toLowerCase()
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join("-");
+}
+
 function getPlaceholderImage(carName: string) {
-  const query = encodeURIComponent(`${carName} luxury car exterior`);
-  return `https://source.unsplash.com/1200x800/?${query}`;
+  const text = encodeURIComponent(carName);
+  return `https://placehold.co/1200x800/e8e8e8/333333?text=${text}`;
 }
 
 export default function Home() {
@@ -22,7 +34,7 @@ export default function Home() {
     inventory.forEach((item) => {
       const tokens = item.car.split(" ");
       const guess = /^\d{4}$/.test(tokens[0]) ? tokens[1] : tokens[0];
-      if (guess) set.add(guess);
+      if (guess) set.add(normalizeBrand(guess));
     });
     return Array.from(set).sort((a, b) => a.localeCompare(b));
   }, []);
@@ -31,8 +43,9 @@ export default function Home() {
     return inventory.filter((item) => {
       const tokens = item.car.split(" ");
       const guessedBrand = /^\d{4}$/.test(tokens[0]) ? tokens[1] : tokens[0];
+      const normalized = normalizeBrand(guessedBrand);
 
-      return selectedBrands.length === 0 || selectedBrands.includes(guessedBrand);
+      return selectedBrands.length === 0 || selectedBrands.includes(normalized);
     });
   }, [selectedBrands]);
 
@@ -69,7 +82,7 @@ export default function Home() {
                     onChange={() => toggleBrand(brand)}
                     className="h-4 w-4 rounded-none border-[#bcbcbc]"
                   />
-                  <span>{brand}</span>
+                  <span>{displayBrand(brand)}</span>
                 </label>
               ))}
             </div>
@@ -79,7 +92,7 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
               {filtered.map((item) => (
                 <Link
-                  key={item.car}
+                  key={item.slug}
                   href={`/inventory/${item.slug}`}
                   className="block border border-[#8f8f8f] bg-white transition hover:shadow-[0_8px_18px_rgba(0,0,0,0.08)]"
                 >
