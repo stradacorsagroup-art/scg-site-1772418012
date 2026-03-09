@@ -11,6 +11,7 @@ export type InventoryItem = {
   mileage?: string;
   exterior?: string;
   interior?: string;
+  notes?: string;
   images?: string[];
   video?: string;
 };

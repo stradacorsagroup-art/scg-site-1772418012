@@ -59,12 +59,15 @@ export default async function InventoryDetailPage({
 
           <VehicleGallery car={vehicle.car} images={vehicle.images} video={vehicle.video} />
 
-          <h1 className="mt-6 text-2xl font-semibold tracking-[-0.02em] sm:text-[2.45rem]">{vehicle.car}</h1>
-
+          <div className="mt-4 rounded-xl border border-zinc-200 bg-white p-4 text-sm">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-500">Notes</p>
+            <p className="mt-2 text-zinc-700">{vehicle.notes || "—"}</p>
+          </div>
         </div>
 
         <aside className="h-fit rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm sm:p-5 lg:sticky lg:top-6">
-          <p className="text-sm text-zinc-500">Subscription Price</p>
+          <h1 className="text-2xl font-semibold tracking-[-0.02em] sm:text-[2.2rem]">{vehicle.car}</h1>
+          <p className="mt-4 text-sm text-zinc-500">Subscription Price</p>
           <p className="mt-1 text-3xl font-semibold text-zinc-900">${vehicle.monthly.toLocaleString()}/mo</p>
 
           <h2 className="mt-5 text-lg font-semibold">Due at Signing</h2>

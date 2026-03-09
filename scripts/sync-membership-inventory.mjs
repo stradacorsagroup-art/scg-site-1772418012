@@ -192,6 +192,10 @@ function buildItem(source, fallbackSlug) {
     location: source.location || "",
   };
 
+  if (source?.notes && String(source.notes).trim() && String(source.notes).trim() !== "—") {
+    out.notes = String(source.notes).trim();
+  }
+
   if (Object.keys(scgMonthlyByTerm).length) out.scgMonthlyByTerm = scgMonthlyByTerm;
   if (Object.keys(scgBuyoutByTerm).length) out.scgBuyoutByTerm = scgBuyoutByTerm;
   if (source?.miles) out.mileage = String(source.miles);
@@ -262,6 +266,7 @@ async function main() {
   mileage?: string;
   exterior?: string;
   interior?: string;
+  notes?: string;
   images?: string[];
   video?: string;
 };
