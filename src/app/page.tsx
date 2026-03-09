@@ -10,7 +10,9 @@ function formatPrice(value: number) {
 }
 
 function normalizeBrand(value: string) {
-  return value.trim().toUpperCase();
+  const normalized = value.trim().toUpperCase();
+  if (normalized === "MERCEDES-AMG") return "MERCEDES-BENZ";
+  return normalized;
 }
 
 function displayBrand(value: string) {
