@@ -100,12 +100,9 @@ export default function Home() {
                 >
                   <article>
                     <div className="flex items-start justify-between border-b border-[#cfcfcf] px-3 py-2">
-                      <div>
-                        <p className="text-[13px] text-[#252525]">{item.car.split(" ")[0]} {item.car.split(" ")[1]}</p>
-                        <h4 className="text-[20px] font-medium uppercase leading-tight tracking-[0.01em] text-[#131313]">
-                          {item.car.split(" ").slice(2).join(" ")}
-                        </h4>
-                      </div>
+                      <h4 className="pr-3 text-[20px] font-medium leading-tight tracking-[0.01em] text-[#131313]">
+                        {item.car}
+                      </h4>
                       <span className="text-xl leading-none text-[#555]">→</span>
                     </div>
 
