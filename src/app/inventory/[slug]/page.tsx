@@ -112,9 +112,7 @@ export default async function InventoryDetailPage({
           >
             Reserve This Vehicle
           </a>
-          <button className="mt-2 h-12 w-full rounded-xl border border-zinc-300 bg-white px-4 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-50">
-            Speak to SCG
-          </button>
+
         </aside>
       </section>
 
