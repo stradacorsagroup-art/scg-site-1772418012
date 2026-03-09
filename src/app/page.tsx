@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { OwnershipPills } from "@/components/ownership-pills";
@@ -8,6 +7,11 @@ import { inventory } from "@/data/inventory";
 
 function formatPrice(value: number) {
   return `$${value.toLocaleString()}`;
+}
+
+function getPlaceholderImage(carName: string) {
+  const query = encodeURIComponent(`${carName} luxury car exterior`);
+  return `https://source.unsplash.com/1200x800/?${query}`;
 }
 
 export default function Home() {
@@ -72,10 +76,7 @@ export default function Home() {
           </aside>
 
           <div>
-            <h3 className="font-serif text-[52px] leading-[1.03] tracking-[0.01em] text-[#121212]">Your Perfect Car Awaits</h3>
-            <p className="mt-2 text-[30px] text-[#2d2d2d]">Browse our curated selection of luxury vehicles ready for immediate subscription</p>
-
-            <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
               {filtered.map((item) => (
                 <Link
                   key={item.car}
@@ -94,11 +95,13 @@ export default function Home() {
                     </div>
 
                     <div className="relative h-[170px] border-b border-[#cfcfcf] bg-[#e8e8e8]">
-                      {item.images?.[0] ? (
-                        <Image src={item.images[0]} alt={item.car} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
-                      ) : (
-                        <div className="flex h-full items-center justify-center text-xs uppercase text-[#666]">Media coming soon</div>
-                      )}
+                      <img
+                        src={item.images?.[0] || getPlaceholderImage(item.car)}
+                        alt={item.car}
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                      />
                     </div>
 
                     <div className="flex items-center justify-between px-3 py-2">
