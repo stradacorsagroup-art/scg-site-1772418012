@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import { notFound } from "next/navigation";
 import { VehicleGallery } from "@/components/vehicle-gallery";
 import { deposit, getInventoryBySlug, membershipFee } from "@/data/inventory";
@@ -120,13 +121,8 @@ export default async function InventoryDetailPage({
       <section id="reserve-form" className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 sm:pb-14">
         <div className="rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm sm:p-4">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-zinc-500">Reserve This Vehicle</p>
-          <iframe
-            title="SCG Vehicle Reservation"
-            src={`https://form.typeform.com/to/01KKA3DY6M02S2NW3H707ES59Y?typeform-medium=embed-snippet&car=${encodeURIComponent(vehicle.car)}`}
-            className="h-[640px] w-full rounded-xl border border-zinc-200"
-            loading="lazy"
-            allow="camera; microphone; autoplay; encrypted-media;"
-          />
+          <div data-tf-live="01KKA3DY6M02S2NW3H707ES59Y" />
+          <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />
         </div>
       </section>
     </main>
