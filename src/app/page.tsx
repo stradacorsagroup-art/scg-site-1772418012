@@ -28,6 +28,18 @@ function getPlaceholderImage(carName: string) {
   return `https://placehold.co/1200x800/e8e8e8/333333?text=${text}`;
 }
 
+function splitCardTitle(car: string) {
+  const tokens = car.trim().split(/\s+/);
+  const year = /^\d{4}$/.test(tokens[0]) ? tokens[0] : "";
+  const brand = year ? (tokens[1] || "") : (tokens[0] || "");
+  const model = year ? tokens.slice(2).join(" ") : tokens.slice(1).join(" ");
+
+  return {
+    top: `${brand} ${year}`.trim(),
+    model: (model || car).toUpperCase(),
+  };
+}
+
 export default function Home() {
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
 
@@ -100,9 +112,12 @@ export default function Home() {
                 >
                   <article>
                     <div className="flex items-start justify-between border-b border-[#cfcfcf] px-3 py-2">
-                      <h4 className="pr-3 text-[20px] font-medium leading-tight tracking-[0.01em] text-[#131313]">
-                        {item.car}
-                      </h4>
+                      <div className="pr-3">
+                        <p className="text-[13px] leading-tight text-[#252525]">{splitCardTitle(item.car).top}</p>
+                        <h4 className="text-[18px] font-medium uppercase leading-tight tracking-[0.01em] text-[#131313]">
+                          {splitCardTitle(item.car).model}
+                        </h4>
+                      </div>
                       <span className="text-xl leading-none text-[#555]">→</span>
                     </div>
 
