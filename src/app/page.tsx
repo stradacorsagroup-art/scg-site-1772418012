@@ -111,10 +111,10 @@ export default function Home() {
                   className="block border border-[#8f8f8f] bg-white transition hover:shadow-[0_8px_18px_rgba(0,0,0,0.08)]"
                 >
                   <article>
-                    <div className="flex items-start justify-between border-b border-[#cfcfcf] px-3 py-2">
+                    <div className="flex h-[86px] items-start justify-between border-b border-[#cfcfcf] px-3 py-2">
                       <div className="pr-3">
                         <p className="text-[13px] leading-tight text-[#252525]">{splitCardTitle(item.car).top}</p>
-                        <h4 className="text-[18px] font-medium uppercase leading-tight tracking-[0.01em] text-[#131313]">
+                        <h4 className="h-[44px] overflow-hidden text-[18px] font-medium uppercase leading-tight tracking-[0.01em] text-[#131313]">
                           {splitCardTitle(item.car).model}
                         </h4>
                       </div>
