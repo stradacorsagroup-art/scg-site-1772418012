@@ -1,5 +1,6 @@
 "use client";
 
+import Script from "next/script";
 import { useState } from "react";
 
 export function ReserveModalButton({ car }: { car: string }) {
@@ -25,13 +26,11 @@ export function ReserveModalButton({ car }: { car: string }) {
               ×
             </button>
 
-            <iframe
-              title="SCG Vehicle Reservation"
-              src={`https://form.typeform.com/to/01KKA3DY6M02S2NW3H707ES59Y?typeform-medium=embed-snippet&car=${encodeURIComponent(car)}`}
-              className="h-full w-full"
-              loading="lazy"
-              allow="camera; microphone; autoplay; encrypted-media;"
-            />
+            <div className="h-full w-full overflow-auto p-3 sm:p-4">
+              <p className="mb-2 text-xs text-zinc-500">Reserve request for: {car}</p>
+              <div data-tf-live="01KKA3DY6M02S2NW3H707ES59Y" />
+              <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />
+            </div>
           </div>
         </div>
       )}
