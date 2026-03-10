@@ -1,10 +1,52 @@
 "use client";
 
-import Script from "next/script";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+declare global {
+  interface Window {
+    tf?: {
+      load?: () => void;
+    };
+  }
+}
+
+const TYPEFORM_EMBED_SRC = "https://embed.typeform.com/next/embed.js";
 
 export function ReserveModalButton({ car }: { car: string }) {
   const [open, setOpen] = useState(false);
+  const embedRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const loadTypeform = () => {
+      window.tf?.load?.();
+    };
+
+    if (window.tf?.load) {
+      loadTypeform();
+      return;
+    }
+
+    const existingScript = document.querySelector<HTMLScriptElement>(
+      `script[src="${TYPEFORM_EMBED_SRC}"]`,
+    );
+
+    if (existingScript) {
+      existingScript.addEventListener("load", loadTypeform, { once: true });
+      return () => existingScript.removeEventListener("load", loadTypeform);
+    }
+
+    const script = document.createElement("script");
+    script.src = TYPEFORM_EMBED_SRC;
+    script.async = true;
+    script.addEventListener("load", loadTypeform, { once: true });
+    document.body.appendChild(script);
+
+    return () => script.removeEventListener("load", loadTypeform);
+  }, [open, car]);
 
   return (
     <>
@@ -28,8 +70,7 @@ export function ReserveModalButton({ car }: { car: string }) {
 
             <div className="h-full w-full overflow-auto p-3 sm:p-4">
               <p className="mb-2 text-xs text-zinc-500">Reserve request for: {car}</p>
-              <div data-tf-live="01KKA3DY6M02S2NW3H707ES59Y" />
-              <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />
+              <div ref={embedRef} key={car} data-tf-live="01KKA3DY6M02S2NW3H707ES59Y" />
             </div>
           </div>
         </div>
