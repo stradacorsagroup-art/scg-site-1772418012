@@ -267,17 +267,7 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "40,000"
   },
-  {
-    "slug": "2024-bmw-xm-14",
-    "car": "2024 BMW XM",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
-    "location": "—",
-    "notes": "$165k sticker • 6 Month ONE PAY Lease: $17,995 (no monthly payments) • 12 Month ONE PAY Lease: $33,995 (no monthly payments)",
-    "mileage": "9,000"
-  },
+
   {
     "slug": "2023-maserati-mc20-18",
     "car": "2023 Maserati MC20",
