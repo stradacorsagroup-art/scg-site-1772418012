@@ -126,6 +126,9 @@ export default function Home() {
                         src={item.images?.[0] || getPlaceholderImage(item.car)}
                         alt={item.car}
                         className="h-full w-full object-cover"
+                        style={{
+                          objectPosition: item.car === "2020 Rolls-Royce Cullinan Black Badge" ? "center 42%" : "center",
+                        }}
                         loading="lazy"
                         referrerPolicy="no-referrer"
                       />
