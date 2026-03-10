@@ -158,8 +158,8 @@ export const inventory: InventoryItem[] = [
     "mileage": "23,000"
   },
   {
-    "slug": "2021-mercedes-benz-s580-black-on-peanut-butter",
-    "car": "2021 Mercedes-Benz S580 Black on Peanut Butter",
+    "slug": "2021-mercedes-benz-s580-faybach-w1kg7gbxma052327",
+    "car": "2021 Mercedes-Benz S580 'FAYBACH",
     "terms": [
       "3 mo",
       "12 mo"
@@ -179,13 +179,7 @@ export const inventory: InventoryItem[] = [
       "3 mo": 65000,
       "12 mo": 65000
     },
-    "mileage": "65,000",
-    "images": [
-      "/images/cars/2021-mercedes-benz-s580/hero.png",
-      "/images/cars/2021-mercedes-benz-s580/2.png",
-      "/images/cars/2021-mercedes-benz-s580/3.png"
-    ],
-    "video": "/videos/cars/2021-mercedes-benz-s580/hero.mov"
+    "mileage": "65,000"
   },
   {
     "slug": "2022-mercedes-benz-s580",
@@ -220,8 +214,8 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "2019-lamborghini-urus-awd-zpbua1zl6kla00922",
-    "car": "2019 Lamborghini Urus AWD",
+    "slug": "lamborghini-urus-blue-zpbua1zl6kla00922",
+    "car": "LAMBORGHINI URUS BLUE",
     "terms": [
       "3 mo",
       "12 mo"
@@ -244,8 +238,8 @@ export const inventory: InventoryItem[] = [
     "mileage": "111,000"
   },
   {
-    "slug": "2019-lamborghini-urus-awd-zpbua1zl5kla01124",
-    "car": "2019 Lamborghini Urus AWD",
+    "slug": "lamborghini-urus-white-zpbua1zl5kla01124",
+    "car": "LAMBORGHINI URUS WHITE",
     "terms": [
       "3 mo",
       "12 mo"
@@ -267,7 +261,6 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "40,000"
   },
-
   {
     "slug": "2023-maserati-mc20-18",
     "car": "2023 Maserati MC20",
@@ -372,6 +365,56 @@ export const inventory: InventoryItem[] = [
       "12 mo": 9000
     },
     "mileage": "13,xxx"
+  },
+  {
+    "slug": "mercedes-g63-satin-black-15",
+    "car": "MERCEDES G63 SATIN BLACK",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—"
+  },
+  {
+    "slug": "mercedes-g63-satin-white-16",
+    "car": "MERCEDES G63 SATIN WHITE",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—"
+  },
+  {
+    "slug": "maybach-gls600-blackred-17",
+    "car": "MAYBACH GLS600 BLACK/RED",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—"
+  },
+  {
+    "slug": "mercedes-s580-faybach-18",
+    "car": "MERCEDES S580 'FAYBACH",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—"
+  },
+  {
+    "slug": "maybach-gls600-blackgold-19",
+    "car": "MAYBACH GLS600 BLACK/GOLD",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—"
   }
 ];
 
