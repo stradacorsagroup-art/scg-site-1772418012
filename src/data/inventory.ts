@@ -397,16 +397,6 @@ export const inventory: InventoryItem[] = [
     "mileage": "—"
   },
   {
-    "slug": "mercedes-s580-faybach-18",
-    "car": "MERCEDES S580 'FAYBACH",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
-    "location": "—",
-    "mileage": "—"
-  },
-  {
     "slug": "maybach-gls600-blackgold-19",
     "car": "MAYBACH GLS600 BLACK/GOLD",
     "terms": [],
