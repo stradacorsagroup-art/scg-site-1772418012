@@ -219,30 +219,7 @@ export const inventory: InventoryItem[] = [
       "/images/cars/2022-mercedes-benz-s580/6.png"
     ]
   },
-  {
-    "slug": "2021-mercedes-benz-g-class-amg-g-63-w1nyc7hj3mx403105",
-    "car": "2021 Mercedes-Benz G-Class AMG G 63",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 19900,
-      "12 mo": 29900
-    },
-    "monthly": 4495,
-    "display": "From $19,900 down • $4,495/mo",
-    "location": "—",
-    "scgMonthlyByTerm": {
-      "3 mo": 4495,
-      "12 mo": 4495
-    },
-    "scgBuyoutByTerm": {
-      "3 mo": 170000,
-      "12 mo": 160000
-    },
-    "mileage": "36,000"
-  },
+
   {
     "slug": "2019-lamborghini-urus-awd-zpbua1zl6kla00922",
     "car": "2019 Lamborghini Urus AWD",
