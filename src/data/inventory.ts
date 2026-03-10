@@ -42,11 +42,9 @@ export const inventory: InventoryItem[] = [
     "mileage": "61,000",
     "images": [
       "/images/cars/ghost-black-badge/hero.jpg",
-      "/images/cars/ghost-black-badge/1.jpg",
-      "/images/cars/ghost-black-badge/2.jpg",
-      "/images/cars/ghost-black-badge/3.jpg",
       "/images/cars/ghost-black-badge/a.jpg",
-      "/images/cars/ghost-black-badge/b.jpg"
+      "/images/cars/ghost-black-badge/b.jpg",
+      "/images/cars/ghost-black-badge/c.jpg"
     ],
     "video": "/videos/cars/ghost-black-badge.mov"
   },

@@ -56,11 +56,9 @@ const CAR_MEDIA = {
   "2022 rolls-royce ghost black badge": {
     images: [
       "/images/cars/ghost-black-badge/hero.jpg",
-      "/images/cars/ghost-black-badge/1.jpg",
-      "/images/cars/ghost-black-badge/2.jpg",
-      "/images/cars/ghost-black-badge/3.jpg",
       "/images/cars/ghost-black-badge/a.jpg",
       "/images/cars/ghost-black-badge/b.jpg",
+      "/images/cars/ghost-black-badge/c.jpg",
     ],
   },
   "2023 lamborghini urus performante": {
