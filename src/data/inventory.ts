@@ -219,7 +219,6 @@ export const inventory: InventoryItem[] = [
       "/images/cars/2022-mercedes-benz-s580/6.png"
     ]
   },
-
   {
     "slug": "2019-lamborghini-urus-awd-zpbua1zl6kla00922",
     "car": "2019 Lamborghini Urus AWD",
