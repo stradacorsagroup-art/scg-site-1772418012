@@ -20,6 +20,8 @@ export default async function InventoryDetailPage({
     return (order[a] ?? 99) - (order[b] ?? 99);
   });
 
+  const prettyTerm = (term: string) => term.replace(" mo", " months");
+
   const costs = getMembershipCostForCar(vehicle.car);
 
   const startupCosts = orderedTerms.map((term) => {
@@ -68,7 +70,7 @@ export default async function InventoryDetailPage({
         <aside className="h-fit rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm sm:p-5 lg:sticky lg:top-6">
           <h1 className="text-2xl font-semibold tracking-[-0.02em] sm:text-[2.2rem]">{vehicle.car}</h1>
           <p className="mt-4 text-sm text-zinc-500">Subscription Price</p>
-          <p className="mt-1 text-3xl font-semibold text-zinc-900">${vehicle.monthly.toLocaleString()}/mo</p>
+          <p className="mt-1 text-3xl font-semibold text-zinc-900">${vehicle.monthly.toLocaleString()}/month</p>
 
           <h2 className="mt-5 text-lg font-semibold">Due at Signing</h2>
           <p className="mt-1 text-sm text-zinc-500">Estimated drive-off total. Excludes taxes and registration fees.</p>
@@ -77,19 +79,19 @@ export default async function InventoryDetailPage({
             {startupCosts.map(({ term, scgDown, scgMonthly, scgBuyout, totalDue }) => (
               <div key={term} className="rounded-lg border border-zinc-200 p-3">
                 <div className="mb-2 flex items-center justify-between text-[11px] uppercase tracking-[0.08em] text-zinc-500">
-                  <span>{term} option</span>
-                  <span>${scgMonthly.toLocaleString()}/mo</span>
+                  <span>{prettyTerm(term)} option</span>
+                  <span>${scgMonthly.toLocaleString()}/month</span>
                 </div>
                 <div className="flex items-center justify-between border-b border-zinc-100 pb-2">
-                  <span>{term} Down</span>
+                  <span>{prettyTerm(term)} Down</span>
                   <strong>${scgDown.toLocaleString()}</strong>
                 </div>
                 <div className="mt-2 flex items-center justify-between border-b border-zinc-100 pb-2">
-                  <span>{term} Monthly</span>
+                  <span>{prettyTerm(term)} Monthly</span>
                   <strong>${scgMonthly.toLocaleString()}</strong>
                 </div>
                 <div className="mt-2 flex items-center justify-between border-b border-zinc-100 pb-2">
-                  <span>{term} Buyout</span>
+                  <span>{prettyTerm(term)} Buyout</span>
                   <strong>{typeof scgBuyout === "number" ? `$${scgBuyout.toLocaleString()}` : "On request"}</strong>
                 </div>
                 <div className="mt-2 flex items-center justify-between border-b border-zinc-100 pb-2">
