@@ -3,7 +3,6 @@ import Script from "next/script";
 import { notFound } from "next/navigation";
 import { VehicleGallery } from "@/components/vehicle-gallery";
 import { deposit, getInventoryBySlug, membershipFee } from "@/data/inventory";
-import { getMembershipCostForCar } from "@/data/membership-costs";
 
 export default async function InventoryDetailPage({
   params,
@@ -22,25 +21,15 @@ export default async function InventoryDetailPage({
 
   const prettyTerm = (term: string) => term.replace(" mo", " months");
 
-  const costs = getMembershipCostForCar(vehicle.car);
-
   const startupCosts = orderedTerms.map((term) => {
     const isThreeMo = term === "3 mo";
     const isTwelveMo = term === "12 mo";
 
-    const scgDown =
-      (isThreeMo ? costs?.threeMo?.scgDown : isTwelveMo ? costs?.twelveMo?.scgDown : undefined) ??
-      vehicle.down[term] ??
-      0;
+    const scgDown = vehicle.down[term] ?? 0;
 
-    const scgMonthly =
-      (isThreeMo ? costs?.threeMo?.scgMonthly : isTwelveMo ? costs?.twelveMo?.scgMonthly : undefined) ??
-      vehicle.scgMonthlyByTerm?.[term] ??
-      vehicle.monthly;
+    const scgMonthly = vehicle.scgMonthlyByTerm?.[term] ?? vehicle.monthly;
 
-    const scgBuyout =
-      (isThreeMo ? costs?.threeMo?.scgBuyout : isTwelveMo ? costs?.twelveMo?.scgBuyout : undefined) ??
-      vehicle.scgBuyoutByTerm?.[term];
+    const scgBuyout = vehicle.scgBuyoutByTerm?.[term];
 
     return {
       term,
