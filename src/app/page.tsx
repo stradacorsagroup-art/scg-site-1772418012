@@ -127,7 +127,7 @@ export default function Home() {
                         alt={item.car}
                         className="h-full w-full object-cover"
                         style={{
-                          objectPosition: item.car === "2020 Rolls-Royce Cullinan Black Badge" ? "center 58%" : "center", 
+                          objectPosition: item.car === "2020 Rolls-Royce Cullinan Black Badge" ? "center 64%" : "center", 
                         }}
                         loading="lazy"
                         referrerPolicy="no-referrer"
