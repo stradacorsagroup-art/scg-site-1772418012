@@ -27,7 +27,7 @@ export const inventory: InventoryItem[] = [
       "12 mo": 59900
     },
     "monthly": 6995,
-    "display": "From $59,900 down \u2022 $6,995/mo",
+    "display": "From $59,900 down • $6,995/mo",
     "location": "New York, NY, United States",
     "scgMonthlyByTerm": {
       "12 mo": 6995
@@ -54,7 +54,7 @@ export const inventory: InventoryItem[] = [
       "12 mo": 13900
     },
     "monthly": 2495,
-    "display": "From $10,900 down \u2022 $2,495/mo",
+    "display": "From $10,900 down • $2,495/mo",
     "location": "New York, NY, United States",
     "scgMonthlyByTerm": {
       "3 mo": 2495,
@@ -84,7 +84,7 @@ export const inventory: InventoryItem[] = [
       "12 mo": 12900
     },
     "monthly": 2695,
-    "display": "From $10,900 down \u2022 $2,695/mo",
+    "display": "From $10,900 down • $2,695/mo",
     "location": "New York, NY, United States",
     "scgMonthlyByTerm": {
       "3 mo": 2695,
@@ -116,8 +116,8 @@ export const inventory: InventoryItem[] = [
       "12 mo": 29900
     },
     "monthly": 3995,
-    "display": "From $17,995 down \u2022 $3,995/mo",
-    "location": "\u2014",
+    "display": "From $17,995 down • $3,995/mo",
+    "location": "—",
     "scgMonthlyByTerm": {
       "3 mo": 3995,
       "12 mo": 3995
@@ -145,7 +145,7 @@ export const inventory: InventoryItem[] = [
       "3 mo": 26900
     },
     "monthly": 5995,
-    "display": "From $26,900 down \u2022 $5,995/mo",
+    "display": "From $26,900 down • $5,995/mo",
     "location": "New York, NY, United States",
     "scgMonthlyByTerm": {
       "3 mo": 5995
@@ -174,8 +174,8 @@ export const inventory: InventoryItem[] = [
       "12 mo": 29995
     },
     "monthly": 4495,
-    "display": "From $19,900 down \u2022 $4,495/mo",
-    "location": "\u2014",
+    "display": "From $19,900 down • $4,495/mo",
+    "location": "—",
     "scgMonthlyByTerm": {
       "3 mo": 4495,
       "12 mo": 4495
@@ -204,9 +204,9 @@ export const inventory: InventoryItem[] = [
       "12 mo": 25995
     },
     "monthly": 3250,
-    "display": "From $25,995 down \u2022 $3,250/mo",
-    "location": "\u2014",
-    "notes": "$339,700 MSRP \u2022 6/12 Month Lease To Own \u2022 Private Access \u2022 Buyout Option At End",
+    "display": "From $25,995 down • $3,250/mo",
+    "location": "—",
+    "notes": "$339,700 MSRP • 6/12 Month Lease To Own • No Credit/Income Check • Buyout Option At End",
     "scgMonthlyByTerm": {
       "3 mo": 3250,
       "12 mo": 3250
@@ -237,9 +237,9 @@ export const inventory: InventoryItem[] = [
       "12 mo": 19995
     },
     "monthly": 5995,
-    "display": "From $19,995 down \u2022 $5,995/mo",
+    "display": "From $19,995 down • $5,995/mo",
     "location": "West Palm FL",
-    "notes": "White Exterior / Handcrafted Red Interior \u2022 $235k Purchase Price \u2022 6/12 Month Lease \u2022 Private Access \u2022 Buyout Option at End",
+    "notes": "White Exterior / Handcrafted Red Interior • $235k Purchase Price • 6/12 Month Lease • No Credit or Income Check • Buyout Option at End",
     "scgMonthlyByTerm": {
       "3 mo": 5995,
       "12 mo": 5995
@@ -269,9 +269,9 @@ export const inventory: InventoryItem[] = [
       "12 mo": 17995
     },
     "monthly": 2000,
-    "display": "From $17,995 down \u2022 $2,000/mo",
-    "location": "\u2014",
-    "notes": "C = Competition (highly sought after trim) \u2022 Silver Matte Paint \u2022 6/12 Month Lease to Own \u2022 Private Access \u2022 Buyout Option at End of Lease",
+    "display": "From $17,995 down • $2,000/mo",
+    "location": "—",
+    "notes": "C = Competition (highly sought after trim) • Silver Matte Paint • 6/12 Month Lease to Own • No Credit or Income Check • Buyout Option at End of Lease",
     "scgMonthlyByTerm": {
       "3 mo": 2000,
       "12 mo": 2000
@@ -302,9 +302,9 @@ export const inventory: InventoryItem[] = [
       "12 mo": 17995
     },
     "monthly": 2500,
-    "display": "From $17,995 down \u2022 $2,500/mo",
-    "location": "\u2014",
-    "notes": "Full Stealth PPF \u2022 6/12 Month Lease to Own \u2022 Private Access \u2022 Buyout Option at End of Lease",
+    "display": "From $17,995 down • $2,500/mo",
+    "location": "—",
+    "notes": "Full Stealth PPF • 6/12 Month Lease to Own • No Credit or Income Check • Buyout Option at End of Lease",
     "scgMonthlyByTerm": {
       "3 mo": 2500,
       "12 mo": 2500
@@ -334,9 +334,9 @@ export const inventory: InventoryItem[] = [
       "12 mo": 49995
     },
     "monthly": 9000,
-    "display": "From $49,995 down \u2022 $9,000/mo",
-    "location": "\u2014",
-    "notes": "INSANE SPEC \u2022 TEMPESTE GREY \u2022 FACTORY BLUE INTERIOR \u2022 STARLIGHT DOORS \u2022 6/12 Month Lease to Own \u2022 Private Access \u2022 Buyout Option Available at End",
+    "display": "From $49,995 down • $9,000/mo",
+    "location": "—",
+    "notes": "INSANE SPEC • TEMPESTE GREY • FACTORY BLUE INTERIOR • STARLIGHT DOORS • 6/12 Month Lease to Own • No Credit or Income Check • Buyout Option Available at End",
     "scgMonthlyByTerm": {
       "3 mo": 9000,
       "12 mo": 9000
@@ -358,8 +358,8 @@ export const inventory: InventoryItem[] = [
     "down": {},
     "monthly": 0,
     "display": "Pricing on request",
-    "location": "\u2014",
-    "mileage": "\u2014",
+    "location": "—",
+    "mileage": "—",
     "images": [
       "/images/cars/2021-mercedes-g63-satin-black/hero.jpg",
       "/images/cars/2021-mercedes-g63-satin-black/2.jpg"
@@ -373,8 +373,8 @@ export const inventory: InventoryItem[] = [
     "down": {},
     "monthly": 0,
     "display": "Pricing on request",
-    "location": "\u2014",
-    "mileage": "\u2014",
+    "location": "—",
+    "mileage": "—",
     "images": [
       "/images/cars/2021-mercedes-g63-satin-white/hero.png",
       "/images/cars/2021-mercedes-g63-satin-white/2.png",
@@ -389,8 +389,8 @@ export const inventory: InventoryItem[] = [
     "down": {},
     "monthly": 0,
     "display": "Pricing on request",
-    "location": "\u2014",
-    "mileage": "\u2014",
+    "location": "—",
+    "mileage": "—",
     "images": [
       "/images/cars/2023-maybach-gls600-black-red/hero.png",
       "/images/cars/2023-maybach-gls600-black-red/3.png",
@@ -406,8 +406,8 @@ export const inventory: InventoryItem[] = [
     "down": {},
     "monthly": 0,
     "display": "Pricing on request",
-    "location": "\u2014",
-    "mileage": "\u2014",
+    "location": "—",
+    "mileage": "—",
     "images": [
       "/images/cars/2021-maybach-gls600-black-gold/3.jpg",
       "/images/cars/2021-maybach-gls600-black-gold/2.jpg",
@@ -423,8 +423,8 @@ export const inventory: InventoryItem[] = [
     "down": {},
     "monthly": 0,
     "display": "Pricing on request",
-    "location": "\u2014",
-    "mileage": "\u2014",
+    "location": "—",
+    "mileage": "—",
     "images": [
       "/images/cars/2025-c8-2lt/3.jpg",
       "/images/cars/2025-c8-2lt/hero.jpg",
@@ -441,8 +441,8 @@ export const inventory: InventoryItem[] = [
     "down": {},
     "monthly": 0,
     "display": "Pricing on request",
-    "location": "\u2014",
-    "mileage": "\u2014",
+    "location": "—",
+    "mileage": "—",
     "images": [
       "/images/cars/2022-mercedes-benz-e450/2.jpg",
       "/images/cars/2022-mercedes-benz-e450/7.jpg",
@@ -460,8 +460,8 @@ export const inventory: InventoryItem[] = [
     "down": {},
     "monthly": 0,
     "display": "Pricing on request",
-    "location": "\u2014",
-    "mileage": "\u2014",
+    "location": "—",
+    "mileage": "—",
     "images": [
       "/images/cars/2021-mercedes-benz-s580-satin-red/hero.jpg",
       "/images/cars/2021-mercedes-benz-s580-satin-red/3.jpg",
@@ -476,8 +476,8 @@ export const inventory: InventoryItem[] = [
     "down": {},
     "monthly": 0,
     "display": "Pricing on request",
-    "location": "\u2014",
-    "mileage": "\u2014",
+    "location": "—",
+    "mileage": "—",
     "images": [
       "/images/cars/2019-ferrari-portofino/2.jpg",
       "/images/cars/2019-ferrari-portofino/hero.jpg",
@@ -491,8 +491,8 @@ export const inventory: InventoryItem[] = [
     "down": {},
     "monthly": 0,
     "display": "Pricing on request",
-    "location": "\u2014",
-    "mileage": "\u2014",
+    "location": "—",
+    "mileage": "—",
     "images": [
       "/images/cars/2024-maybach-gls-600/hero.jpg",
       "/images/cars/2024-maybach-gls-600/2.jpg"
@@ -505,8 +505,8 @@ export const inventory: InventoryItem[] = [
     "down": {},
     "monthly": 0,
     "display": "Pricing on request",
-    "location": "\u2014",
-    "mileage": "\u2014",
+    "location": "—",
+    "mileage": "—",
     "images": [
       "/images/cars/keyvany-keyrus/7.jpg",
       "/images/cars/keyvany-keyrus/4.jpg",
@@ -527,8 +527,8 @@ export const inventory: InventoryItem[] = [
     "down": {},
     "monthly": 0,
     "display": "Pricing on request",
-    "location": "\u2014",
-    "mileage": "\u2014",
+    "location": "—",
+    "mileage": "—",
     "images": [
       "/images/cars/2021-bmw-m8-competition-gran-coupe/9.jpg",
       "/images/cars/2021-bmw-m8-competition-gran-coupe/5.jpg",
@@ -552,7 +552,7 @@ export const inventory: InventoryItem[] = [
       "3 mo": 26900
     },
     "monthly": 5995,
-    "display": "From $26,900 down \u2022 $5,995/mo",
+    "display": "From $26,900 down • $5,995/mo",
     "location": "New York, NY, United States",
     "scgMonthlyByTerm": {
       "3 mo": 5995
@@ -562,8 +562,12 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "38,000",
     "images": [
-      "/images/cars/2023-lamborghini-urus-performante/hero.jpg",
-      "/images/cars/2023-lamborghini-urus-performante/2.jpg"
+      "/images/cars/2023-lamborghini-urus-performante/hero.png",
+      "/images/cars/2023-lamborghini-urus-performante/2.png",
+      "/images/cars/2023-lamborghini-urus-performante/3.png",
+      "/images/cars/2023-lamborghini-urus-performante/4.png",
+      "/images/cars/2023-lamborghini-urus-performante/5.png",
+      "/images/cars/2023-lamborghini-urus-performante/6.png"
     ]
   },
   {
@@ -573,8 +577,8 @@ export const inventory: InventoryItem[] = [
     "down": {},
     "monthly": 0,
     "display": "Pricing on request",
-    "location": "\u2014",
-    "mileage": "\u2014",
+    "location": "—",
+    "mileage": "—",
     "images": [
       "/images/cars/2024-rolls-royce-spectre/hero.png",
       "/images/cars/2024-rolls-royce-spectre/5.png",
