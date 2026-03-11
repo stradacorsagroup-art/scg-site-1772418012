@@ -500,7 +500,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "keyvany-keyrus-21",
-    "car": "2019 Lamborghini Urus \"Keyvany Keyrus\"",
+    "car": "2021 Lamborghini Urus \"Keyvany Keyrus\"",
     "terms": [],
     "down": {},
     "monthly": 0,
