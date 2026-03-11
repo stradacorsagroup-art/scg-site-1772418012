@@ -380,7 +380,8 @@ export const inventory: InventoryItem[] = [
       "/images/cars/2021-mercedes-g63-satin-white/2.png",
       "/images/cars/2021-mercedes-g63-satin-white/3.png",
       "/images/cars/2021-mercedes-g63-satin-white/4.png"
-    ]
+    ],
+    "video": "/videos/cars/2021-mercedes-g63-satin-white/hero.mov"
   },
   {
     "slug": "2023-maybach-gls600-blackred-14",
