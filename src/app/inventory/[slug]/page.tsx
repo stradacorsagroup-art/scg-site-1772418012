@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ReserveModalButton } from "@/components/reserve-modal-button";
 import { VehicleGallery } from "@/components/vehicle-gallery";
+import { TermPricingSelector } from "@/components/term-pricing-selector";
 import { deposit, getInventoryBySlug, membershipFee } from "@/data/inventory";
 
 export default async function InventoryDetailPage({
@@ -19,16 +20,9 @@ export default async function InventoryDetailPage({
     return (order[a] ?? 99) - (order[b] ?? 99);
   });
 
-  const prettyTerm = (term: string) => term.replace(" mo", " months");
-
   const startupCosts = orderedTerms.map((term) => {
-    const isThreeMo = term === "3 mo";
-    const isTwelveMo = term === "12 mo";
-
     const scgDown = vehicle.down[term] ?? 0;
-
     const scgMonthly = vehicle.scgMonthlyByTerm?.[term] ?? vehicle.monthly;
-
     const scgBuyout = vehicle.scgBuyoutByTerm?.[term];
 
     return {
@@ -64,36 +58,7 @@ export default async function InventoryDetailPage({
           <h2 className="mt-5 text-lg font-semibold">Due at Signing</h2>
           <p className="mt-1 text-sm text-zinc-500">Estimated drive-off total. Excludes taxes and registration fees.</p>
 
-          <div className="mt-4 space-y-3 text-sm">
-            {startupCosts.map(({ term, scgDown, scgMonthly, scgBuyout, totalDue }) => (
-              <div key={term} className="rounded-lg border border-zinc-200 p-3">
-                <div className="mb-2 flex items-center justify-between text-[11px] uppercase tracking-[0.08em] text-zinc-500">
-                  <span>{prettyTerm(term)} option</span>
-                  <span>${scgMonthly.toLocaleString()}/month</span>
-                </div>
-                <div className="flex items-center justify-between border-b border-zinc-100 pb-2">
-                  <span>{prettyTerm(term)} Down</span>
-                  <strong>${scgDown.toLocaleString()}</strong>
-                </div>
-                <div className="mt-2 flex items-center justify-between border-b border-zinc-100 pb-2">
-                  <span>{prettyTerm(term)} Monthly</span>
-                  <strong>${scgMonthly.toLocaleString()}</strong>
-                </div>
-                <div className="mt-2 flex items-center justify-between border-b border-zinc-100 pb-2">
-                  <span>{prettyTerm(term)} Buyout</span>
-                  <strong>{typeof scgBuyout === "number" ? `$${scgBuyout.toLocaleString()}` : "On request"}</strong>
-                </div>
-                <div className="mt-2 flex items-center justify-between border-b border-zinc-100 pb-2">
-                  <span>Membership Fee</span>
-                  <strong>${membershipFee.toLocaleString()}</strong>
-                </div>
-                <div className="mt-2 flex items-center justify-between text-base font-semibold">
-                  <span>Total Due at Signing</span>
-                  <strong>${totalDue.toLocaleString()}</strong>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TermPricingSelector startupCosts={startupCosts} membershipFee={membershipFee} />
 
           <div className="mt-5 rounded-xl border border-zinc-200 bg-zinc-50 p-3 text-sm">
             <p className="text-zinc-600">Deposit to reserve</p>
