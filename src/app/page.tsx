@@ -31,8 +31,8 @@ function getPlaceholderImage(carName: string) {
 
 function getCardImagePosition(slug: string) {
   const focalBySlug: Record<string, string> = {
-    "2020-mclaren-720s-spyder-satin-black": "50% 38%",
-    "2022-mercedes-benz-s580": "50% 38%",
+    "2020-mclaren-720s-spyder-satin-black": "50% 62%",
+    "2022-mercedes-benz-s580": "50% 62%",
   };
 
   return focalBySlug[slug] ?? "50% 50%";
