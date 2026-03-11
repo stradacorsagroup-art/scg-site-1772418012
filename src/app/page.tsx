@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { OwnershipPills } from "@/components/ownership-pills";
 import { inventory } from "@/data/inventory";
