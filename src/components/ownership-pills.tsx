@@ -9,7 +9,7 @@ function pillClass(active: boolean) {
 export function OwnershipPills({ active }: { active: "membership" | "sale" | "apply" }) {
   return (
     <div>
-      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-500">Path to ownership</p>
+      <p className="text-[14px] font-semibold uppercase tracking-[0.16em] text-zinc-500">Path to ownership</p>
       <div className="mt-2 flex flex-wrap gap-2">
         <Link href="/#membership-inventory" className={pillClass(active === "membership")}>
           Membership Inventory (No Credit)

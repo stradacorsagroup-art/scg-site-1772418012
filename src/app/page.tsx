@@ -73,7 +73,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#f4f4f4] text-[#111]">
       <section className="border-b border-zinc-200/80 bg-gradient-to-b from-white to-[#f6f7f9]">
         <div className="mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py-12 lg:py-14">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">Dealhaus</p>
+          <p className="text-[14px] font-semibold uppercase tracking-[0.24em] text-zinc-500">Dealhaus</p>
           <h1 className="mt-3 max-w-4xl text-3xl font-semibold tracking-[-0.02em] text-zinc-900 sm:text-5xl">Luxury cars. Flexible ownership.</h1>
           <div className="mt-5">
             <OwnershipPills active="membership" />
