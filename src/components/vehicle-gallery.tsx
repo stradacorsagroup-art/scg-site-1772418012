@@ -41,11 +41,11 @@ export function VehicleGallery({ car, images = [], video }: { car: string; image
   return (
     <>
       <div className="mt-4 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
-        <div className="relative h-60 bg-zinc-100 sm:h-[430px]">
+        <div className="relative h-60 bg-black sm:h-[430px]">
           {current.type === "image" ? (
-            <Image src={current.src} alt={car} fill className="object-contain" sizes="(max-width: 1024px) 100vw, 65vw" />
+            <Image src={current.src} alt={car} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 65vw" />
           ) : (
-            <video key={current.src} className="h-full w-full object-contain bg-black" controls playsInline preload="metadata">
+            <video key={current.src} className="h-full w-full object-cover bg-black" controls playsInline preload="metadata">
               <source src={current.src} />
               Your browser does not support the video tag.
             </video>
