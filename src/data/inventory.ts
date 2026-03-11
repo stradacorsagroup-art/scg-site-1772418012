@@ -96,12 +96,12 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "65,000",
     "images": [
-      "/images/cars/2022-mercedes-benz-s580/hero.png",
-      "/images/cars/2022-mercedes-benz-s580/2.png",
-      "/images/cars/2022-mercedes-benz-s580/3.png",
-      "/images/cars/2022-mercedes-benz-s580/4.png",
-      "/images/cars/2022-mercedes-benz-s580/5.png",
-      "/images/cars/2022-mercedes-benz-s580/6.png"
+      "/images/cars/2022-mercedes-benz-s580/hero.jpg",
+      "/images/cars/2022-mercedes-benz-s580/2.jpg",
+      "/images/cars/2022-mercedes-benz-s580/3.jpg",
+      "/images/cars/2022-mercedes-benz-s580/4.jpg",
+      "/images/cars/2022-mercedes-benz-s580/5.jpg",
+      "/images/cars/2022-mercedes-benz-s580/6.jpg"
     ]
   },
   {
@@ -562,12 +562,8 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "38,000",
     "images": [
-      "/images/cars/2023-lamborghini-urus-performante/hero.png",
-      "/images/cars/2023-lamborghini-urus-performante/2.png",
-      "/images/cars/2023-lamborghini-urus-performante/3.png",
-      "/images/cars/2023-lamborghini-urus-performante/4.png",
-      "/images/cars/2023-lamborghini-urus-performante/5.png",
-      "/images/cars/2023-lamborghini-urus-performante/6.png"
+      "/images/cars/2023-lamborghini-urus-performante/hero.jpg",
+      "/images/cars/2023-lamborghini-urus-performante/2.jpg"
     ]
   },
   {
