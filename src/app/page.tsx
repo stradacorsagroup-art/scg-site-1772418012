@@ -72,17 +72,17 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#f5f5f5] text-zinc-900">
       <section className="border-b border-zinc-200 bg-gradient-to-b from-white to-[#f5f5f5]">
-        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-14 lg:py-16">
+        <div className="mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py-14 lg:py-16">
           <div className="inline-flex items-center gap-3">
             <span className="h-px w-8 bg-zinc-300" />
             <p className="text-[15px] font-semibold uppercase tracking-[0.34em] text-zinc-600">Dealhaus</p>
             <span className="h-px w-8 bg-zinc-300" />
           </div>
-          <h1 className="mt-4 max-w-5xl text-[2.15rem] font-semibold leading-[1.03] tracking-[-0.03em] text-zinc-900 sm:text-[3.8rem]">
+          <h1 className="mt-4 max-w-5xl text-[1.95rem] font-semibold leading-[1.04] tracking-[-0.03em] text-zinc-900 sm:text-[3.8rem]">
             Luxury cars. Flexible ownership.
           </h1>
 
-          <div className="mt-5 flex flex-wrap items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
+          <div className="mt-5 flex flex-wrap items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.11em] text-zinc-500 sm:gap-4 sm:text-[11px] sm:tracking-[0.12em]">
             <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-zinc-700" />Curated Inventory</span>
             <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-zinc-700" />No Credit Membership</span>
             <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-zinc-700" />Concierge Delivery</span>
@@ -106,7 +106,8 @@ export default function Home() {
               Clear
             </button>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="-mx-1 overflow-x-auto pb-1 sm:mx-0 sm:overflow-visible sm:pb-0">
+            <div className="flex w-max gap-2 px-1 sm:w-auto sm:flex-wrap sm:px-0">
             {brandOptions.map((brand) => {
               const active = selectedBrands.includes(brand);
               return (
@@ -126,6 +127,7 @@ export default function Home() {
             })}
           </div>
         </div>
+      </div>
 
         <div>
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
@@ -136,7 +138,7 @@ export default function Home() {
                   className="group block overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)]"
                 >
                   <article>
-                    <div className="relative h-[190px] border-b border-zinc-200 bg-zinc-100">
+                    <div className="relative h-[205px] border-b border-zinc-200 bg-zinc-100 sm:h-[190px]">
                       <img
                         src={item.images?.[0] || getPlaceholderImage(item.car)}
                         alt={item.car}
