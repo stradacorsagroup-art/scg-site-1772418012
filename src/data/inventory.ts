@@ -206,7 +206,7 @@ export const inventory: InventoryItem[] = [
     "monthly": 3250,
     "display": "From $25,995 down • $3,250/mo",
     "location": "—",
-    "notes": "$339,700 MSRP • 6/12 Month Lease To Own • No Credit/Income Check • Buyout Option At End",
+    "notes": "$339,700 MSRP • 6/12 Month Lease To Own • Private Access • Buyout Option At End",
     "scgMonthlyByTerm": {
       "3 mo": 3250,
       "12 mo": 3250
@@ -239,7 +239,7 @@ export const inventory: InventoryItem[] = [
     "monthly": 5995,
     "display": "From $19,995 down • $5,995/mo",
     "location": "West Palm FL",
-    "notes": "White Exterior / Handcrafted Red Interior • $235k Purchase Price • 6/12 Month Lease • No Credit or Income Check • Buyout Option at End",
+    "notes": "White Exterior / Handcrafted Red Interior • $235k Purchase Price • 6/12 Month Lease • Private Access • Buyout Option at End",
     "scgMonthlyByTerm": {
       "3 mo": 5995,
       "12 mo": 5995
@@ -271,7 +271,7 @@ export const inventory: InventoryItem[] = [
     "monthly": 2000,
     "display": "From $17,995 down • $2,000/mo",
     "location": "—",
-    "notes": "C = Competition (highly sought after trim) • Silver Matte Paint • 6/12 Month Lease to Own • No Credit or Income Check • Buyout Option at End of Lease",
+    "notes": "C = Competition (highly sought after trim) • Silver Matte Paint • 6/12 Month Lease to Own • Private Access • Buyout Option at End of Lease",
     "scgMonthlyByTerm": {
       "3 mo": 2000,
       "12 mo": 2000
@@ -304,7 +304,7 @@ export const inventory: InventoryItem[] = [
     "monthly": 2500,
     "display": "From $17,995 down • $2,500/mo",
     "location": "—",
-    "notes": "Full Stealth PPF • 6/12 Month Lease to Own • No Credit or Income Check • Buyout Option at End of Lease",
+    "notes": "Full Stealth PPF • 6/12 Month Lease to Own • Private Access • Buyout Option at End of Lease",
     "scgMonthlyByTerm": {
       "3 mo": 2500,
       "12 mo": 2500
@@ -336,7 +336,7 @@ export const inventory: InventoryItem[] = [
     "monthly": 9000,
     "display": "From $49,995 down • $9,000/mo",
     "location": "—",
-    "notes": "INSANE SPEC • TEMPESTE GREY • FACTORY BLUE INTERIOR • STARLIGHT DOORS • 6/12 Month Lease to Own • No Credit or Income Check • Buyout Option Available at End",
+    "notes": "INSANE SPEC • TEMPESTE GREY • FACTORY BLUE INTERIOR • STARLIGHT DOORS • 6/12 Month Lease to Own • Private Access • Buyout Option Available at End",
     "scgMonthlyByTerm": {
       "3 mo": 9000,
       "12 mo": 9000

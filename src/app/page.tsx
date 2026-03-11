@@ -84,7 +84,7 @@ export default function Home() {
 
           <div className="mt-5 flex flex-wrap items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.11em] text-zinc-500 sm:gap-4 sm:text-[11px] sm:tracking-[0.12em]">
             <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-zinc-700" />Curated Inventory</span>
-            <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-zinc-700" />No Credit Membership</span>
+            <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-zinc-700" />Private Access</span>
             <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-zinc-700" />Concierge Delivery</span>
           </div>
 
