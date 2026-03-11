@@ -11,7 +11,7 @@ function formatPrice(value: number) {
 
 function normalizeBrand(value: string) {
   const normalized = value.trim().toUpperCase();
-  if (normalized === "MERCEDES-AMG") return "MERCEDES-BENZ";
+  if (normalized === "MERCEDES-AMG" || normalized === "MERCEDES") return "MERCEDES-BENZ";
   return normalized;
 }
 
