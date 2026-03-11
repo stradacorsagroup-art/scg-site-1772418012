@@ -282,7 +282,6 @@ export const inventory: InventoryItem[] = [
       "/images/cars/2018-mercedes-amg-gt-c/2.jpg",
       "/images/cars/2018-mercedes-amg-gt-c/3.jpg",
       "/images/cars/2018-mercedes-amg-gt-c/4.jpg",
-      "/images/cars/2018-mercedes-amg-gt-c/5.jpg",
       "/images/cars/2018-mercedes-amg-gt-c/6.jpg",
       "/images/cars/2018-mercedes-amg-gt-c/7.jpg",
       "/images/cars/2018-mercedes-amg-gt-c/8.jpg",
