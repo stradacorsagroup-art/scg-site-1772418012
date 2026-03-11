@@ -128,9 +128,9 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "111,000",
     "images": [
+      "/images/cars/2019-lamborghini-urus-awd-blue/3.jpg",
       "/images/cars/2019-lamborghini-urus-awd-blue/hero.jpg",
       "/images/cars/2019-lamborghini-urus-awd-blue/2.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-blue/3.jpg",
       "/images/cars/2019-lamborghini-urus-awd-blue/4.jpg",
       "/images/cars/2019-lamborghini-urus-awd-blue/5.jpg"
     ]
@@ -186,8 +186,8 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "40,000",
     "images": [
-      "/images/cars/2019-lamborghini-urus-awd-white/hero.jpg",
       "/images/cars/2019-lamborghini-urus-awd-white/2.jpg",
+      "/images/cars/2019-lamborghini-urus-awd-white/hero.jpg",
       "/images/cars/2019-lamborghini-urus-awd-white/3.jpg",
       "/images/cars/2019-lamborghini-urus-awd-white/4.jpg"
     ]

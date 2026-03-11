@@ -147,12 +147,12 @@ export default function Home() {
               className="group block overflow-hidden rounded-2xl border border-zinc-800 bg-[#111] transition duration-200 hover:-translate-y-0.5 hover:border-zinc-600"
             >
               <article>
-                <div className="relative h-[240px] bg-zinc-900">
+                <div className="relative h-[212px] bg-zinc-900 sm:h-[240px]">
                   <Image
                     src={item.images?.[0] || getPlaceholderImage(item.car)}
                     alt={item.car}
                     fill
-                    className="object-cover transition duration-300 group-hover:scale-[1.02]"
+                    className="object-cover object-center"
                     sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     quality={90}
                     unoptimized={!item.images?.[0]}
