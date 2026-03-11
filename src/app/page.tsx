@@ -107,7 +107,7 @@ export default function Home() {
               Your terms.
             </h1>
 
-            <div className="mt-24 lg:mt-8">
+            <div className="mt-36 lg:mt-8">
               <OwnershipPills active="membership" />
             </div>
           </div>
