@@ -29,6 +29,11 @@ function getPlaceholderImage(carName: string) {
   return `https://placehold.co/1200x800/101010/e8e8e8?text=${text}`;
 }
 
+function getCardImage(src?: string) {
+  if (!src) return undefined;
+  return src.replace(/\/hero\.(jpg|jpeg|png|webp)$/i, "/thumb.jpg");
+}
+
 function splitCardTitle(car: string) {
   const tokens = car.trim().split(/\s+/);
   const year = /^\d{4}$/.test(tokens[0]) ? tokens[0] : "";
@@ -148,12 +153,12 @@ export default function Home() {
               <article>
                 <div className="relative h-[240px] bg-zinc-900">
                   <Image
-                    src={item.images?.[0] || getPlaceholderImage(item.car)}
+                    src={getCardImage(item.images?.[0]) || getPlaceholderImage(item.car)}
                     alt={item.car}
                     fill
                     className="object-cover transition duration-300 group-hover:scale-[1.02]"
                     sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                    quality={65}
+                    quality={55}
                     unoptimized={!item.images?.[0]}
                   />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-4">
