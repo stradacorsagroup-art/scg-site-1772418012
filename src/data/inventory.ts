@@ -374,7 +374,10 @@ export const inventory: InventoryItem[] = [
     "monthly": 0,
     "display": "Pricing on request",
     "location": "\u2014",
-    "mileage": "\u2014"
+    "mileage": "\u2014",
+    "images": [
+      "/images/cars/2019-ferrari-portofino/hero.jpg"
+    ]
   },
   {
     "slug": "2024-maybach-gls-600-20",
