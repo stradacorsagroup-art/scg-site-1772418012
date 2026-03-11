@@ -3,10 +3,14 @@
 import Image from "next/image";
 import { useMemo, useState } from "react";
 
-export function VehicleGallery({ car, images = [] }: { car: string; images?: string[]; video?: string }) {
+type GalleryMedia =
+  | { type: "image"; src: string }
+  | { type: "video"; src: string };
+
+export function VehicleGallery({ car, images = [], video }: { car: string; images?: string[]; video?: string }) {
   const media = useMemo(() => {
     const seen = new Set<string>();
-    const arr: Array<{ type: "image"; src: string }> = [];
+    const arr: GalleryMedia[] = [];
 
     for (const img of images) {
       const key = `image:${img}`;
@@ -16,8 +20,16 @@ export function VehicleGallery({ car, images = [] }: { car: string; images?: str
       }
     }
 
+    if (video) {
+      const key = `video:${video}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        arr.push({ type: "video", src: video });
+      }
+    }
+
     return arr;
-  }, [images]);
+  }, [images, video]);
 
   const [active, setActive] = useState(0);
   const current = media[active];
@@ -30,7 +42,14 @@ export function VehicleGallery({ car, images = [] }: { car: string; images?: str
     <>
       <div className="mt-4 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
         <div className="relative h-60 bg-zinc-100 sm:h-[430px]">
-          <Image src={current.src} alt={car} fill className="object-contain" sizes="(max-width: 1024px) 100vw, 65vw" />
+          {current.type === "image" ? (
+            <Image src={current.src} alt={car} fill className="object-contain" sizes="(max-width: 1024px) 100vw, 65vw" />
+          ) : (
+            <video key={current.src} className="h-full w-full object-contain bg-black" controls playsInline preload="metadata">
+              <source src={current.src} />
+              Your browser does not support the video tag.
+            </video>
+          )}
         </div>
       </div>
 
@@ -44,7 +63,13 @@ export function VehicleGallery({ car, images = [] }: { car: string; images?: str
                 className={`relative h-16 w-24 overflow-hidden rounded-lg border bg-white sm:h-[72px] sm:w-28 ${idx === active ? "border-zinc-900 ring-1 ring-zinc-900/10" : "border-zinc-200"}`}
                 aria-label={`Show media ${idx + 1}`}
               >
-                <Image src={m.src} alt={car} fill className="object-cover" sizes="120px" />
+                {m.type === "image" ? (
+                  <Image src={m.src} alt={car} fill className="object-cover" sizes="120px" />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-zinc-900 text-xs font-semibold uppercase tracking-[0.08em] text-white">
+                    Video
+                  </div>
+                )}
               </button>
             ))}
           </div>
