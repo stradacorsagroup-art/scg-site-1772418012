@@ -81,6 +81,13 @@ export default function Home() {
           <h1 className="mt-4 max-w-5xl text-[2.15rem] font-semibold leading-[1.03] tracking-[-0.03em] text-zinc-900 sm:text-[3.8rem]">
             Luxury cars. Flexible ownership.
           </h1>
+
+          <div className="mt-5 flex flex-wrap items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
+            <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-zinc-700" />Curated Inventory</span>
+            <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-zinc-700" />No Credit Membership</span>
+            <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-zinc-700" />Concierge Delivery</span>
+          </div>
+
           <div className="mt-6">
             <OwnershipPills active="membership" />
           </div>
@@ -88,26 +95,39 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-10">
+        <div className="mb-6 rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm sm:p-4">
+          <div className="mb-3 flex items-center justify-between">
+            <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-zinc-500">Filter by brand</p>
+            <button
+              type="button"
+              onClick={() => setSelectedBrands([])}
+              className="text-[12px] font-medium text-zinc-500 hover:text-zinc-900"
+            >
+              Clear
+            </button>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {brandOptions.map((brand) => {
+              const active = selectedBrands.includes(brand);
+              return (
+                <button
+                  key={brand}
+                  type="button"
+                  onClick={() => toggleBrand(brand)}
+                  className={`rounded-full border px-3 py-1.5 text-[13px] font-medium transition ${
+                    active
+                      ? "border-zinc-900 bg-zinc-900 text-white"
+                      : "border-zinc-300 bg-white text-zinc-700 hover:border-zinc-500"
+                  }`}
+                >
+                  {displayBrand(brand)}
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
-        <div className="grid gap-8 lg:grid-cols-[210px_minmax(0,1fr)]">
-          <aside className="h-fit rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm">
-            <h2 className="mb-3 text-[12px] font-semibold uppercase tracking-[0.16em] text-zinc-500">Filter by brand</h2>
-            <div className="space-y-2.5">
-              {brandOptions.map((brand) => (
-                <label key={brand} className="flex cursor-pointer items-center gap-2.5 text-[14px] text-zinc-800">
-                  <input
-                    type="checkbox"
-                    checked={selectedBrands.includes(brand)}
-                    onChange={() => toggleBrand(brand)}
-                    className="h-4 w-4 rounded border-zinc-300"
-                  />
-                  <span className="font-medium">{displayBrand(brand)}</span>
-                </label>
-              ))}
-            </div>
-          </aside>
-
-          <div>
+        <div>
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
               {filtered.map((item) => (
                 <Link
@@ -152,7 +172,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
       </section>
     </main>
   );
