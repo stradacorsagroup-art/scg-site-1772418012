@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import { OwnershipPills } from "@/components/ownership-pills";
 import { inventory } from "@/data/inventory";
@@ -80,12 +79,24 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-zinc-100">
-      <section className="border-b border-zinc-800 bg-[#0a0a0a]">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-5 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:items-stretch lg:gap-12 lg:py-24">
+      <section className="relative overflow-hidden border-b border-zinc-800 bg-[#0a0a0a]">
+        <div className="absolute inset-0 lg:hidden">
+          <Image
+            src="/images/hero/home-hero.jpg"
+            alt="SCG hero garage"
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+
+        <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-8 px-5 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:items-stretch lg:gap-12 lg:py-24">
           <div className="flex flex-col justify-center">
             <div className="inline-flex items-center gap-3">
               <span className="h-px w-8 bg-zinc-700" />
-              <p className="text-[13px] font-semibold uppercase tracking-[0.34em] text-zinc-400">Dealhaus</p>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.34em] text-zinc-300">Dealhaus</p>
               <span className="h-px w-8 bg-zinc-700" />
             </div>
 
@@ -96,27 +107,18 @@ export default function Home() {
             </h1>
 
             <div className="mt-8">
-              <Link
-                href="#membership-inventory"
-                className="inline-flex h-11 items-center rounded-full border border-zinc-500 px-5 text-sm font-semibold text-zinc-100 transition hover:border-zinc-300 hover:bg-zinc-900"
-              >
-                Explore Inventory
-              </Link>
-            </div>
-
-            <div className="mt-8">
               <OwnershipPills active="membership" />
             </div>
           </div>
 
-          <div className="relative min-h-[260px] overflow-hidden rounded-xl lg:min-h-[520px] lg:rounded-none">
+          <div className="relative hidden min-h-[520px] overflow-hidden lg:block lg:rounded-none">
             <Image
               src="/images/hero/home-hero.jpg"
               alt="SCG hero garage"
               fill
               className="object-cover"
               priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="50vw"
             />
             <div className="absolute inset-0 bg-black/45" />
           </div>
