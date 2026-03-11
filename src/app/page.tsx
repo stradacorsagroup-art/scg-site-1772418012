@@ -125,7 +125,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute inset-x-5 bottom-6 z-20 lg:hidden sm:inset-x-6">
+        <div className="absolute inset-x-5 bottom-[-18px] z-20 lg:hidden sm:inset-x-6">
           <OwnershipPills active="membership" />
         </div>
       </section>
