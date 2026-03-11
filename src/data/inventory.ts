@@ -287,8 +287,8 @@ export const inventory: InventoryItem[] = [
     "mileage": "—"
   },
   {
-    "slug": "2021-maybach-gls600-blackred-14",
-    "car": "2021 MAYBACH GLS600 BLACK/RED",
+    "slug": "2023-maybach-gls600-blackred-14",
+    "car": "2023 MAYBACH GLS600 BLACK/RED",
     "terms": [],
     "down": {},
     "monthly": 0,
@@ -309,6 +309,66 @@ export const inventory: InventoryItem[] = [
   {
     "slug": "2025-c8-2lt-16",
     "car": "2025 C8 2LT",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—"
+  },
+  {
+    "slug": "2022-mercedes-benz-e450-17",
+    "car": "2022 Mercedes-Benz E450",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—"
+  },
+  {
+    "slug": "2021-mercedes-benz-s580-satin-red-18",
+    "car": "2021 Mercedes-Benz S580 SATIN RED",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—"
+  },
+  {
+    "slug": "2019-ferrari-portofino-19",
+    "car": "2019 Ferrari Portofino",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—"
+  },
+  {
+    "slug": "2024-maybach-gls-600-20",
+    "car": "2024 Maybach GLS 600",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—"
+  },
+  {
+    "slug": "keyvany-keyrus-21",
+    "car": "Keyvany Keyrus",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—"
+  },
+  {
+    "slug": "2021-bmw-m8-competition-gran-coupe-22",
+    "car": "2021 BMW M8 Competition Gran Coupe",
     "terms": [],
     "down": {},
     "monthly": 0,
