@@ -403,6 +403,16 @@ export const inventory: InventoryItem[] = [
       "/images/cars/2023-lamborghini-urus-performante/5.png",
       "/images/cars/2023-lamborghini-urus-performante/6.png"
     ]
+  },
+  {
+    "slug": "2024-rolls-royce-spectre-24",
+    "car": "2024 Rolls-Royce Spectre",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—"
   }
 ];
 
