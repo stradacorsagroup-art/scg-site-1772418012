@@ -563,12 +563,8 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "38,000",
     "images": [
-      "/images/cars/2023-lamborghini-urus-performante/hero.png",
-      "/images/cars/2023-lamborghini-urus-performante/2.png",
-      "/images/cars/2023-lamborghini-urus-performante/3.png",
-      "/images/cars/2023-lamborghini-urus-performante/4.png",
-      "/images/cars/2023-lamborghini-urus-performante/5.png",
-      "/images/cars/2023-lamborghini-urus-performante/6.png"
+      "/images/cars/2023-lamborghini-urus-performante/hero.jpg",
+      "/images/cars/2023-lamborghini-urus-performante/2.jpg"
     ]
   },
   {
