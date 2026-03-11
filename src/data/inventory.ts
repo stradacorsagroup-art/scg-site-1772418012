@@ -305,6 +305,16 @@ export const inventory: InventoryItem[] = [
     "display": "Pricing on request",
     "location": "—",
     "mileage": "—"
+  },
+  {
+    "slug": "2025-c8-2lt-16",
+    "car": "2025 C8 2LT",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—"
   }
 ];
 
