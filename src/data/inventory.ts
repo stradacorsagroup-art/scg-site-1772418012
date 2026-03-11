@@ -35,7 +35,12 @@ export const inventory: InventoryItem[] = [
     "scgBuyoutByTerm": {
       "12 mo": 229900
     },
-    "mileage": "23,000"
+    "mileage": "23,000",
+    "images": [
+      "/images/cars/2020-mclaren-720s-spider/hero.jpg",
+      "/images/cars/2020-mclaren-720s-spider/2.jpg"
+    ],
+    "video": "/videos/cars/2020-mclaren-720s-spider/hero.mov"
   },
   {
     "slug": "2021-mercedes-benz-s580-faybach-w1kg7gbxma052327",
@@ -61,11 +66,11 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "65,000",
     "images": [
-      "/images/cars/2021-mercedes-benz-s580/hero.png",
-      "/images/cars/2021-mercedes-benz-s580/2.png",
-      "/images/cars/2021-mercedes-benz-s580/3.png"
+      "/images/cars/2021-mercedes-benz-s580-faybach/hero.png",
+      "/images/cars/2021-mercedes-benz-s580-faybach/2.png",
+      "/images/cars/2021-mercedes-benz-s580-faybach/3.png"
     ],
-    "video": "/videos/cars/2021-mercedes-benz-s580/hero.mov"
+    "video": "/videos/cars/2021-mercedes-benz-s580-faybach/hero.mov"
   },
   {
     "slug": "2022-mercedes-benz-s580",
@@ -121,7 +126,14 @@ export const inventory: InventoryItem[] = [
       "3 mo": 125000,
       "12 mo": 119000
     },
-    "mileage": "111,000"
+    "mileage": "111,000",
+    "images": [
+      "/images/cars/2019-lamborghini-urus-awd-blue/hero.jpeg",
+      "/images/cars/2019-lamborghini-urus-awd-blue/2.jpeg",
+      "/images/cars/2019-lamborghini-urus-awd-blue/3.jpeg",
+      "/images/cars/2019-lamborghini-urus-awd-blue/4.jpeg",
+      "/images/cars/2019-lamborghini-urus-awd-blue/5.jpeg"
+    ]
   },
   {
     "slug": "2019-lamborghini-urus-awd-green-zpbuc3zl4pla22334",
@@ -141,7 +153,14 @@ export const inventory: InventoryItem[] = [
     "scgBuyoutByTerm": {
       "3 mo": 250000
     },
-    "mileage": "38,000"
+    "mileage": "38,000",
+    "images": [
+      "/images/cars/2019-lamborghini-urus-awd-green/hero.png",
+      "/images/cars/2019-lamborghini-urus-awd-green/2.png",
+      "/images/cars/2019-lamborghini-urus-awd-green/3.png",
+      "/images/cars/2019-lamborghini-urus-awd-green/4.png"
+    ],
+    "video": "/videos/cars/2019-lamborghini-urus-awd-green/hero.mov"
   },
   {
     "slug": "2019-lamborghini-urus-awd-white-zpbua1zl5kla01124",
@@ -165,7 +184,13 @@ export const inventory: InventoryItem[] = [
       "3 mo": 165000,
       "12 mo": 150000
     },
-    "mileage": "40,000"
+    "mileage": "40,000",
+    "images": [
+      "/images/cars/2019-lamborghini-urus-awd-white/hero.jpg",
+      "/images/cars/2019-lamborghini-urus-awd-white/2.jpg",
+      "/images/cars/2019-lamborghini-urus-awd-white/3.jpg",
+      "/images/cars/2019-lamborghini-urus-awd-white/4.jpeg"
+    ]
   },
   {
     "slug": "2023-maserati-mc20-18",
@@ -186,7 +211,19 @@ export const inventory: InventoryItem[] = [
       "3 mo": 3250,
       "12 mo": 3250
     },
-    "mileage": "24,000"
+    "mileage": "24,000",
+    "images": [
+      "/images/cars/2023-maserati-mc20/hero.jpg",
+      "/images/cars/2023-maserati-mc20/2.jpg",
+      "/images/cars/2023-maserati-mc20/3.jpg",
+      "/images/cars/2023-maserati-mc20/4.jpg",
+      "/images/cars/2023-maserati-mc20/5.jpg",
+      "/images/cars/2023-maserati-mc20/6.jpg",
+      "/images/cars/2023-maserati-mc20/7.jpg",
+      "/images/cars/2023-maserati-mc20/8.jpg",
+      "/images/cars/2023-maserati-mc20/9.jpg",
+      "/images/cars/2023-maserati-mc20/10.jpg"
+    ]
   },
   {
     "slug": "2018-rr-dawn-66l-v12",
@@ -209,9 +246,15 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "19,780",
     "images": [
-      "/images/cars/2017-rolls-royce-dawn/hero.png",
-      "/images/cars/2017-rolls-royce-dawn/2.png",
-      "/images/cars/2017-rolls-royce-dawn/3.png"
+      "/images/cars/2018-rolls-royce-dawn-66l-v12/hero.jpg",
+      "/images/cars/2018-rolls-royce-dawn-66l-v12/2.jpg",
+      "/images/cars/2018-rolls-royce-dawn-66l-v12/3.jpg",
+      "/images/cars/2018-rolls-royce-dawn-66l-v12/4.jpg",
+      "/images/cars/2018-rolls-royce-dawn-66l-v12/5.jpg",
+      "/images/cars/2018-rolls-royce-dawn-66l-v12/6.jpg",
+      "/images/cars/2018-rolls-royce-dawn-66l-v12/7.jpg",
+      "/images/cars/2018-rolls-royce-dawn-66l-v12/8.jpg",
+      "/images/cars/2018-rolls-royce-dawn-66l-v12/9.jpg"
     ]
   },
   {
@@ -233,7 +276,19 @@ export const inventory: InventoryItem[] = [
       "3 mo": 2000,
       "12 mo": 2000
     },
-    "mileage": "45,xxx"
+    "mileage": "45,xxx",
+    "images": [
+      "/images/cars/2018-mercedes-amg-gt-c/hero.jpg",
+      "/images/cars/2018-mercedes-amg-gt-c/2.jpg",
+      "/images/cars/2018-mercedes-amg-gt-c/3.jpg",
+      "/images/cars/2018-mercedes-amg-gt-c/4.jpg",
+      "/images/cars/2018-mercedes-amg-gt-c/5.jpg",
+      "/images/cars/2018-mercedes-amg-gt-c/6.jpg",
+      "/images/cars/2018-mercedes-amg-gt-c/7.jpg",
+      "/images/cars/2018-mercedes-amg-gt-c/8.jpg",
+      "/images/cars/2018-mercedes-amg-gt-c/9.jpg",
+      "/images/cars/2018-mercedes-amg-gt-c/10.jpg"
+    ]
   },
   {
     "slug": "2021-audi-rs-6-avant-22",
@@ -254,7 +309,18 @@ export const inventory: InventoryItem[] = [
       "3 mo": 2500,
       "12 mo": 2500
     },
-    "mileage": "40,xxx"
+    "mileage": "40,xxx",
+    "images": [
+      "/images/cars/2021-audi-rs-6-avant/hero.jpg",
+      "/images/cars/2021-audi-rs-6-avant/2.jpg",
+      "/images/cars/2021-audi-rs-6-avant/3.jpg",
+      "/images/cars/2021-audi-rs-6-avant/4.jpg",
+      "/images/cars/2021-audi-rs-6-avant/5.jpg",
+      "/images/cars/2021-audi-rs-6-avant/6.jpg",
+      "/images/cars/2021-audi-rs-6-avant/7.jpg",
+      "/images/cars/2021-audi-rs-6-avant/8.jpg",
+      "/images/cars/2021-audi-rs-6-avant/9.jpg"
+    ]
   },
   {
     "slug": "2025-rolls-royce-spectre-electric-23",
@@ -275,7 +341,15 @@ export const inventory: InventoryItem[] = [
       "3 mo": 9000,
       "12 mo": 9000
     },
-    "mileage": "13,xxx"
+    "mileage": "13,xxx",
+    "images": [
+      "/images/cars/2025-rolls-royce-spectre-electric/hero.jpg",
+      "/images/cars/2025-rolls-royce-spectre-electric/2.jpg",
+      "/images/cars/2025-rolls-royce-spectre-electric/3.jpg",
+      "/images/cars/2025-rolls-royce-spectre-electric/4.jpg",
+      "/images/cars/2025-rolls-royce-spectre-electric/5.jpg",
+      "/images/cars/2025-rolls-royce-spectre-electric/6.jpg"
+    ]
   },
   {
     "slug": "2021-mercedes-g63-satin-black-12",
@@ -291,7 +365,8 @@ export const inventory: InventoryItem[] = [
       "/images/cars/2021-mercedes-g63/2.png",
       "/images/cars/2021-mercedes-g63/3.png",
       "/images/cars/2021-mercedes-g63/4.png"
-    ]
+    ],
+    "video": "/videos/cars/2021-mercedes-g63-satin-black/hero.mov"
   },
   {
     "slug": "2021-mercedes-g63-satin-white-13",
@@ -303,10 +378,10 @@ export const inventory: InventoryItem[] = [
     "location": "\u2014",
     "mileage": "\u2014",
     "images": [
-      "/images/cars/2021-mercedes-g63/hero.png",
-      "/images/cars/2021-mercedes-g63/2.png",
-      "/images/cars/2021-mercedes-g63/3.png",
-      "/images/cars/2021-mercedes-g63/4.png"
+      "/images/cars/2021-mercedes-g63-satin-white/hero.png",
+      "/images/cars/2021-mercedes-g63-satin-white/2.png",
+      "/images/cars/2021-mercedes-g63-satin-white/3.png",
+      "/images/cars/2021-mercedes-g63-satin-white/4.png"
     ]
   },
   {
@@ -334,7 +409,14 @@ export const inventory: InventoryItem[] = [
     "monthly": 0,
     "display": "Pricing on request",
     "location": "\u2014",
-    "mileage": "\u2014"
+    "mileage": "\u2014",
+    "images": [
+      "/images/cars/2021-maybach-gls600-black-gold/hero.jpeg",
+      "/images/cars/2021-maybach-gls600-black-gold/2.jpg",
+      "/images/cars/2021-maybach-gls600-black-gold/3.jpg",
+      "/images/cars/2021-maybach-gls600-black-gold/4.jpg"
+    ],
+    "video": "/videos/cars/2021-maybach-gls600-black-gold/hero.mov"
   },
   {
     "slug": "2025-c8-2lt-16",
@@ -344,7 +426,15 @@ export const inventory: InventoryItem[] = [
     "monthly": 0,
     "display": "Pricing on request",
     "location": "\u2014",
-    "mileage": "\u2014"
+    "mileage": "\u2014",
+    "images": [
+      "/images/cars/2025-c8-2lt/hero.jpg",
+      "/images/cars/2025-c8-2lt/2.jpg",
+      "/images/cars/2025-c8-2lt/3.jpg",
+      "/images/cars/2025-c8-2lt/4.jpg",
+      "/images/cars/2025-c8-2lt/5.jpg",
+      "/images/cars/2025-c8-2lt/6.jpg"
+    ]
   },
   {
     "slug": "2022-mercedes-benz-e450-17",
@@ -354,7 +444,16 @@ export const inventory: InventoryItem[] = [
     "monthly": 0,
     "display": "Pricing on request",
     "location": "\u2014",
-    "mileage": "\u2014"
+    "mileage": "\u2014",
+    "images": [
+      "/images/cars/2022-mercedes-benz-e450/hero.jpg",
+      "/images/cars/2022-mercedes-benz-e450/2.jpg",
+      "/images/cars/2022-mercedes-benz-e450/3.jpg",
+      "/images/cars/2022-mercedes-benz-e450/4.jpg",
+      "/images/cars/2022-mercedes-benz-e450/5.jpg",
+      "/images/cars/2022-mercedes-benz-e450/6.jpg",
+      "/images/cars/2022-mercedes-benz-e450/7.jpg"
+    ]
   },
   {
     "slug": "2021-mercedes-benz-s580-satin-red-18",
@@ -364,7 +463,13 @@ export const inventory: InventoryItem[] = [
     "monthly": 0,
     "display": "Pricing on request",
     "location": "\u2014",
-    "mileage": "\u2014"
+    "mileage": "\u2014",
+    "images": [
+      "/images/cars/2021-mercedes-benz-s580-satin-red/hero.jpg",
+      "/images/cars/2021-mercedes-benz-s580-satin-red/2.jpg",
+      "/images/cars/2021-mercedes-benz-s580-satin-red/3.jpg"
+    ],
+    "video": "/videos/cars/2021-mercedes-benz-s580-satin-red/hero.mp4"
   },
   {
     "slug": "2019-ferrari-portofino-19",
@@ -376,7 +481,9 @@ export const inventory: InventoryItem[] = [
     "location": "\u2014",
     "mileage": "\u2014",
     "images": [
-      "/images/cars/2019-ferrari-portofino/hero.jpg"
+      "/images/cars/2019-ferrari-portofino/hero.jpg",
+      "/images/cars/2019-ferrari-portofino/2.jpg",
+      "/images/cars/2019-ferrari-portofino/3.jpg"
     ]
   },
   {
@@ -387,7 +494,11 @@ export const inventory: InventoryItem[] = [
     "monthly": 0,
     "display": "Pricing on request",
     "location": "\u2014",
-    "mileage": "\u2014"
+    "mileage": "\u2014",
+    "images": [
+      "/images/cars/2024-maybach-gls-600/hero.jpg",
+      "/images/cars/2024-maybach-gls-600/2.jpg"
+    ]
   },
   {
     "slug": "keyvany-keyrus-21",
@@ -397,7 +508,19 @@ export const inventory: InventoryItem[] = [
     "monthly": 0,
     "display": "Pricing on request",
     "location": "\u2014",
-    "mileage": "\u2014"
+    "mileage": "\u2014",
+    "images": [
+      "/images/cars/keyvany-keyrus/hero.jpg",
+      "/images/cars/keyvany-keyrus/2.jpg",
+      "/images/cars/keyvany-keyrus/3.jpg",
+      "/images/cars/keyvany-keyrus/4.jpg",
+      "/images/cars/keyvany-keyrus/5.jpg",
+      "/images/cars/keyvany-keyrus/6.jpg",
+      "/images/cars/keyvany-keyrus/7.jpg",
+      "/images/cars/keyvany-keyrus/8.jpg",
+      "/images/cars/keyvany-keyrus/9.jpg",
+      "/images/cars/keyvany-keyrus/10.jpg"
+    ]
   },
   {
     "slug": "2021-bmw-m8-competition-gran-coupe-22",
@@ -407,7 +530,19 @@ export const inventory: InventoryItem[] = [
     "monthly": 0,
     "display": "Pricing on request",
     "location": "\u2014",
-    "mileage": "\u2014"
+    "mileage": "\u2014",
+    "images": [
+      "/images/cars/2021-bmw-m8-competition-gran-coupe/hero.jpg",
+      "/images/cars/2021-bmw-m8-competition-gran-coupe/2.jpg",
+      "/images/cars/2021-bmw-m8-competition-gran-coupe/3.jpg",
+      "/images/cars/2021-bmw-m8-competition-gran-coupe/4.jpg",
+      "/images/cars/2021-bmw-m8-competition-gran-coupe/5.jpg",
+      "/images/cars/2021-bmw-m8-competition-gran-coupe/6.jpg",
+      "/images/cars/2021-bmw-m8-competition-gran-coupe/7.jpg",
+      "/images/cars/2021-bmw-m8-competition-gran-coupe/8.jpg",
+      "/images/cars/2021-bmw-m8-competition-gran-coupe/9.jpg",
+      "/images/cars/2021-bmw-m8-competition-gran-coupe/10.jpg"
+    ]
   },
   {
     "slug": "2023-lamborghini-urus-performante-zpbuc3zl4pla22334",
@@ -429,12 +564,8 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "38,000",
     "images": [
-      "/images/cars/2023-lamborghini-urus-performante/hero.png",
-      "/images/cars/2023-lamborghini-urus-performante/2.png",
-      "/images/cars/2023-lamborghini-urus-performante/3.png",
-      "/images/cars/2023-lamborghini-urus-performante/4.png",
-      "/images/cars/2023-lamborghini-urus-performante/5.png",
-      "/images/cars/2023-lamborghini-urus-performante/6.png"
+      "/images/cars/2023-lamborghini-urus-performante/hero.jpg",
+      "/images/cars/2023-lamborghini-urus-performante/2.jpg"
     ]
   },
   {
@@ -445,7 +576,14 @@ export const inventory: InventoryItem[] = [
     "monthly": 0,
     "display": "Pricing on request",
     "location": "\u2014",
-    "mileage": "\u2014"
+    "mileage": "\u2014",
+    "images": [
+      "/images/cars/2024-rolls-royce-spectre/hero.png",
+      "/images/cars/2024-rolls-royce-spectre/2.png",
+      "/images/cars/2024-rolls-royce-spectre/3.png",
+      "/images/cars/2024-rolls-royce-spectre/4.png",
+      "/images/cars/2024-rolls-royce-spectre/5.png"
+    ]
   }
 ];
 
