@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { OwnershipPills } from "@/components/ownership-pills";
@@ -146,12 +147,14 @@ export default function Home() {
             >
               <article>
                 <div className="relative h-[240px] bg-zinc-900">
-                  <img
+                  <Image
                     src={item.images?.[0] || getPlaceholderImage(item.car)}
                     alt={item.car}
-                    className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
-                    loading="lazy"
-                    referrerPolicy="no-referrer"
+                    fill
+                    className="object-cover transition duration-300 group-hover:scale-[1.02]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    quality={65}
+                    unoptimized={!item.images?.[0]}
                   />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-4">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-300">{splitCardTitle(item.car).top}</p>
