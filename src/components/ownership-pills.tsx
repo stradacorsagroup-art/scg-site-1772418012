@@ -9,17 +9,17 @@ function pillClass(active: boolean) {
 export function OwnershipPills({ active }: { active: "membership" | "sale" | "apply" }) {
   return (
     <div>
-      <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-zinc-500 sm:text-[14px]">Path to ownership</p>
-      <div className="mt-3 -mx-1 overflow-x-auto pb-1 sm:mx-0 sm:overflow-visible sm:pb-0">
+      <div className="h-px w-full bg-zinc-800" />
+      <div className="mt-4 -mx-1 overflow-x-auto pb-1 sm:mx-0 sm:overflow-visible sm:pb-0">
         <div className="flex w-max gap-2 px-1 sm:w-auto sm:flex-wrap sm:gap-3 sm:px-0">
           <Link href="/#membership-inventory" className={pillClass(active === "membership")}>
-            Private Access
+            Lease to Own
           </Link>
           <Link href="/cars-for-sale" className={pillClass(active === "sale")}>
             Cars for Sale
           </Link>
           <Link href="/apply" className={pillClass(active === "apply")}>
-            Apply
+            Source a Vehicle
           </Link>
         </div>
       </div>

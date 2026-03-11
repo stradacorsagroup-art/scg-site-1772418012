@@ -80,33 +80,45 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-zinc-100">
-      <section className="border-b border-zinc-800 bg-[radial-gradient(circle_at_30%_20%,#1d1d1d_0%,#0a0a0a_50%)]">
-        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-16 lg:py-20">
-          <div className="inline-flex items-center gap-3">
-            <span className="h-px w-8 bg-zinc-700" />
-            <p className="text-[13px] font-semibold uppercase tracking-[0.34em] text-zinc-400">Dealhaus</p>
-            <span className="h-px w-8 bg-zinc-700" />
+      <section className="border-b border-zinc-800 bg-[#0a0a0a]">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-5 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:items-stretch lg:gap-12 lg:py-24">
+          <div className="flex flex-col justify-center">
+            <div className="inline-flex items-center gap-3">
+              <span className="h-px w-8 bg-zinc-700" />
+              <p className="text-[13px] font-semibold uppercase tracking-[0.34em] text-zinc-400">Dealhaus</p>
+              <span className="h-px w-8 bg-zinc-700" />
+            </div>
+
+            <h1 className="font-display mt-6 max-w-4xl text-[2.2rem] leading-[1.02] tracking-[-0.02em] text-white sm:text-[4.1rem]">
+              Elite inventory.
+              <br />
+              Your terms.
+            </h1>
+
+            <div className="mt-8">
+              <Link
+                href="#membership-inventory"
+                className="inline-flex h-11 items-center rounded-full border border-zinc-500 px-5 text-sm font-semibold text-zinc-100 transition hover:border-zinc-300 hover:bg-zinc-900"
+              >
+                Explore Inventory
+              </Link>
+            </div>
+
+            <div className="mt-8">
+              <OwnershipPills active="membership" />
+            </div>
           </div>
 
-          <h1 className="font-display mt-4 max-w-4xl text-[2.2rem] leading-[1.02] tracking-[-0.02em] text-white sm:text-[4.1rem]">
-            Private access.
-            <br />
-            Elite inventory.
-          </h1>
-
-          <p className="mt-4 max-w-xl text-sm text-zinc-400 sm:text-base">Luxury cars. Flexible ownership.</p>
-
-          <div className="mt-6">
-            <Link
-              href="#membership-inventory"
-              className="inline-flex h-11 items-center rounded-full border border-zinc-500 px-5 text-sm font-semibold text-zinc-100 transition hover:border-zinc-300 hover:bg-zinc-900"
-            >
-              Explore Inventory
-            </Link>
-          </div>
-
-          <div className="mt-7">
-            <OwnershipPills active="membership" />
+          <div className="relative min-h-[260px] overflow-hidden rounded-xl lg:min-h-[520px] lg:rounded-none">
+            <Image
+              src="/images/cars/2025-rolls-royce-spectre-electric/hero.jpg"
+              alt="Cinematic luxury car"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-black/45" />
           </div>
         </div>
       </section>
