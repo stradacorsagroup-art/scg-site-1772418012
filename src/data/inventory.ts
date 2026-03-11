@@ -18,126 +18,6 @@ export type InventoryItem = {
 
 export const inventory: InventoryItem[] = [
   {
-    "slug": "2022-rolls-royce-ghost-black-badge-whiteblack",
-    "car": "2022 Rolls-Royce Ghost Black Badge",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 27900,
-      "12 mo": 47900
-    },
-    "monthly": 5595,
-    "display": "From $27,900 down • $5,595/mo",
-    "location": "New York, NY, United States",
-    "scgMonthlyByTerm": {
-      "3 mo": 5595,
-      "12 mo": 5595
-    },
-    "scgBuyoutByTerm": {
-      "3 mo": 229900,
-      "12 mo": 215000
-    },
-    "mileage": "61,000",
-    "images": [
-      "/images/cars/ghost-black-badge/hero.jpg",
-      "/images/cars/ghost-black-badge/a.jpg",
-      "/images/cars/ghost-black-badge/b.jpg",
-      "/images/cars/ghost-black-badge/c.jpg"
-    ],
-    "video": "/videos/cars/ghost-black-badge.mov"
-  },
-  {
-    "slug": "2020-rolls-royce-cullinan-black-badge-slatv8c09lu200999",
-    "car": "2020 Rolls-Royce Cullinan Black Badge",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 26900,
-      "12 mo": 49900
-    },
-    "monthly": 6900,
-    "display": "From $26,900 down • $6,900/mo",
-    "location": "New York, NY, United States",
-    "scgMonthlyByTerm": {
-      "3 mo": 6900,
-      "12 mo": 6900
-    },
-    "scgBuyoutByTerm": {
-      "3 mo": 239900,
-      "12 mo": 229900
-    },
-    "mileage": "51,000",
-    "images": [
-      "/images/cars/2020-rolls-royce-cullinan-black-badge/hero.png",
-      "/images/cars/2020-rolls-royce-cullinan-black-badge/2.png",
-      "/images/cars/2020-rolls-royce-cullinan-black-badge/3.png"
-    ],
-    "video": "/videos/cars/2020-rolls-royce-cullinan-black-badge/hero.mov"
-  },
-  {
-    "slug": "2018-ferrari-488-spider-yellow",
-    "car": "2018 Ferrari 488 Spider",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 26900,
-      "12 mo": 49900
-    },
-    "monthly": 6900,
-    "display": "From $26,900 down • $6,900/mo",
-    "location": "New York, NY, United States",
-    "scgMonthlyByTerm": {
-      "3 mo": 6900,
-      "12 mo": 6900
-    },
-    "scgBuyoutByTerm": {
-      "3 mo": 250000,
-      "12 mo": 235000
-    },
-    "mileage": "27,000",
-    "images": [
-      "/images/cars/2018-ferrari-488-spider/hero.png",
-      "/images/cars/2018-ferrari-488-spider/2.png",
-      "/images/cars/2018-ferrari-488-spider/3.png",
-      "/images/cars/2018-ferrari-488-spider/4.png",
-      "/images/cars/2018-ferrari-488-spider/5.png"
-    ]
-  },
-  {
-    "slug": "2023-lamborghini-urus-performante-zpbuc3zl4pla22334",
-    "car": "2023 Lamborghini Urus Performante",
-    "terms": [
-      "3 mo"
-    ],
-    "down": {
-      "3 mo": 26900
-    },
-    "monthly": 5995,
-    "display": "From $26,900 down • $5,995/mo",
-    "location": "New York, NY, United States",
-    "scgMonthlyByTerm": {
-      "3 mo": 5995
-    },
-    "scgBuyoutByTerm": {
-      "3 mo": 250000
-    },
-    "mileage": "38,000",
-    "images": [
-      "/images/cars/2023-lamborghini-urus-performante/hero.png",
-      "/images/cars/2023-lamborghini-urus-performante/2.png",
-      "/images/cars/2023-lamborghini-urus-performante/3.png",
-      "/images/cars/2023-lamborghini-urus-performante/4.png",
-      "/images/cars/2023-lamborghini-urus-performante/5.png",
-      "/images/cars/2023-lamborghini-urus-performante/6.png"
-    ]
-  },
-  {
     "slug": "2020-mclaren-720s-spyder-satin-black",
     "car": "2020 McLaren 720S Spider",
     "terms": [
@@ -214,8 +94,8 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "lamborghini-urus-blue-zpbua1zl6kla00922",
-    "car": "LAMBORGHINI URUS BLUE",
+    "slug": "2019-lamborghini-urus-awd-blue-zpbua1zl6kla00922",
+    "car": "2019 Lamborghini Urus AWD BLUE",
     "terms": [
       "3 mo",
       "12 mo"
@@ -238,8 +118,28 @@ export const inventory: InventoryItem[] = [
     "mileage": "111,000"
   },
   {
-    "slug": "lamborghini-urus-white-zpbua1zl5kla01124",
-    "car": "LAMBORGHINI URUS WHITE",
+    "slug": "2019-lamborghini-urus-awd-green-zpbuc3zl4pla22334",
+    "car": "2019 Lamborghini Urus AWD GREEN",
+    "terms": [
+      "3 mo"
+    ],
+    "down": {
+      "3 mo": 26900
+    },
+    "monthly": 5995,
+    "display": "From $26,900 down • $5,995/mo",
+    "location": "New York, NY, United States",
+    "scgMonthlyByTerm": {
+      "3 mo": 5995
+    },
+    "scgBuyoutByTerm": {
+      "3 mo": 250000
+    },
+    "mileage": "38,000"
+  },
+  {
+    "slug": "2019-lamborghini-urus-awd-white-zpbua1zl5kla01124",
+    "car": "2019 Lamborghini Urus AWD WHITE",
     "terms": [
       "3 mo",
       "12 mo"
@@ -367,8 +267,8 @@ export const inventory: InventoryItem[] = [
     "mileage": "13,xxx"
   },
   {
-    "slug": "mercedes-g63-satin-black-15",
-    "car": "MERCEDES G63 SATIN BLACK",
+    "slug": "2021-mercedes-g63-satin-black-12",
+    "car": "2021 MERCEDES G63 SATIN BLACK",
     "terms": [],
     "down": {},
     "monthly": 0,
@@ -377,8 +277,8 @@ export const inventory: InventoryItem[] = [
     "mileage": "—"
   },
   {
-    "slug": "mercedes-g63-satin-white-16",
-    "car": "MERCEDES G63 SATIN WHITE",
+    "slug": "2021-mercedes-g63-satin-white-13",
+    "car": "2021 MERCEDES G63 SATIN WHITE",
     "terms": [],
     "down": {},
     "monthly": 0,
@@ -387,8 +287,8 @@ export const inventory: InventoryItem[] = [
     "mileage": "—"
   },
   {
-    "slug": "maybach-gls600-blackred-17",
-    "car": "MAYBACH GLS600 BLACK/RED",
+    "slug": "2021-maybach-gls600-blackred-14",
+    "car": "2021 MAYBACH GLS600 BLACK/RED",
     "terms": [],
     "down": {},
     "monthly": 0,
@@ -397,8 +297,8 @@ export const inventory: InventoryItem[] = [
     "mileage": "—"
   },
   {
-    "slug": "maybach-gls600-blackgold-19",
-    "car": "MAYBACH GLS600 BLACK/GOLD",
+    "slug": "2021-maybach-gls600-blackgold-15",
+    "car": "2021 MAYBACH GLS600 BLACK/GOLD",
     "terms": [],
     "down": {},
     "monthly": 0,
