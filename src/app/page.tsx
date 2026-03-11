@@ -111,8 +111,8 @@ export default function Home() {
 
           <div className="relative min-h-[260px] overflow-hidden rounded-xl lg:min-h-[520px] lg:rounded-none">
             <Image
-              src="/images/cars/2025-rolls-royce-spectre-electric/hero.jpg"
-              alt="Cinematic luxury car"
+              src="/images/hero/home-hero.jpg"
+              alt="SCG hero garage"
               fill
               className="object-cover"
               priority
