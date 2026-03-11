@@ -107,7 +107,7 @@ export default function Home() {
               Your terms.
             </h1>
 
-            <div className="mt-36 lg:mt-8">
+            <div className="mt-8 hidden lg:block">
               <OwnershipPills active="membership" />
             </div>
           </div>
@@ -125,6 +125,9 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="absolute inset-x-5 bottom-6 z-20 lg:hidden sm:inset-x-6">
+          <OwnershipPills active="membership" />
+        </div>
       </section>
 
       <section id="membership-inventory" className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-10">
