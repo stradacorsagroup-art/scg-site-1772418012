@@ -418,7 +418,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2025-c8-2lt-16",
-    "car": "2025 C8 2LT",
+    "car": "2025 Corvette C8 2LT",
     "terms": [],
     "down": {},
     "monthly": 0,
