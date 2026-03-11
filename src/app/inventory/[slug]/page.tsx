@@ -34,6 +34,8 @@ export default async function InventoryDetailPage({
     };
   });
 
+  const noteText = `Miles: ${vehicle.mileage || "—"}${vehicle.notes ? ` • ${vehicle.notes}` : ""}`;
+
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-zinc-100">
       <section className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-6 sm:px-6 sm:py-9 lg:grid-cols-[1.42fr_1fr] lg:gap-7">
@@ -49,8 +51,7 @@ export default async function InventoryDetailPage({
           <div className="mt-3 rounded-xl border border-zinc-800 bg-[#111] p-4 text-sm">
             <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-400">Notes</p>
             <div className="mt-2 space-y-1 text-zinc-300">
-              <p>Miles: {vehicle.mileage || "—"}</p>
-              <p>{vehicle.notes || "—"}</p>
+              <p>{noteText}</p>
             </div>
           </div>
         </div>
