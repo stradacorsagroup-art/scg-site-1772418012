@@ -2,15 +2,15 @@ import Link from "next/link";
 
 function pillClass(active: boolean) {
   return active
-    ? "inline-flex h-9 items-center rounded-full border border-zinc-900 bg-zinc-900 px-4 text-xs font-semibold text-white"
-    : "inline-flex h-9 items-center rounded-full border border-zinc-300 bg-white px-4 text-xs font-semibold text-zinc-900 hover:bg-zinc-100";
+    ? "inline-flex h-11 items-center rounded-full border border-zinc-900 bg-zinc-900 px-5 text-sm font-semibold text-white"
+    : "inline-flex h-11 items-center rounded-full border border-zinc-300 bg-white px-5 text-sm font-semibold text-zinc-900 hover:border-zinc-400 hover:bg-zinc-50";
 }
 
 export function OwnershipPills({ active }: { active: "membership" | "sale" | "apply" }) {
   return (
     <div>
-      <p className="text-[14px] font-semibold uppercase tracking-[0.16em] text-zinc-500">Path to ownership</p>
-      <div className="mt-2 flex flex-wrap gap-2">
+      <p className="text-[15px] font-semibold uppercase tracking-[0.18em] text-zinc-500">Path to ownership</p>
+      <div className="mt-3 flex flex-wrap gap-3">
         <Link href="/#membership-inventory" className={pillClass(active === "membership")}>
           Membership Inventory (No Credit)
         </Link>

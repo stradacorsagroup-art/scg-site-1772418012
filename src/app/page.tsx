@@ -70,75 +70,82 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-[#f4f4f4] text-[#111]">
-      <section className="border-b border-zinc-200/80 bg-gradient-to-b from-white to-[#f6f7f9]">
-        <div className="mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py-12 lg:py-14">
-          <p className="text-[14px] font-semibold uppercase tracking-[0.24em] text-zinc-500">Dealhaus</p>
-          <h1 className="mt-3 max-w-4xl text-3xl font-semibold tracking-[-0.02em] text-zinc-900 sm:text-5xl">Luxury cars. Flexible ownership.</h1>
-          <div className="mt-5">
+    <main className="min-h-screen bg-[#f5f5f5] text-zinc-900">
+      <section className="border-b border-zinc-200 bg-gradient-to-b from-white to-[#f5f5f5]">
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-14 lg:py-16">
+          <div className="inline-flex items-center gap-3">
+            <span className="h-px w-8 bg-zinc-300" />
+            <p className="text-[15px] font-semibold uppercase tracking-[0.34em] text-zinc-600">Dealhaus</p>
+            <span className="h-px w-8 bg-zinc-300" />
+          </div>
+          <h1 className="mt-4 max-w-5xl text-[2.15rem] font-semibold leading-[1.03] tracking-[-0.03em] text-zinc-900 sm:text-[3.8rem]">
+            Luxury cars. Flexible ownership.
+          </h1>
+          <div className="mt-6">
             <OwnershipPills active="membership" />
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1380px] px-6 py-8 sm:px-10">
+      <section className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-10">
 
-        <div className="grid gap-8 lg:grid-cols-[170px_minmax(0,1fr)]">
-          <aside>
-            <h2 className="mb-3 text-[26px] font-light">Brands</h2>
-            <div className="space-y-2">
+        <div className="grid gap-8 lg:grid-cols-[210px_minmax(0,1fr)]">
+          <aside className="h-fit rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm">
+            <h2 className="mb-3 text-[12px] font-semibold uppercase tracking-[0.16em] text-zinc-500">Filter by brand</h2>
+            <div className="space-y-2.5">
               {brandOptions.map((brand) => (
-                <label key={brand} className="flex cursor-pointer items-center gap-2 text-[14px] text-[#333]">
+                <label key={brand} className="flex cursor-pointer items-center gap-2.5 text-[14px] text-zinc-800">
                   <input
                     type="checkbox"
                     checked={selectedBrands.includes(brand)}
                     onChange={() => toggleBrand(brand)}
-                    className="h-4 w-4 rounded-none border-[#bcbcbc]"
+                    className="h-4 w-4 rounded border-zinc-300"
                   />
-                  <span>{displayBrand(brand)}</span>
+                  <span className="font-medium">{displayBrand(brand)}</span>
                 </label>
               ))}
             </div>
           </aside>
 
           <div>
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
               {filtered.map((item) => (
                 <Link
                   key={item.slug}
                   href={`/inventory/${item.slug}`}
-                  className="block border border-[#8f8f8f] bg-white transition hover:shadow-[0_8px_18px_rgba(0,0,0,0.08)]"
+                  className="group block overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)]"
                 >
                   <article>
-                    <div className="flex h-[86px] items-start justify-between border-b border-[#cfcfcf] px-3 py-2">
-                      <div className="pr-3">
-                        <p className="text-[13px] leading-tight text-[#252525]">{splitCardTitle(item.car).top}</p>
-                        <h4 className="h-[44px] overflow-hidden text-[18px] font-medium uppercase leading-tight tracking-[0.01em] text-[#131313]">
-                          {splitCardTitle(item.car).model}
-                        </h4>
-                      </div>
-                      <span className="text-xl leading-none text-[#555]">→</span>
-                    </div>
-
-                    <div className="relative h-[170px] border-b border-[#cfcfcf] bg-[#e8e8e8]">
+                    <div className="relative h-[190px] border-b border-zinc-200 bg-zinc-100">
                       <img
                         src={item.images?.[0] || getPlaceholderImage(item.car)}
                         alt={item.car}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
                         style={{
-                          objectPosition: item.car === "2020 Rolls-Royce Cullinan Black Badge" ? "center 64%" : "center", 
+                          objectPosition: item.car === "2020 Rolls-Royce Cullinan Black Badge" ? "center 64%" : "center",
                         }}
                         loading="lazy"
                         referrerPolicy="no-referrer"
                       />
                     </div>
 
-                    <div className="flex items-center justify-between px-3 py-2">
-                      <div>
-                        <p className="text-xs text-[#5a5a5a]">Subscription</p>
-                        <p className="text-[16px] font-medium text-[#161616]">{formatPrice(item.monthly)}/mo</p>
+                    <div className="space-y-3 p-4">
+                      <div className="min-h-[60px]">
+                        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-zinc-500">{splitCardTitle(item.car).top}</p>
+                        <h4 className="mt-1 line-clamp-2 text-[20px] font-semibold uppercase leading-tight tracking-[0.01em] text-zinc-900">
+                          {splitCardTitle(item.car).model}
+                        </h4>
                       </div>
-                      <div className="border border-[#999] px-3 py-1 text-[13px] text-[#242424]">See Details →</div>
+
+                      <div className="flex items-center justify-between border-t border-zinc-200 pt-3">
+                        <div>
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-500">Monthly Price</p>
+                          <p className="mt-1 text-[18px] font-semibold text-zinc-900">{formatPrice(item.monthly)}/mo</p>
+                        </div>
+                        <div className="rounded-full border border-zinc-300 px-3 py-1 text-[13px] font-medium text-zinc-700 transition group-hover:border-zinc-900 group-hover:text-zinc-900">
+                          See Details →
+                        </div>
+                      </div>
                     </div>
                   </article>
                 </Link>

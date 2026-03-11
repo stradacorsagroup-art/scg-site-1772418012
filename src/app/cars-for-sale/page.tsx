@@ -47,11 +47,14 @@ export default function CarsForSalePage() {
 
   return (
     <main className="min-h-screen bg-[#f6f7f9] text-zinc-900">
-      <section className="border-b border-zinc-200/80 bg-gradient-to-b from-white to-[#f6f7f9]">
-        <div className="mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py-12 lg:py-14">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">The Exotic Marketplace</p>
-          <h1 className="mt-3 max-w-4xl text-3xl font-semibold tracking-[-0.02em] text-zinc-900 sm:text-5xl">Luxury Vehicle Ownership, Redefined for Discerning Drivers.</h1>
-          <p className="mt-4 max-w-2xl text-sm text-zinc-600 sm:text-base">Curated inventory. Transparent terms. Zero guesswork. Browse live inventory—with flexible ownership built for a lifestyle that moves with you.</p>
+      <section className="border-b border-zinc-200 bg-gradient-to-b from-white to-[#f5f5f5]">
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-14 lg:py-16">
+          <div className="inline-flex items-center gap-3">
+            <span className="h-px w-8 bg-zinc-300" />
+            <p className="text-[15px] font-semibold uppercase tracking-[0.34em] text-zinc-600">Dealhaus</p>
+            <span className="h-px w-8 bg-zinc-300" />
+          </div>
+          <h1 className="mt-4 max-w-5xl text-[2.15rem] font-semibold leading-[1.03] tracking-[-0.03em] text-zinc-900 sm:text-[3.8rem]">Luxury cars. Flexible ownership.</h1>
         </div>
       </section>
 
