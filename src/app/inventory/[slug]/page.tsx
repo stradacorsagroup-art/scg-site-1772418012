@@ -35,36 +35,41 @@ export default async function InventoryDetailPage({
   });
 
   return (
-    <main className="min-h-screen bg-[#f5f5f5] text-zinc-900">
+    <main className="min-h-screen bg-[#0a0a0a] text-zinc-100">
       <section className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-6 sm:px-6 sm:py-9 lg:grid-cols-[1.42fr_1fr] lg:gap-7">
         <div>
-          <Link href="/" className="inline-flex text-sm font-medium text-zinc-600 hover:text-zinc-900">
+          <Link href="/" className="inline-flex text-sm font-medium text-zinc-400 hover:text-zinc-100">
             ← Back to inventory
           </Link>
 
-          <div className="mt-3 rounded-2xl border border-zinc-200 bg-white p-2 shadow-sm sm:p-3">
+          <div className="mt-3 rounded-2xl border border-zinc-800 bg-[#111] p-2 shadow-sm sm:p-3">
             <VehicleGallery car={vehicle.car} images={vehicle.images} video={vehicle.video} />
           </div>
 
-          <div className="mt-3 rounded-xl border border-zinc-200 bg-white p-4 text-sm">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-500">Notes</p>
-            <p className="mt-2 text-zinc-700">{vehicle.notes || "—"}</p>
+          <div className="mt-3 rounded-xl border border-zinc-800 bg-[#111] p-4 text-sm">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-400">Notes</p>
+            <p className="mt-2 text-zinc-300">{vehicle.notes || "—"}</p>
           </div>
         </div>
 
-        <aside className="h-fit rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm sm:p-5 lg:sticky lg:top-4">
-          <h1 className="text-[1.85rem] font-semibold leading-tight tracking-[-0.02em] sm:text-[2.25rem]">{vehicle.car}</h1>
-          <p className="mt-3 text-sm font-medium text-zinc-500">Monthly Price</p>
-          <p className="mt-1 text-3xl font-semibold text-zinc-900">${vehicle.monthly.toLocaleString()}/month</p>
+        <aside className="h-fit rounded-2xl border border-zinc-800 bg-[#111] p-4 shadow-sm sm:p-5 lg:sticky lg:top-4">
+          <h1 className="text-[1.85rem] font-semibold leading-tight tracking-[-0.02em] text-zinc-100 sm:text-[2.25rem]">{vehicle.car}</h1>
+          <p className="mt-3 text-sm font-medium text-zinc-400">Monthly Price</p>
+          <p className="mt-1 text-3xl font-semibold text-zinc-100">${vehicle.monthly.toLocaleString()}/month</p>
 
-          <h2 className="mt-4 text-lg font-semibold">Due at Signing</h2>
-          <p className="mt-1 text-sm text-zinc-500">Estimated drive-off total. Excludes taxes and registration fees.</p>
+          <h2 className="mt-4 text-lg font-semibold text-zinc-100">Due at Signing</h2>
+          <p className="mt-1 text-sm text-zinc-400">Estimated drive-off total. Excludes taxes and registration fees.</p>
 
-          <TermPricingSelector startupCosts={startupCosts} membershipFee={membershipFee} />
+          <details className="mt-3 rounded-xl border border-zinc-700 bg-[#181818] p-3">
+            <summary className="cursor-pointer text-sm font-semibold text-zinc-200">View full terms</summary>
+            <div className="mt-2">
+              <TermPricingSelector startupCosts={startupCosts} membershipFee={membershipFee} />
+            </div>
+          </details>
 
-          <div className="mt-4 rounded-xl border border-zinc-200 bg-zinc-50 p-3 text-sm">
-            <p className="text-zinc-600">Deposit to reserve</p>
-            <p className="text-xl font-semibold">${deposit.toLocaleString()}</p>
+          <div className="mt-4 rounded-xl border border-zinc-700 bg-[#181818] p-3 text-sm">
+            <p className="text-zinc-400">Deposit to reserve</p>
+            <p className="text-xl font-semibold text-zinc-100">${deposit.toLocaleString()}</p>
           </div>
 
           <ReserveModalButton car={vehicle.car} />

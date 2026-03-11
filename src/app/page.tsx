@@ -25,7 +25,7 @@ function displayBrand(value: string) {
 
 function getPlaceholderImage(carName: string) {
   const text = encodeURIComponent(carName);
-  return `https://placehold.co/1200x800/e8e8e8/333333?text=${text}`;
+  return `https://placehold.co/1200x800/101010/e8e8e8?text=${text}`;
 }
 
 function splitCardTitle(car: string) {
@@ -58,7 +58,6 @@ export default function Home() {
       const tokens = item.car.split(" ");
       const guessedBrand = /^\d{4}$/.test(tokens[0]) ? tokens[1] : tokens[0];
       const normalized = normalizeBrand(guessedBrand);
-
       return selectedBrands.length === 0 || selectedBrands.includes(normalized);
     });
   }, [selectedBrands]);
@@ -70,110 +69,100 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-[#f5f5f5] text-zinc-900">
-      <section className="border-b border-zinc-200 bg-gradient-to-b from-white to-[#f5f5f5]">
-        <div className="mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py-14 lg:py-16">
+    <main className="min-h-screen bg-[#0a0a0a] text-zinc-100">
+      <section className="border-b border-zinc-800 bg-[radial-gradient(circle_at_30%_20%,#1d1d1d_0%,#0a0a0a_50%)]">
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-16 lg:py-20">
           <div className="inline-flex items-center gap-3">
-            <span className="h-px w-8 bg-zinc-300" />
-            <p className="text-[15px] font-semibold uppercase tracking-[0.34em] text-zinc-600">Dealhaus</p>
-            <span className="h-px w-8 bg-zinc-300" />
+            <span className="h-px w-8 bg-zinc-700" />
+            <p className="text-[13px] font-semibold uppercase tracking-[0.34em] text-zinc-400">Dealhaus</p>
+            <span className="h-px w-8 bg-zinc-700" />
           </div>
-          <h1 className="mt-4 max-w-5xl text-[1.95rem] font-semibold leading-[1.04] tracking-[-0.03em] text-zinc-900 sm:text-[3.8rem]">
-            Luxury cars. Flexible ownership.
+
+          <h1 className="font-display mt-4 max-w-4xl text-[2.2rem] leading-[1.02] tracking-[-0.02em] text-white sm:text-[4.1rem]">
+            Private access.
+            <br />
+            Elite inventory.
           </h1>
 
-          <div className="mt-5 flex flex-wrap items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.11em] text-zinc-500 sm:gap-4 sm:text-[11px] sm:tracking-[0.12em]">
-            <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-zinc-700" />Curated Inventory</span>
-            <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-zinc-700" />Private Access</span>
-            <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-zinc-700" />Concierge Delivery</span>
-          </div>
+          <p className="mt-4 max-w-xl text-sm text-zinc-400 sm:text-base">Luxury cars. Flexible ownership.</p>
 
           <div className="mt-6">
+            <Link
+              href="#membership-inventory"
+              className="inline-flex h-11 items-center rounded-full border border-zinc-500 px-5 text-sm font-semibold text-zinc-100 transition hover:border-zinc-300 hover:bg-zinc-900"
+            >
+              Explore Inventory
+            </Link>
+          </div>
+
+          <div className="mt-7">
             <OwnershipPills active="membership" />
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-10">
-        <div className="mb-6 rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm sm:p-4">
+      <section id="membership-inventory" className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-10">
+        <div className="mb-6 rounded-2xl border border-zinc-800 bg-[#111] p-3 sm:p-4">
           <div className="mb-3 flex items-center justify-between">
-            <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-zinc-500">Filter by brand</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-zinc-400">Filter by brand</p>
             <button
               type="button"
               onClick={() => setSelectedBrands([])}
-              className="text-[12px] font-medium text-zinc-500 hover:text-zinc-900"
+              className="text-[12px] font-medium text-zinc-400 hover:text-zinc-200"
             >
               Clear
             </button>
           </div>
+
           <div className="-mx-1 overflow-x-auto pb-1 sm:mx-0 sm:overflow-visible sm:pb-0">
             <div className="flex w-max gap-2 px-1 sm:w-auto sm:flex-wrap sm:px-0">
-            {brandOptions.map((brand) => {
-              const active = selectedBrands.includes(brand);
-              return (
-                <button
-                  key={brand}
-                  type="button"
-                  onClick={() => toggleBrand(brand)}
-                  className={`rounded-full border px-3 py-1.5 text-[13px] font-medium transition ${
-                    active
-                      ? "border-zinc-900 bg-zinc-900 text-white"
-                      : "border-zinc-300 bg-white text-zinc-700 hover:border-zinc-500"
-                  }`}
-                >
-                  {displayBrand(brand)}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-        <div>
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
-              {filtered.map((item) => (
-                <Link
-                  key={item.slug}
-                  href={`/inventory/${item.slug}`}
-                  className="group block overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(0,0,0,0.09)]"
-                >
-                  <article>
-                    <div className="relative h-[205px] border-b border-zinc-200 bg-zinc-100 sm:h-[190px]">
-                      <img
-                        src={item.images?.[0] || getPlaceholderImage(item.car)}
-                        alt={item.car}
-                        className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
-                        style={{
-                          objectPosition: item.car === "2020 Rolls-Royce Cullinan Black Badge" ? "center 64%" : "center",
-                        }}
-                        loading="lazy"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-
-                    <div className="space-y-3 p-4">
-                      <div className="min-h-[60px]">
-                        <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-zinc-500">{splitCardTitle(item.car).top}</p>
-                        <h4 className="mt-1 line-clamp-2 text-[20px] font-semibold uppercase leading-tight tracking-[0.01em] text-zinc-900">
-                          {splitCardTitle(item.car).model}
-                        </h4>
-                      </div>
-
-                      <div className="flex items-center justify-between border-t border-zinc-200 pt-3">
-                        <div>
-                          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-500">Monthly Price</p>
-                          <p className="mt-1 text-[18px] font-semibold text-zinc-900">{formatPrice(item.monthly)}/mo</p>
-                        </div>
-                        <div className="rounded-full border border-zinc-300 px-3 py-1 text-[13px] font-medium text-zinc-700 transition group-hover:border-zinc-900 group-hover:text-zinc-900">
-                          See Details →
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </Link>
-              ))}
+              {brandOptions.map((brand) => {
+                const active = selectedBrands.includes(brand);
+                return (
+                  <button
+                    key={brand}
+                    type="button"
+                    onClick={() => toggleBrand(brand)}
+                    className={`rounded-full border px-3 py-1.5 text-[13px] font-medium transition ${
+                      active
+                        ? "border-zinc-100 bg-zinc-100 text-zinc-900"
+                        : "border-zinc-700 bg-transparent text-zinc-300 hover:border-zinc-400 hover:text-zinc-100"
+                    }`}
+                  >
+                    {displayBrand(brand)}
+                  </button>
+                );
+              })}
             </div>
           </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
+          {filtered.map((item) => (
+            <Link
+              key={item.slug}
+              href={`/inventory/${item.slug}`}
+              className="group block overflow-hidden rounded-2xl border border-zinc-800 bg-[#111] transition duration-200 hover:-translate-y-0.5 hover:border-zinc-600"
+            >
+              <article>
+                <div className="relative h-[240px] bg-zinc-900">
+                  <img
+                    src={item.images?.[0] || getPlaceholderImage(item.car)}
+                    alt={item.car}
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-4">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-300">{splitCardTitle(item.car).top}</p>
+                    <h4 className="mt-1 line-clamp-2 text-[20px] font-semibold uppercase leading-tight text-white">{splitCardTitle(item.car).model}</h4>
+                    <p className="mt-2 text-[18px] font-semibold text-white">{formatPrice(item.monthly)}/mo</p>
+                  </div>
+                </div>
+              </article>
+            </Link>
+          ))}
+        </div>
       </section>
     </main>
   );
