@@ -29,6 +29,14 @@ function getPlaceholderImage(carName: string) {
   return `https://placehold.co/1200x800/101010/e8e8e8?text=${text}`;
 }
 
+function getCardImagePosition(slug: string) {
+  const focalBySlug: Record<string, string> = {
+    "2020-mclaren-720s-spyder-satin-black": "50% 38%",
+    "2022-mercedes-benz-s580": "50% 38%",
+  };
+
+  return focalBySlug[slug] ?? "50% 50%";
+}
 
 function splitCardTitle(car: string) {
   const tokens = car.trim().split(/\s+/);
@@ -152,7 +160,8 @@ export default function Home() {
                     src={item.images?.[0] || getPlaceholderImage(item.car)}
                     alt={item.car}
                     fill
-                    className="object-cover object-center"
+                    className="object-cover"
+                    style={{ objectPosition: getCardImagePosition(item.slug) }}
                     sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     quality={90}
                     unoptimized={!item.images?.[0]}
