@@ -375,6 +375,34 @@ export const inventory: InventoryItem[] = [
     "display": "Pricing on request",
     "location": "—",
     "mileage": "—"
+  },
+  {
+    "slug": "2023-lamborghini-urus-performante-zpbuc3zl4pla22334",
+    "car": "2023 Lamborghini Urus Performante",
+    "terms": [
+      "3 mo"
+    ],
+    "down": {
+      "3 mo": 26900
+    },
+    "monthly": 5995,
+    "display": "From $26,900 down • $5,995/mo",
+    "location": "New York, NY, United States",
+    "scgMonthlyByTerm": {
+      "3 mo": 5995
+    },
+    "scgBuyoutByTerm": {
+      "3 mo": 250000
+    },
+    "mileage": "38,000",
+    "images": [
+      "/images/cars/2023-lamborghini-urus-performante/hero.png",
+      "/images/cars/2023-lamborghini-urus-performante/2.png",
+      "/images/cars/2023-lamborghini-urus-performante/3.png",
+      "/images/cars/2023-lamborghini-urus-performante/4.png",
+      "/images/cars/2023-lamborghini-urus-performante/5.png",
+      "/images/cars/2023-lamborghini-urus-performante/6.png"
+    ]
   }
 ];
 
