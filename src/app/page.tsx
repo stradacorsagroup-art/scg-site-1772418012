@@ -134,7 +134,7 @@ export default function Home() {
 
       <section id="membership-inventory" className="mx-auto max-w-7xl px-5 pb-8 pt-14 sm:px-6 sm:py-10">
         <div className="mb-6 px-1">
-          <p className="font-display text-[2rem] leading-[1.02] tracking-[-0.02em] text-white sm:text-[3rem]">
+          <p className="font-display text-[1.75rem] leading-[1.04] tracking-[-0.015em] text-white sm:text-[2.6rem]">
             No credit check · ID + Insurance + Drive
           </p>
         </div>
