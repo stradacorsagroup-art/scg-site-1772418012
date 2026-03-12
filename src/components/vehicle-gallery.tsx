@@ -47,7 +47,7 @@ export function VehicleGallery({ car, images = [], video }: { car: string; image
               src={current.src}
               alt={car}
               fill
-              className="object-cover lg:object-contain"
+              className="object-cover object-center"
               sizes="(max-width: 1024px) 100vw, 65vw"
               quality={95}
             />
