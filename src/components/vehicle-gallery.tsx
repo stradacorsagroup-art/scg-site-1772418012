@@ -8,8 +8,13 @@ type GalleryMedia =
   | { type: "video"; src: string };
 
 function getImagePosition(car: string, src: string) {
-  if (car.includes("2020 McLaren 720S Spider") && src.includes("/images/cars/2020-mclaren-720s-spider/2.jpg")) {
-    return "50% 72%";
+  if (car.includes("2020 McLaren 720S Spider")) {
+    if (
+      src.includes("/images/cars/2020-mclaren-720s-spider/2.jpg") ||
+      src.includes("/images/cars/2020-mclaren-720s-spider/hero.jpg")
+    ) {
+      return "50% 85%";
+    }
   }
   return "50% 50%";
 }
