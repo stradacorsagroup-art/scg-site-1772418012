@@ -21,15 +21,21 @@ export const inventory: InventoryItem[] = [
     "slug": "2020-mclaren-720s-spyder-satin-black",
     "car": "2020 McLaren 720S Spider",
     "terms": [
+      "3 mo",
+      "6 mo",
       "12 mo"
     ],
     "down": {
-      "12 mo": 59900
+      "3 mo": 26995,
+      "6 mo": 32495,
+      "12 mo": 54895
     },
     "monthly": 6995,
-    "display": "From $59,900 down • $6,995/mo",
+    "display": "From $26,995 down • $6,995/mo",
     "location": "New York, NY, United States",
     "scgMonthlyByTerm": {
+      "3 mo": 6995,
+      "6 mo": 6995,
       "12 mo": 6995
     },
     "scgBuyoutByTerm": {
