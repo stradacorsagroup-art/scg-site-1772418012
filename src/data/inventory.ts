@@ -69,8 +69,8 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "9,847",
     "images": [
-      "/images/cars/keyvany-keyrus/hero.jpg",
       "/images/cars/keyvany-keyrus/2.jpg",
+      "/images/cars/keyvany-keyrus/hero.jpg",
       "/images/cars/keyvany-keyrus/3.jpg",
       "/images/cars/keyvany-keyrus/4.jpg",
       "/images/cars/keyvany-keyrus/5.jpg",
