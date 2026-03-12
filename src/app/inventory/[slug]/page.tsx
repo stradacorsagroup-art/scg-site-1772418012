@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { OwnershipPills } from "@/components/ownership-pills";
 import { ReserveModalButton } from "@/components/reserve-modal-button";
 import { VehicleGallery } from "@/components/vehicle-gallery";
 import { TermPricingSelector } from "@/components/term-pricing-selector";
+import { carsForSaleInventory } from "@/data/cars-for-sale";
 import { deposit, getInventoryBySlug, membershipFee } from "@/data/inventory";
 
 export default async function InventoryDetailPage({
@@ -14,6 +16,9 @@ export default async function InventoryDetailPage({
   const vehicle = getInventoryBySlug(slug);
 
   if (!vehicle) notFound();
+
+  const normalize = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const isSaleVehicle = carsForSaleInventory.some((item) => normalize(item.car) === normalize(vehicle.car));
 
   const orderedTerms = [...vehicle.terms].sort((a, b) => {
     const order: Record<string, number> = { "3 mo": 1, "6 mo": 2, "9 mo": 3, "12 mo": 4 };
@@ -38,10 +43,14 @@ export default async function InventoryDetailPage({
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-zinc-100">
+      <section className="mx-auto max-w-7xl px-4 pt-5 sm:px-6 sm:pt-6">
+        <OwnershipPills active={isSaleVehicle ? "sale" : "membership"} />
+      </section>
+
       <section className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-6 sm:px-6 sm:py-9 lg:grid-cols-[1.42fr_1fr] lg:gap-7">
         <div>
-          <Link href="/" className="inline-flex text-sm font-medium text-zinc-400 hover:text-zinc-100">
-            ← Back to inventory
+          <Link href={isSaleVehicle ? "/cars-for-sale" : "/#membership-inventory"} className="inline-flex text-sm font-medium text-zinc-400 hover:text-zinc-100">
+            ← Back to {isSaleVehicle ? "cars for sale" : "inventory"}
           </Link>
 
           <div className="mt-3 rounded-2xl border border-zinc-800 bg-[#111] p-2 shadow-sm sm:p-3">
