@@ -22,10 +22,12 @@ export const inventory: InventoryItem[] = [
     "car": "2020 McLaren 720S Spider",
     "terms": [
       "3 mo",
+      "6 mo",
       "12 mo"
     ],
     "down": {
       "3 mo": 26995,
+      "6 mo": 32495,
       "12 mo": 54895
     },
     "monthly": 6995,
@@ -33,6 +35,7 @@ export const inventory: InventoryItem[] = [
     "location": "New York, NY, United States",
     "scgMonthlyByTerm": {
       "3 mo": 6995,
+      "6 mo": 6995,
       "12 mo": 6995
     },
     "scgBuyoutByTerm": {
