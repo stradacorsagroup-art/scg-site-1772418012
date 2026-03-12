@@ -43,65 +43,58 @@ export const inventory: InventoryItem[] = [
     "video": "/videos/cars/2020-mclaren-720s-spider/hero.mov"
   },
   {
-    "slug": "2021-mercedes-benz-s580-faybach-w1kg7gbxma052327",
-    "car": "2021 Mercedes-Benz S580 'FAYBACH",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 10900,
-      "12 mo": 13900
-    },
-    "monthly": 2495,
-    "display": "From $10,900 down • $2,495/mo",
-    "location": "New York, NY, United States",
-    "scgMonthlyByTerm": {
-      "3 mo": 2495,
-      "12 mo": 2495
-    },
-    "scgBuyoutByTerm": {
-      "3 mo": 65000,
-      "12 mo": 65000
-    },
-    "mileage": "65,000",
+    "slug": "keyvany-keyrus-21",
+    "car": "2021 Lamborghini Urus \"Keyvany Keyrus\"",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
+    "location": "—",
+    "mileage": "—",
     "images": [
-      "/images/cars/2021-mercedes-benz-s580-faybach/hero.jpg",
-      "/images/cars/2021-mercedes-benz-s580-faybach/2.jpg",
-      "/images/cars/2021-mercedes-benz-s580-faybach/3.jpg"
-    ],
-    "video": "/videos/cars/2021-mercedes-benz-s580-faybach/hero.mov"
+      "/images/cars/keyvany-keyrus/hero.jpg",
+      "/images/cars/keyvany-keyrus/2.jpg",
+      "/images/cars/keyvany-keyrus/3.jpg",
+      "/images/cars/keyvany-keyrus/4.jpg",
+      "/images/cars/keyvany-keyrus/5.jpg",
+      "/images/cars/keyvany-keyrus/6.jpg",
+      "/images/cars/keyvany-keyrus/7.jpg",
+      "/images/cars/keyvany-keyrus/8.jpg",
+      "/images/cars/keyvany-keyrus/9.jpg",
+      "/images/cars/keyvany-keyrus/10.jpg"
+    ]
   },
   {
-    "slug": "2022-mercedes-benz-s580",
-    "car": "2022 Mercedes-Benz S580",
+    "slug": "2023-maserati-mc20-18",
+    "car": "2023 Maserati MC20",
     "terms": [
       "3 mo",
       "12 mo"
     ],
     "down": {
-      "3 mo": 10900,
-      "12 mo": 12900
+      "3 mo": 25995,
+      "12 mo": 25995
     },
-    "monthly": 2695,
-    "display": "From $10,900 down • $2,695/mo",
-    "location": "New York, NY, United States",
+    "monthly": 3250,
+    "display": "From $25,995 down • $3,250/mo",
+    "location": "—",
+    "notes": "$339,700 MSRP • 6/12 Month Lease To Own • No Credit/Income Check • Buyout Option At End",
     "scgMonthlyByTerm": {
-      "3 mo": 2695,
-      "12 mo": 2695
+      "3 mo": 3250,
+      "12 mo": 3250
     },
-    "scgBuyoutByTerm": {
-      "3 mo": 65000,
-      "12 mo": 65000
-    },
-    "mileage": "65,000",
+    "mileage": "24,000",
     "images": [
-      "/images/cars/2022-mercedes-benz-s580/hero.png",
-      "/images/cars/2022-mercedes-benz-s580/2.png",
-      "/images/cars/2022-mercedes-benz-s580/3.png",
-      "/images/cars/2022-mercedes-benz-s580/4.png",
-      "/images/cars/2022-mercedes-benz-s580/5.png",
-      "/images/cars/2022-mercedes-benz-s580/6.png"
+      "/images/cars/2023-maserati-mc20/hero.jpg",
+      "/images/cars/2023-maserati-mc20/2.jpg",
+      "/images/cars/2023-maserati-mc20/3.jpg",
+      "/images/cars/2023-maserati-mc20/4.jpg",
+      "/images/cars/2023-maserati-mc20/5.jpg",
+      "/images/cars/2023-maserati-mc20/6.jpg",
+      "/images/cars/2023-maserati-mc20/7.jpg",
+      "/images/cars/2023-maserati-mc20/8.jpg",
+      "/images/cars/2023-maserati-mc20/9.jpg",
+      "/images/cars/2023-maserati-mc20/10.jpg"
     ]
   },
   {
@@ -193,41 +186,25 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "2023-maserati-mc20-18",
-    "car": "2023 Maserati MC20",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 25995,
-      "12 mo": 25995
-    },
-    "monthly": 3250,
-    "display": "From $25,995 down • $3,250/mo",
+    "slug": "2021-mercedes-g63-satin-white-13",
+    "car": "2021 Mercedes-AMG G63 SATIN WHITE",
+    "terms": [],
+    "down": {},
+    "monthly": 0,
+    "display": "Pricing on request",
     "location": "—",
-    "notes": "$339,700 MSRP • 6/12 Month Lease To Own • No Credit/Income Check • Buyout Option At End",
-    "scgMonthlyByTerm": {
-      "3 mo": 3250,
-      "12 mo": 3250
-    },
-    "mileage": "24,000",
+    "mileage": "—",
     "images": [
-      "/images/cars/2023-maserati-mc20/hero.jpg",
-      "/images/cars/2023-maserati-mc20/2.jpg",
-      "/images/cars/2023-maserati-mc20/3.jpg",
-      "/images/cars/2023-maserati-mc20/4.jpg",
-      "/images/cars/2023-maserati-mc20/5.jpg",
-      "/images/cars/2023-maserati-mc20/6.jpg",
-      "/images/cars/2023-maserati-mc20/7.jpg",
-      "/images/cars/2023-maserati-mc20/8.jpg",
-      "/images/cars/2023-maserati-mc20/9.jpg",
-      "/images/cars/2023-maserati-mc20/10.jpg"
-    ]
+      "/images/cars/2021-mercedes-g63-satin-white/hero.jpg",
+      "/images/cars/2021-mercedes-g63-satin-white/2.jpg",
+      "/images/cars/2021-mercedes-g63-satin-white/3.jpg",
+      "/images/cars/2021-mercedes-g63-satin-white/4.jpg"
+    ],
+    "video": "/videos/cars/2021-mercedes-g63-satin-white/hero.mov"
   },
   {
     "slug": "2018-rr-dawn-66l-v12",
-    "car": "2018 Rolls-Royce Dawn 6.6L V12",
+    "car": "2018 Rolls-Royce Dawn",
     "terms": [
       "3 mo",
       "12 mo"
@@ -323,7 +300,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2025-rolls-royce-spectre-electric-23",
-    "car": "2025 Rolls-Royce Spectre Electric",
+    "car": "2025 Rolls-Royce Spectre",
     "terms": [
       "3 mo",
       "12 mo"
@@ -352,7 +329,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2021-mercedes-g63-satin-black-12",
-    "car": "2021 MERCEDES G63 SATIN BLACK",
+    "car": "2021 Mercedes-AMG G63 SATIN BLACK",
     "terms": [],
     "down": {},
     "monthly": 0,
@@ -366,25 +343,36 @@ export const inventory: InventoryItem[] = [
     "video": "/videos/cars/2021-mercedes-g63-satin-black/hero.mov"
   },
   {
-    "slug": "2021-mercedes-g63-satin-white-13",
-    "car": "2021 MERCEDES G63 SATIN WHITE",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
-    "location": "—",
-    "mileage": "—",
-    "images": [
-      "/images/cars/2021-mercedes-g63-satin-white/hero.jpg",
-      "/images/cars/2021-mercedes-g63-satin-white/2.jpg",
-      "/images/cars/2021-mercedes-g63-satin-white/3.jpg",
-      "/images/cars/2021-mercedes-g63-satin-white/4.jpg"
+    "slug": "2023-lamborghini-urus-performante-zpbuc3zl4pla22334",
+    "car": "2023 Lamborghini Urus Performante",
+    "terms": [
+      "3 mo"
     ],
-    "video": "/videos/cars/2021-mercedes-g63-satin-white/hero.mov"
+    "down": {
+      "3 mo": 26900
+    },
+    "monthly": 5995,
+    "display": "From $26,900 down • $5,995/mo",
+    "location": "New York, NY, United States",
+    "scgMonthlyByTerm": {
+      "3 mo": 5995
+    },
+    "scgBuyoutByTerm": {
+      "3 mo": 250000
+    },
+    "mileage": "38,000",
+    "images": [
+      "/images/cars/2023-lamborghini-urus-performante/hero.png",
+      "/images/cars/2023-lamborghini-urus-performante/2.png",
+      "/images/cars/2023-lamborghini-urus-performante/3.png",
+      "/images/cars/2023-lamborghini-urus-performante/4.png",
+      "/images/cars/2023-lamborghini-urus-performante/5.png",
+      "/images/cars/2023-lamborghini-urus-performante/6.png"
+    ]
   },
   {
     "slug": "2023-maybach-gls600-blackred-14",
-    "car": "2023 MAYBACH GLS600 BLACK/RED",
+    "car": "2023 Maybach GLS600 BLACK/RED",
     "terms": [],
     "down": {},
     "monthly": 0,
@@ -401,7 +389,7 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2021-maybach-gls600-blackgold-15",
-    "car": "2021 MAYBACH GLS600 BLACK/GOLD",
+    "car": "2021 Maybach GLS600 BLACK/GOLD",
     "terms": [],
     "down": {},
     "monthly": 0,
@@ -435,8 +423,8 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "2022-mercedes-benz-e450-17",
-    "car": "2022 Mercedes-Benz E450",
+    "slug": "2024-rolls-royce-spectre-24",
+    "car": "2024 Rolls-Royce Spectre",
     "terms": [],
     "down": {},
     "monthly": 0,
@@ -444,13 +432,11 @@ export const inventory: InventoryItem[] = [
     "location": "—",
     "mileage": "—",
     "images": [
-      "/images/cars/2022-mercedes-benz-e450/hero.jpg",
-      "/images/cars/2022-mercedes-benz-e450/2.jpg",
-      "/images/cars/2022-mercedes-benz-e450/3.jpg",
-      "/images/cars/2022-mercedes-benz-e450/4.jpg",
-      "/images/cars/2022-mercedes-benz-e450/5.jpg",
-      "/images/cars/2022-mercedes-benz-e450/6.jpg",
-      "/images/cars/2022-mercedes-benz-e450/7.jpg"
+      "/images/cars/2024-rolls-royce-spectre/hero.jpg",
+      "/images/cars/2024-rolls-royce-spectre/2.jpg",
+      "/images/cars/2024-rolls-royce-spectre/3.jpg",
+      "/images/cars/2024-rolls-royce-spectre/4.jpg",
+      "/images/cars/2024-rolls-royce-spectre/5.jpg"
     ]
   },
   {
@@ -499,28 +485,6 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "keyvany-keyrus-21",
-    "car": "2021 Lamborghini Urus \"Keyvany Keyrus\"",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
-    "location": "—",
-    "mileage": "—",
-    "images": [
-      "/images/cars/keyvany-keyrus/hero.jpg",
-      "/images/cars/keyvany-keyrus/2.jpg",
-      "/images/cars/keyvany-keyrus/3.jpg",
-      "/images/cars/keyvany-keyrus/4.jpg",
-      "/images/cars/keyvany-keyrus/5.jpg",
-      "/images/cars/keyvany-keyrus/6.jpg",
-      "/images/cars/keyvany-keyrus/7.jpg",
-      "/images/cars/keyvany-keyrus/8.jpg",
-      "/images/cars/keyvany-keyrus/9.jpg",
-      "/images/cars/keyvany-keyrus/10.jpg"
-    ]
-  },
-  {
     "slug": "2021-bmw-m8-competition-gran-coupe-22",
     "car": "2021 BMW M8 Competition Gran Coupe",
     "terms": [],
@@ -543,36 +507,38 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "2023-lamborghini-urus-performante-zpbuc3zl4pla22334",
-    "car": "2023 Lamborghini Urus Performante",
+    "slug": "2021-mercedes-benz-s580-faybach-w1kg7gbxma052327",
+    "car": "2021 Mercedes-Benz S580 'FAYBACH",
     "terms": [
-      "3 mo"
+      "3 mo",
+      "12 mo"
     ],
     "down": {
-      "3 mo": 26900
+      "3 mo": 10900,
+      "12 mo": 13900
     },
-    "monthly": 5995,
-    "display": "From $26,900 down • $5,995/mo",
+    "monthly": 2495,
+    "display": "From $10,900 down • $2,495/mo",
     "location": "New York, NY, United States",
     "scgMonthlyByTerm": {
-      "3 mo": 5995
+      "3 mo": 2495,
+      "12 mo": 2495
     },
     "scgBuyoutByTerm": {
-      "3 mo": 250000
+      "3 mo": 65000,
+      "12 mo": 65000
     },
-    "mileage": "38,000",
+    "mileage": "65,000",
     "images": [
-      "/images/cars/2023-lamborghini-urus-performante/hero.png",
-      "/images/cars/2023-lamborghini-urus-performante/2.png",
-      "/images/cars/2023-lamborghini-urus-performante/3.png",
-      "/images/cars/2023-lamborghini-urus-performante/4.png",
-      "/images/cars/2023-lamborghini-urus-performante/5.png",
-      "/images/cars/2023-lamborghini-urus-performante/6.png"
-    ]
+      "/images/cars/2021-mercedes-benz-s580-faybach/hero.jpg",
+      "/images/cars/2021-mercedes-benz-s580-faybach/2.jpg",
+      "/images/cars/2021-mercedes-benz-s580-faybach/3.jpg"
+    ],
+    "video": "/videos/cars/2021-mercedes-benz-s580-faybach/hero.mov"
   },
   {
-    "slug": "2024-rolls-royce-spectre-24",
-    "car": "2024 Rolls-Royce Spectre",
+    "slug": "2022-mercedes-benz-e450-17",
+    "car": "2022 Mercedes-Benz E450",
     "terms": [],
     "down": {},
     "monthly": 0,
@@ -580,13 +546,47 @@ export const inventory: InventoryItem[] = [
     "location": "—",
     "mileage": "—",
     "images": [
-      "/images/cars/2024-rolls-royce-spectre/hero.jpg",
-      "/images/cars/2024-rolls-royce-spectre/2.jpg",
-      "/images/cars/2024-rolls-royce-spectre/3.jpg",
-      "/images/cars/2024-rolls-royce-spectre/4.jpg",
-      "/images/cars/2024-rolls-royce-spectre/5.jpg"
+      "/images/cars/2022-mercedes-benz-e450/hero.jpg",
+      "/images/cars/2022-mercedes-benz-e450/2.jpg",
+      "/images/cars/2022-mercedes-benz-e450/3.jpg",
+      "/images/cars/2022-mercedes-benz-e450/4.jpg",
+      "/images/cars/2022-mercedes-benz-e450/5.jpg",
+      "/images/cars/2022-mercedes-benz-e450/6.jpg",
+      "/images/cars/2022-mercedes-benz-e450/7.jpg"
     ]
-  }
+  },
+  {
+    "slug": "2022-mercedes-benz-s580",
+    "car": "2022 Mercedes-Benz S580",
+    "terms": [
+      "3 mo",
+      "12 mo"
+    ],
+    "down": {
+      "3 mo": 10900,
+      "12 mo": 12900
+    },
+    "monthly": 2695,
+    "display": "From $10,900 down • $2,695/mo",
+    "location": "New York, NY, United States",
+    "scgMonthlyByTerm": {
+      "3 mo": 2695,
+      "12 mo": 2695
+    },
+    "scgBuyoutByTerm": {
+      "3 mo": 65000,
+      "12 mo": 65000
+    },
+    "mileage": "65,000",
+    "images": [
+      "/images/cars/2022-mercedes-benz-s580/hero.png",
+      "/images/cars/2022-mercedes-benz-s580/2.png",
+      "/images/cars/2022-mercedes-benz-s580/3.png",
+      "/images/cars/2022-mercedes-benz-s580/4.png",
+      "/images/cars/2022-mercedes-benz-s580/5.png",
+      "/images/cars/2022-mercedes-benz-s580/6.png"
+    ]
+  },
 ];
 
 export const membershipFee = 1000;
