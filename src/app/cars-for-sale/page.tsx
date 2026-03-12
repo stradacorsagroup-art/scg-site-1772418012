@@ -117,7 +117,14 @@ export default function CarsForSalePage() {
             >
               <div className="relative h-44 border-b border-zinc-800 bg-zinc-900 sm:h-48">
                 {item.image ? (
-                  <Image src={item.image} alt={item.car} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
+                  <Image
+                    src={item.image}
+                    alt={item.car}
+                    fill
+                    className="object-cover lg:object-contain"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    quality={95}
+                  />
                 ) : (
                   <div className="flex h-full flex-col items-center justify-center gap-1 text-xs uppercase tracking-[0.12em] text-zinc-500">
                     <span>Media coming soon</span>
