@@ -121,7 +121,7 @@ export default function Home() {
 
             <div className="mt-8 hidden lg:block">
               <OwnershipPills active="membership" />
-              <p className="mt-3 text-sm text-zinc-300">No credit check · ID + Insurance + Drive</p>
+              <p className="mt-3 text-base font-medium tracking-[0.01em] text-zinc-100/95">No credit check · ID + Insurance + Drive</p>
             </div>
           </div>
 
@@ -130,7 +130,7 @@ export default function Home() {
 
         <div className="absolute inset-x-5 bottom-[-44px] z-20 lg:hidden sm:inset-x-6">
           <OwnershipPills active="membership" />
-          <p className="mt-2 px-1 text-xs text-zinc-300">No credit check · ID + Insurance + Drive</p>
+          <p className="mt-2 px-1 text-sm font-medium tracking-[0.01em] text-zinc-100/95">No credit check · ID + Insurance + Drive</p>
         </div>
       </section>
 
