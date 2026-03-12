@@ -94,7 +94,7 @@ export const inventory: InventoryItem[] = [
     "monthly": 3250,
     "display": "From $25,995 down • $3,250/mo",
     "location": "—",
-    "notes": "$339,700 MSRP • 6/12 Month Lease To Own • No Credit/Income Check • Buyout Option At End",
+    "notes": "",
     "scgMonthlyByTerm": {
       "3 mo": 3250,
       "12 mo": 3250
