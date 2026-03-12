@@ -13,7 +13,7 @@ function getImagePosition(car: string, src: string) {
       src.includes("/images/cars/2020-mclaren-720s-spider/2.jpg") ||
       src.includes("/images/cars/2020-mclaren-720s-spider/hero.jpg")
     ) {
-      return "50% 85%";
+      return "50% 78%";
     }
   }
   return "50% 50%";
