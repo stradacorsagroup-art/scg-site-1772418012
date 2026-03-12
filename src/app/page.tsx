@@ -93,6 +93,18 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
+        <div className="absolute right-0 top-0 hidden h-full w-[50vw] lg:block">
+          <Image
+            src="/images/hero/home-hero.jpg"
+            alt="SCG hero garage"
+            fill
+            className="object-cover"
+            priority
+            sizes="50vw"
+          />
+          <div className="absolute inset-0 bg-black/45" />
+        </div>
+
         <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-8 px-5 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:items-stretch lg:gap-12 lg:py-24">
           <div className="flex flex-col justify-center">
             <div className="inline-flex items-center gap-3">
@@ -112,17 +124,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative hidden min-h-[520px] overflow-hidden lg:block lg:rounded-none">
-            <Image
-              src="/images/hero/home-hero.jpg"
-              alt="SCG hero garage"
-              fill
-              className="object-cover"
-              priority
-              sizes="50vw"
-            />
-            <div className="absolute inset-0 bg-black/45" />
-          </div>
+          <div className="hidden lg:block" />
         </div>
 
         <div className="absolute inset-x-5 bottom-[-18px] z-20 lg:hidden sm:inset-x-6">
