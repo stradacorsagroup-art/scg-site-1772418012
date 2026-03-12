@@ -134,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="membership-inventory" className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-10">
+      <section id="membership-inventory" className="mx-auto max-w-7xl px-5 pb-8 pt-14 sm:px-6 sm:py-10">
         <div className="mb-6 rounded-2xl border border-zinc-800 bg-[#111] p-3 sm:p-4">
           <div className="mb-3 flex items-center justify-between">
             <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-zinc-400">Filter by brand</p>

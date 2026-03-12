@@ -55,7 +55,7 @@ export default function ApplyPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-10">
+      <section className="mx-auto max-w-7xl px-5 pb-8 pt-14 sm:px-6 sm:py-10">
 
         <div className="max-w-5xl rounded-2xl border border-zinc-800 bg-[#111] p-4 shadow-sm sm:p-6">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-zinc-400">Reserve Request</p>

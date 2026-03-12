@@ -97,7 +97,7 @@ export default function CarsForSalePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-10">
+      <section className="mx-auto max-w-7xl px-5 pb-8 pt-14 sm:px-6 sm:py-10">
 
         <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
