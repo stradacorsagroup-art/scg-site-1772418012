@@ -80,7 +80,7 @@ export function VehicleGallery({ car, images = [], video }: { car: string; image
               <button
                 key={`${m.type}-${m.src}`}
                 onClick={() => setActive(idx)}
-                className={`relative h-16 w-24 overflow-hidden rounded-lg border bg-white sm:h-[72px] sm:w-28 ${idx === active ? "border-zinc-900 ring-1 ring-zinc-900/10" : "border-zinc-200"}`}
+                className={`relative h-16 w-24 overflow-hidden rounded-lg border bg-zinc-900 sm:h-[72px] sm:w-28 ${idx === active ? "border-zinc-100 ring-1 ring-zinc-100/30" : "border-zinc-700"}`}
                 aria-label={`Show media ${idx + 1}`}
               >
                 {m.type === "image" ? (
