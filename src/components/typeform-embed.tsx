@@ -2,41 +2,39 @@
 
 import { useEffect, useRef } from "react";
 
+const TYPEFORM_EMBED_SRC = "https://embed.typeform.com/next/embed.js";
 
 export function TypeformEmbed({ formId }: { formId: string }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const init = () => {
-      const tf = (window as any).tf;
-      if (!containerRef.current || !tf?.createWidget) return;
-      containerRef.current.innerHTML = "";
-      tf.createWidget(formId, {
-        container: containerRef.current,
-        inlineOnMobile: true,
-      });
+      // Uses Typeform's auto-scan for data-tf-live containers
+      (window as any).tf?.load?.();
     };
 
-    const existing = document.getElementById("typeform-embed-script") as HTMLScriptElement | null;
-
-    if (existing) {
-      const tf = (window as any).tf;
-      if (tf?.createWidget) init();
-      else existing.addEventListener("load", init, { once: true });
+    if ((window as any).tf?.load) {
+      init();
       return;
     }
 
+    const existingScript = document.querySelector<HTMLScriptElement>(
+      `script[src="${TYPEFORM_EMBED_SRC}"]`,
+    );
+
+    if (existingScript) {
+      existingScript.addEventListener("load", init, { once: true });
+      return () => existingScript.removeEventListener("load", init);
+    }
+
     const script = document.createElement("script");
-    script.id = "typeform-embed-script";
-    script.src = "https://embed.typeform.com/next/embed.js";
+    script.src = TYPEFORM_EMBED_SRC;
     script.async = true;
-    script.onload = init;
+    script.addEventListener("load", init, { once: true });
     document.body.appendChild(script);
 
-    return () => {
-      script.onload = null;
-    };
+    return () => script.removeEventListener("load", init);
   }, [formId]);
 
-  return <div ref={containerRef} className="min-h-[720px]" />;
+  return <div ref={containerRef} data-tf-live={formId} className="min-h-[720px]" />;
 }
