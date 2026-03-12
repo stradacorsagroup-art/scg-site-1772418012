@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Script from "next/script";
 import { OwnershipPills } from "@/components/ownership-pills";
+import { TypeformEmbed } from "@/components/typeform-embed";
 
 export default function ApplyPage() {
   return (
@@ -59,8 +59,7 @@ export default function ApplyPage() {
 
         <div className="max-w-5xl rounded-2xl border border-zinc-800 bg-[#111] p-4 shadow-sm sm:p-6">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-zinc-400">Reserve Request</p>
-          <div data-tf-live="01KKA3DY6M02S2NW3H707ES59Y" className="min-h-[720px]" />
-          <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />
+          <TypeformEmbed formId="01KKA3DY6M02S2NW3H707ES59Y" />
         </div>
       </section>
     </main>
