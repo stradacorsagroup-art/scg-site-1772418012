@@ -45,12 +45,23 @@ export const inventory: InventoryItem[] = [
   {
     "slug": "keyvany-keyrus-21",
     "car": "2021 Lamborghini Urus \"Keyvany Keyrus\"",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
-    "location": "—",
-    "mileage": "—",
+    "terms": [
+      "3 mo",
+      "12 mo"
+    ],
+    "down": {
+      "3 mo": 99995,
+      "12 mo": 144995
+    },
+    "monthly": 8965,
+    "display": "From $99,995 down • $8,965/mo",
+    "location": "Miami, Florida",
+    "notes": "No Credit or Income Check • 1 of 3 imported to North America • Full custom interior",
+    "scgMonthlyByTerm": {
+      "3 mo": 8965,
+      "12 mo": 8965
+    },
+    "mileage": "9,847",
     "images": [
       "/images/cars/keyvany-keyrus/hero.jpg",
       "/images/cars/keyvany-keyrus/2.jpg",
