@@ -84,9 +84,15 @@ export default async function InventoryDetailPage({
         </div>
 
         <aside className="h-fit rounded-2xl border border-zinc-800 bg-[#111] p-4 shadow-sm sm:p-5 lg:sticky lg:top-4">
-          <h1 className="text-[1.6rem] font-semibold leading-[1.06] tracking-[-0.02em] text-zinc-100 sm:text-[1.95rem]">
-            <span className="block">{titleParts.primary}</span>
-            {titleParts.secondary ? <span className="block">{titleParts.secondary}</span> : null}
+          <h1 className="min-h-[88px] text-zinc-100">
+            <span className="block text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-400 sm:text-[12px]">
+              {titleParts.primary}
+            </span>
+            {titleParts.secondary ? (
+              <span className="mt-1 block line-clamp-2 text-[1.35rem] font-semibold uppercase leading-[1.04] tracking-[-0.015em] text-zinc-100 sm:text-[1.6rem]">
+                {titleParts.secondary}
+              </span>
+            ) : null}
           </h1>
           <p className="mt-3 text-sm font-medium text-zinc-400">Monthly Price</p>
           <p className="mt-1 text-3xl font-semibold text-zinc-100">${vehicle.monthly.toLocaleString()}/month</p>
