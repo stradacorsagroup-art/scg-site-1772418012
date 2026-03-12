@@ -59,8 +59,8 @@ export default async function InventoryDetailPage({
 
           <div className="mt-3 rounded-xl border border-zinc-800 bg-[#111] p-4 text-sm">
             <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-400">Notes</p>
-            <div className="mt-2 space-y-1 text-zinc-300">
-              <p>{noteText}</p>
+            <div className="mt-2 max-h-40 space-y-1 overflow-y-auto pr-1 text-zinc-300">
+              <p className="whitespace-pre-line">{noteText}</p>
             </div>
           </div>
         </div>
