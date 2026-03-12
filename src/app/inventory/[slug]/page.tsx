@@ -66,7 +66,7 @@ export default async function InventoryDetailPage({
         </div>
 
         <aside className="h-fit rounded-2xl border border-zinc-800 bg-[#111] p-4 shadow-sm sm:p-5 lg:sticky lg:top-4">
-          <h1 className="text-[1.85rem] font-semibold leading-tight tracking-[-0.02em] text-zinc-100 sm:text-[2.25rem]">{vehicle.car}</h1>
+          <h1 className="text-[1.6rem] font-semibold leading-[1.06] tracking-[-0.02em] text-zinc-100 sm:text-[1.95rem]">{vehicle.car}</h1>
           <p className="mt-3 text-sm font-medium text-zinc-400">Monthly Price</p>
           <p className="mt-1 text-3xl font-semibold text-zinc-100">${vehicle.monthly.toLocaleString()}/month</p>
 
