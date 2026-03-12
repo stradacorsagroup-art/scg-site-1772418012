@@ -30,7 +30,7 @@ export default function ApplyPage() {
           <div className="absolute inset-0 bg-black/45" />
         </div>
 
-        <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-8 px-5 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:items-stretch lg:gap-12 lg:py-24">
+        <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-8 px-5 py-24 sm:px-6 sm:py-20 lg:grid-cols-2 lg:items-stretch lg:gap-12 lg:py-24">
           <div className="flex flex-col justify-center">
             <div className="inline-flex items-center gap-3">
               <span className="h-px w-8 bg-zinc-700" />
