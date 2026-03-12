@@ -2,7 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ReserveModalButton } from "@/components/reserve-modal-button";
 import { VehicleGallery } from "@/components/vehicle-gallery";
-import { deposit, getInventoryBySlug } from "@/data/inventory";
+import { TermPricingSelector } from "@/components/term-pricing-selector";
+import { deposit, getInventoryBySlug, membershipFee } from "@/data/inventory";
 
 export default async function InventoryDetailPage({
   params,
@@ -13,6 +14,25 @@ export default async function InventoryDetailPage({
   const vehicle = getInventoryBySlug(slug);
 
   if (!vehicle) notFound();
+
+  const orderedTerms = [...vehicle.terms].sort((a, b) => {
+    const order: Record<string, number> = { "3 mo": 1, "6 mo": 2, "9 mo": 3, "12 mo": 4 };
+    return (order[a] ?? 99) - (order[b] ?? 99);
+  });
+
+  const startupCosts = orderedTerms.map((term) => {
+    const scgDown = vehicle.down[term] ?? 0;
+    const scgMonthly = vehicle.scgMonthlyByTerm?.[term] ?? vehicle.monthly;
+    const scgBuyout = vehicle.scgBuyoutByTerm?.[term];
+
+    return {
+      term,
+      scgDown,
+      scgMonthly,
+      scgBuyout,
+      totalDue: scgDown + scgMonthly + membershipFee,
+    };
+  });
 
   const noteText = `Miles: ${vehicle.mileage || "—"}${vehicle.notes ? ` • ${vehicle.notes}` : ""}`;
 
@@ -40,6 +60,13 @@ export default async function InventoryDetailPage({
           <h1 className="text-[1.85rem] font-semibold leading-tight tracking-[-0.02em] text-zinc-100 sm:text-[2.25rem]">{vehicle.car}</h1>
           <p className="mt-3 text-sm font-medium text-zinc-400">Monthly Price</p>
           <p className="mt-1 text-3xl font-semibold text-zinc-100">${vehicle.monthly.toLocaleString()}/month</p>
+
+          <h2 className="mt-4 text-lg font-semibold text-zinc-100">Due at Signing</h2>
+          <p className="mt-1 text-sm text-zinc-400">Estimated drive-off total. Excludes taxes and registration fees.</p>
+
+          <div className="mt-3 rounded-xl border border-zinc-700 bg-[#181818] p-3">
+            <TermPricingSelector startupCosts={startupCosts} membershipFee={membershipFee} />
+          </div>
 
           <div className="mt-4 rounded-xl border border-zinc-700 bg-[#181818] p-3 text-sm">
             <p className="text-zinc-400">Deposit to reserve</p>
