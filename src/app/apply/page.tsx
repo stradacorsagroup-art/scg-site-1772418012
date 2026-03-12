@@ -50,7 +50,7 @@ export default function ApplyPage() {
           <div className="hidden lg:block" />
         </div>
 
-        <div className="absolute inset-x-5 bottom-[-18px] z-20 lg:hidden sm:inset-x-6">
+        <div className="relative z-20 px-5 pb-6 lg:hidden sm:px-6">
           <OwnershipPills active="apply" />
         </div>
       </section>

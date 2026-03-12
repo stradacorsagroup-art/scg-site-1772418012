@@ -128,9 +128,9 @@ export default function Home() {
           <div className="hidden lg:block" />
         </div>
 
-        <div className="absolute inset-x-5 bottom-[-44px] z-20 lg:hidden sm:inset-x-6">
+        <div className="relative z-20 px-5 pb-6 lg:hidden sm:px-6">
           <OwnershipPills active="membership" />
-          <p className="mt-2 px-1 text-sm font-medium tracking-[0.01em] text-zinc-100/95">No credit check · ID + Insurance + Drive</p>
+          <p className="mt-3 px-1 text-sm font-medium tracking-[0.01em] text-zinc-100/95">No credit check · ID + Insurance + Drive</p>
         </div>
       </section>
 
