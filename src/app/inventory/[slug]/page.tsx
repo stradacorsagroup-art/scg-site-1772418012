@@ -40,6 +40,7 @@ export default async function InventoryDetailPage({
   });
 
   const noteText = `Miles: ${vehicle.mileage || "—"}${vehicle.notes ? ` • ${vehicle.notes}` : ""}`;
+  const isLongTitle = vehicle.car.length > 28;
 
 
   return (
@@ -48,7 +49,7 @@ export default async function InventoryDetailPage({
         <OwnershipPills active={isSaleVehicle ? "sale" : "membership"} />
       </section>
 
-      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-6 sm:px-6 sm:py-9 lg:grid-cols-[1.3fr_1.06fr] lg:gap-7">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-6 sm:px-6 sm:py-9 lg:grid-cols-[minmax(0,1fr)_430px] lg:gap-7">
         <div>
           <Link href={isSaleVehicle ? "/cars-for-sale" : "/#membership-inventory"} className="inline-flex text-sm font-medium text-zinc-400 hover:text-zinc-100">
             ← Back to {isSaleVehicle ? "cars for sale" : "inventory"}
@@ -67,7 +68,7 @@ export default async function InventoryDetailPage({
         </div>
 
         <aside className="h-fit rounded-2xl border border-zinc-800 bg-[#111] p-4 shadow-sm sm:p-5 lg:sticky lg:top-4">
-          <h1 className="text-[1.6rem] font-semibold leading-[1.06] tracking-[-0.02em] text-zinc-100 sm:text-[1.95rem]">{vehicle.car}</h1>
+          <h1 className={`font-semibold leading-[1.06] tracking-[-0.02em] text-zinc-100 ${isLongTitle ? "text-[1.35rem] sm:text-[1.55rem]" : "text-[1.6rem] sm:text-[1.95rem]"}`}>{vehicle.car}</h1>
           <p className="mt-3 text-sm font-medium text-zinc-400">Monthly Price</p>
           <p className="mt-1 text-3xl font-semibold text-zinc-100">${vehicle.monthly.toLocaleString()}/month</p>
 
