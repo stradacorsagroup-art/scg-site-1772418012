@@ -79,13 +79,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] pt-[72px] text-zinc-100">
-      <section className="fixed inset-x-0 top-0 z-50 border-b border-zinc-800/80 bg-[#0a0a0a]/95 backdrop-blur">
-        <div className="mx-auto max-w-7xl px-5 py-3 sm:px-6">
-          <OwnershipPills active="membership" />
-        </div>
-      </section>
-
+    <main className="min-h-screen bg-[#0a0a0a] text-zinc-100">
       <section className="relative overflow-hidden border-b border-zinc-800 bg-[#0a0a0a]">
         <div className="absolute inset-0 lg:hidden">
           <Image
@@ -125,13 +119,17 @@ export default function Home() {
               Your terms.
             </h1>
 
-
+            <div className="mt-8 hidden lg:block">
+              <OwnershipPills active="membership" />
+            </div>
           </div>
 
           <div className="hidden lg:block" />
         </div>
 
-
+        <div className="absolute inset-x-5 bottom-[-18px] z-20 lg:hidden sm:inset-x-6">
+          <OwnershipPills active="membership" />
+        </div>
       </section>
 
       <section id="membership-inventory" className="mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-10">

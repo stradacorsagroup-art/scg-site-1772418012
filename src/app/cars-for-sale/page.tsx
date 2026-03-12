@@ -46,12 +46,7 @@ export default function CarsForSalePage() {
   });
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] pt-[72px] text-zinc-100">
-      <section className="fixed inset-x-0 top-0 z-50 border-b border-zinc-800/80 bg-[#0a0a0a]/95 backdrop-blur">
-        <div className="mx-auto max-w-7xl px-5 py-3 sm:px-6">
-          <OwnershipPills active="sale" />
-        </div>
-      </section>
+    <main className="min-h-screen bg-[#0a0a0a] text-zinc-100">
       <section className="border-b border-zinc-800 bg-[radial-gradient(circle_at_30%_20%,#1d1d1d_0%,#0a0a0a_50%)]">
         <div className="mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py-14 lg:py-16">
           <div className="inline-flex items-center gap-3">
@@ -64,6 +59,10 @@ export default function CarsForSalePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-5 sm:px-6 sm:py-6">
+        <div className="mb-6">
+          <OwnershipPills active="sale" />
+        </div>
+
         <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h1 className="text-2xl font-semibold tracking-tight text-zinc-100 sm:text-3xl">Cars for Sale</h1>

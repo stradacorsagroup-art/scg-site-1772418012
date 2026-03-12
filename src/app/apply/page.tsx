@@ -3,12 +3,7 @@ import { OwnershipPills } from "@/components/ownership-pills";
 
 export default function ApplyPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a] pt-[72px] text-zinc-100">
-      <section className="fixed inset-x-0 top-0 z-50 border-b border-zinc-800/80 bg-[#0a0a0a]/95 backdrop-blur">
-        <div className="mx-auto max-w-7xl px-5 py-3 sm:px-6">
-          <OwnershipPills active="apply" />
-        </div>
-      </section>
+    <main className="min-h-screen bg-[#0a0a0a] text-zinc-100">
       <section className="border-b border-zinc-800 bg-[radial-gradient(circle_at_30%_20%,#1d1d1d_0%,#0a0a0a_50%)]">
         <div className="mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py-14 lg:py-16">
           <div className="inline-flex items-center gap-3">
@@ -21,6 +16,10 @@ export default function ApplyPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-5 sm:px-6 sm:py-6">
+        <div className="mb-6">
+          <OwnershipPills active="apply" />
+        </div>
+
         <div className="max-w-5xl rounded-2xl border border-zinc-800 bg-[#111] p-4 shadow-sm sm:p-6">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-zinc-400">Reserve Request</p>
           <div data-tf-live="01KKA3DY6M02S2NW3H707ES59Y" />
