@@ -22,12 +22,10 @@ export const inventory: InventoryItem[] = [
     "car": "2020 McLaren 720S Spider",
     "terms": [
       "3 mo",
-      "6 mo",
       "12 mo"
     ],
     "down": {
       "3 mo": 26995,
-      "6 mo": 32495,
       "12 mo": 54895
     },
     "monthly": 6995,
@@ -35,7 +33,6 @@ export const inventory: InventoryItem[] = [
     "location": "New York, NY, United States",
     "scgMonthlyByTerm": {
       "3 mo": 6995,
-      "6 mo": 6995,
       "12 mo": 6995
     },
     "scgBuyoutByTerm": {
@@ -62,7 +59,7 @@ export const inventory: InventoryItem[] = [
     "monthly": 8965,
     "display": "From $99,995 down • $8,965/mo",
     "location": "Miami, Florida",
-    "notes": "No Credit or Income Check • 1 of 3 imported to North America • Full custom interior",
+    "notes": "No Credit or Income Check\n\nKeyvany Keyrus\n1 of 3 imported to North America. Most exclusive custom Urus on the planet. Originally created upon a Pearl Capsule Edition unit from Lamborghini, painted in Green base with heavy Gold metallic flakes.\n\nEvery piece of bodywork on this vehicle has been hand crafted from the highest Aerograde Carbon Fiber. Only the door shells and roof have remained original aluminum.\n\nFull Catless RYFT Titanium Exhaust System with a Stage 2 Tune pushing just around 900 HP. Only Urus seen to shoot 3-4 foot flames.\n\nIt's sitting on one-off AL13 3-Piece Wheels specially made for this Keyrus, running over $30,000 for the set with tires.\n\nInterior is also fully custom down to the floor mats, carbon door sills, and forged carbon fiber steering wheel with the Keyvany crest. Also has a color-changing Starlight Headliner that has twinkle effect, as well as color-changing ambient lighting.\n\n+ Full Custom Interior",
     "scgMonthlyByTerm": {
       "3 mo": 8965,
       "12 mo": 8965
@@ -602,7 +599,7 @@ export const inventory: InventoryItem[] = [
       "/images/cars/2022-mercedes-benz-s580/5.png",
       "/images/cars/2022-mercedes-benz-s580/6.png"
     ]
-  },
+  }
 ];
 
 export const membershipFee = 1000;
