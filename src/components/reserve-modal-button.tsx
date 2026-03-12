@@ -52,7 +52,7 @@ export function ReserveModalButton({ car }: { car: string }) {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="mt-5 inline-flex h-12 w-full items-center justify-center rounded-xl bg-zinc-900 px-4 text-sm font-semibold text-white shadow-[0_8px_18px_rgba(0,0,0,0.14)] transition hover:-translate-y-0.5 hover:bg-zinc-800"
+        className="mt-5 inline-flex h-12 w-full items-center justify-center rounded-xl bg-white px-4 text-sm font-semibold text-zinc-900 shadow-[0_8px_18px_rgba(0,0,0,0.18)] transition hover:-translate-y-0.5 hover:bg-zinc-100"
       >
         Reserve This Vehicle
       </button>
