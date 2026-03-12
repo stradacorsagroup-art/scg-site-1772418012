@@ -95,22 +95,6 @@ export function TermPricingSelector({
         </div>
       </div>
 
-      {ordered.length > 1 && (
-        <details className="mt-3 rounded-lg border border-zinc-700 bg-[#151515] p-3">
-          <summary className="cursor-pointer text-sm font-medium text-zinc-200">View all terms</summary>
-          <div className="mt-3 space-y-3">
-            {ordered.map((option) => (
-              <div key={option.term} className="rounded-md border border-zinc-700 bg-[#101010] p-3">
-                <div className="mb-1 text-[11px] uppercase tracking-[0.08em] text-zinc-400">{prettyTerm(option.term)}</div>
-                <div className="flex items-center justify-between">
-                  <span>{money(option.scgMonthly)}/month</span>
-                  <span>{money(option.totalDue)} due at signing</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </details>
-      )}
     </div>
   );
 }
