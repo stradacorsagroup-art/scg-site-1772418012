@@ -199,9 +199,7 @@ export default function Home() {
                     <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-300">{splitCardTitle(item.car).top}</p>
                     <h4 className="mt-1 line-clamp-2 text-[20px] font-semibold uppercase leading-tight text-white">{splitCardTitle(item.car).model}</h4>
                     <p className="mt-2 text-[18px] font-semibold text-white">{formatPrice(item.monthly)}/mo</p>
-                    <p className="mt-1 text-[11px] uppercase tracking-[0.12em] text-zinc-300/90">
-                      Terms: {item.terms?.length ? item.terms.join(" • ") : "On request"}
-                    </p>
+
                   </div>
                 </div>
               </article>
