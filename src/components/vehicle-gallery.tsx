@@ -9,7 +9,7 @@ type GalleryMedia =
 
 function getImagePosition(car: string, src: string) {
   if (car.includes("2020 McLaren 720S Spider") && src.includes("/images/cars/2020-mclaren-720s-spider/2.jpg")) {
-    return "50% 8%";
+    return "50% 72%";
   }
   return "50% 50%";
 }
