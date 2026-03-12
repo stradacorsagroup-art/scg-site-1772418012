@@ -43,8 +43,8 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "23,000",
     "images": [
-      "/images/cars/2020-mclaren-720s-spider/hero.jpg",
-      "/images/cars/2020-mclaren-720s-spider/2.jpg"
+      "/images/cars/2020-mclaren-720s-spider/2.jpg",
+      "/images/cars/2020-mclaren-720s-spider/hero.jpg"
     ],
     "video": "/videos/cars/2020-mclaren-720s-spider/hero.mov"
   },
