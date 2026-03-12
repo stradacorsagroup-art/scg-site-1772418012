@@ -7,6 +7,13 @@ type GalleryMedia =
   | { type: "image"; src: string }
   | { type: "video"; src: string };
 
+function getImagePosition(car: string, src: string) {
+  if (car.includes("2020 McLaren 720S Spider") && src.includes("/images/cars/2020-mclaren-720s-spider/2.jpg")) {
+    return "50% 36%";
+  }
+  return "50% 50%";
+}
+
 export function VehicleGallery({ car, images = [], video }: { car: string; images?: string[]; video?: string }) {
   const media = useMemo(() => {
     const seen = new Set<string>();
@@ -47,7 +54,8 @@ export function VehicleGallery({ car, images = [], video }: { car: string; image
               src={current.src}
               alt={car}
               fill
-              className="object-cover object-center"
+              className="object-cover"
+              style={{ objectPosition: getImagePosition(car, current.src) }}
               sizes="(max-width: 1024px) 100vw, 65vw"
               quality={95}
             />
