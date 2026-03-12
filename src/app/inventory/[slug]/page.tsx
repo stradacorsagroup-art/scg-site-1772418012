@@ -5,7 +5,7 @@ import { ReserveModalButton } from "@/components/reserve-modal-button";
 import { VehicleGallery } from "@/components/vehicle-gallery";
 import { TermPricingSelector } from "@/components/term-pricing-selector";
 import { carsForSaleInventory } from "@/data/cars-for-sale";
-import { deposit, getInventoryBySlug, membershipFee } from "@/data/inventory";
+import { getInventoryBySlug, membershipFee } from "@/data/inventory";
 
 export default async function InventoryDetailPage({
   params,
@@ -75,11 +75,6 @@ export default async function InventoryDetailPage({
 
           <div className="mt-3 rounded-xl border border-zinc-700 bg-[#181818] p-3">
             <TermPricingSelector startupCosts={startupCosts} membershipFee={membershipFee} />
-          </div>
-
-          <div className="mt-4 rounded-xl border border-zinc-700 bg-[#181818] p-3 text-sm">
-            <p className="text-zinc-400">Deposit to reserve</p>
-            <p className="text-xl font-semibold text-zinc-100">${deposit.toLocaleString()}</p>
           </div>
 
           <ReserveModalButton car={vehicle.car} />
