@@ -58,11 +58,13 @@ export default function CarsForSalePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-5 sm:px-6 sm:py-6">
-        <div className="mb-6">
+      <section className="sticky top-0 z-40 border-b border-zinc-800/80 bg-[#0a0a0a]/95 backdrop-blur">
+        <div className="mx-auto max-w-7xl px-5 py-3 sm:px-6">
           <OwnershipPills active="sale" />
         </div>
+      </section>
 
+      <section className="mx-auto max-w-7xl px-5 py-5 sm:px-6 sm:py-6">
         <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h1 className="text-2xl font-semibold tracking-tight text-zinc-100 sm:text-3xl">Cars for Sale</h1>

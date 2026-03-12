@@ -119,15 +119,17 @@ export default function Home() {
               Your terms.
             </h1>
 
-            <div className="mt-8 hidden lg:block">
-              <OwnershipPills active="membership" />
-            </div>
+
           </div>
 
           <div className="hidden lg:block" />
         </div>
 
-        <div className="absolute inset-x-5 bottom-[-18px] z-20 lg:hidden sm:inset-x-6">
+
+      </section>
+
+      <section className="sticky top-0 z-40 border-b border-zinc-800/80 bg-[#0a0a0a]/95 backdrop-blur">
+        <div className="mx-auto max-w-7xl px-5 py-3 sm:px-6">
           <OwnershipPills active="membership" />
         </div>
       </section>
