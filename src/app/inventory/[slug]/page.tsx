@@ -42,6 +42,13 @@ export default async function InventoryDetailPage({
   const noteText = `Miles: ${vehicle.mileage || "—"}${vehicle.notes ? ` • ${vehicle.notes}` : ""}`;
 
   const titleParts = (() => {
+    if (slug === "keyvany-keyrus-21") {
+      return {
+        primary: "2021 Lamborghini",
+        secondary: "Urus Keyrus",
+      };
+    }
+
     const tokens = vehicle.car.trim().split(/\s+/);
     const hasYear = /^\d{4}$/.test(tokens[0] || "");
 
