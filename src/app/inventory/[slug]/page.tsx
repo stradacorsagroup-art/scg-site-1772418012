@@ -47,7 +47,7 @@ export default async function InventoryDetailPage({
         <OwnershipPills active={isSaleVehicle ? "sale" : "membership"} />
       </section>
 
-      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-6 sm:px-6 sm:py-9 lg:grid-cols-[1.42fr_1fr] lg:gap-7">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-6 sm:px-6 sm:py-9 lg:grid-cols-[1.3fr_1.06fr] lg:gap-7">
         <div>
           <Link href={isSaleVehicle ? "/cars-for-sale" : "/#membership-inventory"} className="inline-flex text-sm font-medium text-zinc-400 hover:text-zinc-100">
             ← Back to {isSaleVehicle ? "cars for sale" : "inventory"}
