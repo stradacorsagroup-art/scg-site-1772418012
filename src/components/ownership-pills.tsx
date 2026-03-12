@@ -13,7 +13,7 @@ export function OwnershipPills({ active }: { active: "membership" | "sale" | "ap
       <div className="mt-4 -mx-1 overflow-x-auto pb-1 sm:mx-0 sm:overflow-visible sm:pb-0">
         <div className="flex w-max gap-2 px-1 sm:w-auto sm:flex-wrap sm:gap-3 sm:px-0">
           <Link href="/#membership-inventory" className={pillClass(active === "membership")}>
-            Lease to Own
+            Drive to Own
           </Link>
           <Link href="/cars-for-sale" className={pillClass(active === "sale")}>
             Cars for Sale
