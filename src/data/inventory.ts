@@ -74,7 +74,6 @@ export const inventory: InventoryItem[] = [
       "/images/cars/keyvany-keyrus/3.jpg",
       "/images/cars/keyvany-keyrus/4.jpg",
       "/images/cars/keyvany-keyrus/5.jpg",
-      "/images/cars/keyvany-keyrus/6.jpg",
       "/images/cars/keyvany-keyrus/7.jpg",
       "/images/cars/keyvany-keyrus/8.jpg",
       "/images/cars/keyvany-keyrus/9.jpg",
