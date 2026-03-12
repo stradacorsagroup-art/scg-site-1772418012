@@ -71,7 +71,7 @@ export default async function InventoryDetailPage({
           <p className="mt-1 text-3xl font-semibold text-zinc-100">${vehicle.monthly.toLocaleString()}/month</p>
 
           <h2 className="mt-4 text-lg font-semibold text-zinc-100">Due at Signing</h2>
-          <p className="mt-1 text-sm text-zinc-400">Estimated drive-off total. Excludes taxes and registration fees.</p>
+          <p className="mt-1 text-sm text-zinc-400">No credit check required. Just bring your ID, proof of insurance, down payment, and first month.</p>
 
           <div className="mt-3 rounded-xl border border-zinc-700 bg-[#181818] p-3">
             <TermPricingSelector startupCosts={startupCosts} membershipFee={membershipFee} />
