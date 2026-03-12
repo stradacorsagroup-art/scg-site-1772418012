@@ -41,30 +41,6 @@ export default async function InventoryDetailPage({
 
   const noteText = `Miles: ${vehicle.mileage || "—"}${vehicle.notes ? ` • ${vehicle.notes}` : ""}`;
 
-  const titleParts = (() => {
-    if (slug === "keyvany-keyrus-21") {
-      return {
-        primary: "2021 Lamborghini",
-        secondary: "Urus Keyrus",
-      };
-    }
-
-    const tokens = vehicle.car.trim().split(/\s+/);
-    const hasYear = /^\d{4}$/.test(tokens[0] || "");
-
-    if (!hasYear) {
-      return { primary: vehicle.car, secondary: "" };
-    }
-
-    const year = tokens[0];
-    const brand = tokens[1] || "";
-    const rest = tokens.slice(2).join(" ");
-
-    return {
-      primary: `${year} ${brand}`.trim(),
-      secondary: rest,
-    };
-  })();
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-zinc-100">
@@ -91,16 +67,7 @@ export default async function InventoryDetailPage({
         </div>
 
         <aside className="h-fit rounded-2xl border border-zinc-800 bg-[#111] p-4 shadow-sm sm:p-5 lg:sticky lg:top-4">
-          <h1 className="min-h-[88px] text-zinc-100">
-            <span className="block text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-400 sm:text-[12px]">
-              {titleParts.primary}
-            </span>
-            {titleParts.secondary ? (
-              <span className="mt-1 block line-clamp-2 text-[1.35rem] font-semibold uppercase leading-[1.04] tracking-[-0.015em] text-zinc-100 sm:text-[1.6rem]">
-                {titleParts.secondary}
-              </span>
-            ) : null}
-          </h1>
+          <h1 className="text-[1.6rem] font-semibold leading-[1.06] tracking-[-0.02em] text-zinc-100 sm:text-[1.95rem]">{vehicle.car}</h1>
           <p className="mt-3 text-sm font-medium text-zinc-400">Monthly Price</p>
           <p className="mt-1 text-3xl font-semibold text-zinc-100">${vehicle.monthly.toLocaleString()}/month</p>
 
