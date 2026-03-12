@@ -121,7 +121,7 @@ export default function CarsForSalePage() {
                     src={item.image}
                     alt={item.car}
                     fill
-                    className="object-cover lg:object-contain"
+                    className="object-cover"
                     sizes="(max-width: 768px) 100vw, 25vw"
                     quality={95}
                   />

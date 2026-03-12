@@ -181,7 +181,7 @@ export default function Home() {
                     src={item.images?.[0] || getPlaceholderImage(item.car)}
                     alt={item.car}
                     fill
-                    className="object-cover lg:object-contain"
+                    className="object-cover"
                     style={{ objectPosition: getCardImagePosition(item.slug) }}
                     sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     quality={95}
