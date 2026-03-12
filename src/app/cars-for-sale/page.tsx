@@ -92,7 +92,7 @@ export default function CarsForSalePage() {
           <div className="hidden lg:block" />
         </div>
 
-        <div className="relative z-20 px-5 pb-6 lg:hidden sm:px-6">
+        <div className="relative z-20 translate-y-3 px-5 pb-3 lg:hidden sm:px-6">
           <OwnershipPills active="sale" />
         </div>
       </section>
