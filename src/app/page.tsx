@@ -121,7 +121,6 @@ export default function Home() {
 
             <div className="mt-8 hidden lg:block">
               <OwnershipPills active="membership" />
-              <p className="mt-3 text-base font-medium tracking-[0.01em] text-zinc-100/95">No credit check · ID + Insurance + Drive</p>
             </div>
           </div>
 
@@ -130,11 +129,16 @@ export default function Home() {
 
         <div className="relative z-20 px-5 pb-6 lg:hidden sm:px-6">
           <OwnershipPills active="membership" />
-          <p className="mt-3 px-1 text-sm font-medium tracking-[0.01em] text-zinc-100/95">No credit check · ID + Insurance + Drive</p>
         </div>
       </section>
 
       <section id="membership-inventory" className="mx-auto max-w-7xl px-5 pb-8 pt-14 sm:px-6 sm:py-10">
+        <div className="mb-6 px-1">
+          <p className="font-display text-[2rem] leading-[1.02] tracking-[-0.02em] text-white sm:text-[3rem]">
+            No credit check · ID + Insurance + Drive
+          </p>
+        </div>
+
         <div className="mb-6 rounded-2xl border border-zinc-800 bg-[#111] p-3 sm:p-4">
           <div className="mb-3 flex items-center justify-between">
             <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-zinc-400">Filter by brand</p>
