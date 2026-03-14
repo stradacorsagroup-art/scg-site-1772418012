@@ -17,9 +17,6 @@ function normalizeBrand(value: string) {
 }
 
 function displayBrand(value: string) {
-  const upper = value.trim().toUpperCase();
-  if (upper === "BMW") return "BMW";
-
   return value
     .toLowerCase()
     .split("-")
@@ -32,30 +29,10 @@ function getPlaceholderImage(carName: string) {
   return `https://placehold.co/1200x800/101010/e8e8e8?text=${text}`;
 }
 
-function getCardImageSrc(item: { slug: string; car: string; images?: string[] }) {
-  const fallback = item.images?.[0] || getPlaceholderImage(item.car);
-  const overrideBySlug: Record<string, string> = {
-    "2023-lamborghini-urus-performante-zpbuc3zl4pla22334": "/images/cars/2023-lamborghini-urus-performante/2.jpg",
-    "2021-maybach-gls600-blackgold-15": "/images/cars/2021-maybach-gls600-black-gold/3.jpg",
-    "2021-bmw-m8-competition-gran-coupe-22": "/images/cars/2021-bmw-m8-competition-gran-coupe/2.jpg",
-  };
-
-  return overrideBySlug[item.slug] ?? fallback;
-}
-
 function getCardImagePosition(slug: string) {
   const focalBySlug: Record<string, string> = {
     "2020-mclaren-720s-spyder-satin-black": "50% 62%",
     "2022-mercedes-benz-s580": "50% 62%",
-    "2022-lamborghini-urus-green-zpbuc3zl4pla22334": "50% 67%",
-    "2021-bmw-m8-competition-gran-coupe-22": "50% 72%",
-    "2023-urus-performante-zpbuc3zl4pla22334": "50% 74%",
-    "2023-lamborghini-urus-performante-zpbuc3zl4pla22334": "50% 74%",
-    "2020-mercedes-g63-satin-black-wdcyc7hj6lx338220": "50% 75%",
-    "2021-maybach-gls600-blackgold-15": "50% 68%",
-    "2025-c8-2lt-16": "50% 72%",
-    "2024-rolls-royce-spectre-24": "50% 62%",
-    "2019-ferrari-portofino-19": "50% 72%",
   };
 
   return focalBySlug[slug] ?? "50% 50%";
@@ -96,7 +73,9 @@ export default function Home() {
   }, [selectedBrands]);
 
   const toggleBrand = (brand: string) => {
-    setSelectedBrands((prev) => (prev.includes(brand) ? [] : [brand]));
+    setSelectedBrands((prev) =>
+      prev.includes(brand) ? prev.filter((b) => b !== brand) : [...prev, brand],
+    );
   };
 
   return (
@@ -207,14 +186,13 @@ export default function Home() {
               <article>
                 <div className="relative h-[212px] bg-zinc-900 sm:h-[240px]">
                   <Image
-                    src={getCardImageSrc(item)}
+                    src={item.images?.[0] || getPlaceholderImage(item.car)}
                     alt={item.car}
                     fill
                     className="object-cover"
                     style={{ objectPosition: getCardImagePosition(item.slug) }}
                     sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     quality={95}
-                    loading="eager"
                     unoptimized={!item.images?.[0]}
                   />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-4">
