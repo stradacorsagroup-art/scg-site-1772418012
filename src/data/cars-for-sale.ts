@@ -24,5 +24,17 @@ export const carsForSaleInventory: CarsForSaleCard[] = [
       "buyout": 115000
     },
     "notes": "\u2014"
+  },
+  {
+    "car": "2023 Nisan GTR",
+    "miles": "61,000",
+    "vin": "SCATD6C05NU213792",
+    "threeMo": {
+      "buyout": 115000
+    },
+    "twelveMo": {
+      "buyout": 115000
+    },
+    "notes": "\u2014"
   }
 ];
