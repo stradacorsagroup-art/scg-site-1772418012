@@ -17,6 +17,9 @@ function normalizeBrand(value: string) {
 }
 
 function displayBrand(value: string) {
+  const upper = value.trim().toUpperCase();
+  if (upper === "BMW") return "BMW";
+
   return value
     .toLowerCase()
     .split("-")
@@ -44,9 +47,15 @@ function splitCardTitle(car: string) {
   const brand = year ? (tokens[1] || "") : (tokens[0] || "");
   const model = year ? tokens.slice(2).join(" ") : tokens.slice(1).join(" ");
 
+  const normalizedBrand = brand.toUpperCase();
+  const normalizedModel = (model || car).toUpperCase();
+  const cardModel = normalizedBrand === "CORVETTE" && normalizedModel.startsWith("C8")
+    ? `CORVETTE ${normalizedModel}`
+    : normalizedModel;
+
   return {
     top: `${brand} ${year}`.trim(),
-    model: (model || car).toUpperCase(),
+    model: cardModel,
   };
 }
 
