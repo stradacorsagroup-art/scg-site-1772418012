@@ -203,6 +203,7 @@ export default function Home() {
                     style={{ objectPosition: getCardImagePosition(item.slug) }}
                     sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     quality={95}
+                    loading="eager"
                     unoptimized={!item.images?.[0]}
                   />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-4">
