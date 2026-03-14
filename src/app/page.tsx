@@ -17,6 +17,9 @@ function normalizeBrand(value: string) {
 }
 
 function displayBrand(value: string) {
+  const upper = value.trim().toUpperCase();
+  if (upper === "BMW") return "BMW";
+
   return value
     .toLowerCase()
     .split("-")
@@ -33,6 +36,15 @@ function getCardImagePosition(slug: string) {
   const focalBySlug: Record<string, string> = {
     "2020-mclaren-720s-spyder-satin-black": "50% 62%",
     "2022-mercedes-benz-s580": "50% 62%",
+    "2022-lamborghini-urus-green-zpbuc3zl4pla22334": "50% 67%",
+    "2021-bmw-m8-competition-gran-coupe-22": "50% 72%",
+    "2023-urus-performante-zpbuc3zl4pla22334": "50% 74%",
+    "2023-lamborghini-urus-performante-zpbuc3zl4pla22334": "50% 74%",
+    "2020-mercedes-g63-satin-black-wdcyc7hj6lx338220": "50% 75%",
+    "2021-maybach-gls600-blackgold-15": "50% 68%",
+    "2025-c8-2lt-16": "50% 72%",
+    "2024-rolls-royce-spectre-24": "50% 62%",
+    "2019-ferrari-portofino-19": "50% 72%",
   };
 
   return focalBySlug[slug] ?? "50% 50%";
@@ -73,9 +85,7 @@ export default function Home() {
   }, [selectedBrands]);
 
   const toggleBrand = (brand: string) => {
-    setSelectedBrands((prev) =>
-      prev.includes(brand) ? prev.filter((b) => b !== brand) : [...prev, brand],
-    );
+    setSelectedBrands((prev) => (prev.includes(brand) ? [] : [brand]));
   };
 
   return (
