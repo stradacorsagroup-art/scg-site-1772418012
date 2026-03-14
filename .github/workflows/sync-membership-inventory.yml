@@ -2,6 +2,9 @@ name: Sync Membership Inventory
 
 on:
   workflow_dispatch:
+  schedule:
+    # Every 24h
+    - cron: "0 13 * * *"
 
 permissions:
   contents: write
