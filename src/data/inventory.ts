@@ -22,24 +22,21 @@ export const inventory: InventoryItem[] = [
     "car": "2020 McLaren 720S Spider",
     "terms": [
       "3 mo",
-      "6 mo",
       "12 mo"
     ],
     "down": {
       "3 mo": 26995,
-      "6 mo": 32495,
-      "12 mo": 54895
+      "12 mo": 54890
     },
     "monthly": 6995,
     "display": "From $26,995 down • $6,995/mo",
     "location": "New York, NY, United States",
     "scgMonthlyByTerm": {
       "3 mo": 6995,
-      "6 mo": 6995,
       "12 mo": 6995
     },
     "scgBuyoutByTerm": {
-      "12 mo": 229900
+      "12 mo": 229895
     },
     "mileage": "23,000",
     "images": [
@@ -59,13 +56,13 @@ export const inventory: InventoryItem[] = [
       "3 mo": 99995,
       "12 mo": 144995
     },
-    "monthly": 8965,
-    "display": "From $99,995 down • $8,965/mo",
+    "monthly": 8960,
+    "display": "From $99,995 down • $8,960/mo",
     "location": "Miami, Florida",
-    "notes": "Keyvany Keyrus\n1 of 3 imported to North America. Most exclusive custom Urus on the planet. Originally created upon a Pearl Capsule Edition unit from Lamborghini, painted in Green base with heavy Gold metallic flakes.\n\nEvery piece of bodywork on this vehicle has been hand crafted from the highest Aerograde Carbon Fiber. Only the door shells and roof have remained original aluminum.\n\nFull Catless RYFT Titanium Exhaust System with a Stage 2 Tune pushing just around 900 HP. Only Urus seen to shoot 3-4 foot flames.\n\nIt's sitting on one-off AL13 3-Piece Wheels specially made for this Keyrus, running over $30,000 for the set with tires.\n\nInterior is also fully custom down to the floor mats, carbon door sills, and forged carbon fiber steering wheel with the Keyvany crest. Also has a color-changing Starlight Headliner that has twinkle effect, as well as color-changing ambient lighting.\n\n+ Full Custom Interior",
+    "notes": "Keyvany Keyrus 1 of 3 imported to North America. Most exclusive custom Urus on the planet. Originally created upon a Pearl Capsule Edition unit from Lamborghini, painted in Green base with heavy Gold metallic flakes. Every piece of bodywork on this vehicle has been hand crafted from the highest Aerograde Carbon Fiber. Only the door shells and roof have remained original aluminum. Full Catless RYFT Titanium Exhaust System with a Stage 2 Tune pushing just around 900 HP. Only Urus seen to shoot 3-4 foot flames. It's sitting on one-off AL13 3-Piece Wheels specially made for this Keyrus, running over $30,000 for the set with tires. Interior is also fully custom down to the floor mats, carbon door sills, and forged carbon fiber steering wheel with the Keyvany crest. Also has a color-changing Starlight Headliner that has twinkle effect, as well as color-changing ambient lighting. + Full Custom Interior",
     "scgMonthlyByTerm": {
-      "3 mo": 8965,
-      "12 mo": 8965
+      "3 mo": 8960,
+      "12 mo": 8960
     },
     "mileage": "9,847",
     "images": [
@@ -84,20 +81,17 @@ export const inventory: InventoryItem[] = [
     "slug": "2023-maserati-mc20-18",
     "car": "2023 Maserati MC20",
     "terms": [
-      "3 mo",
       "12 mo"
     ],
     "down": {
-      "3 mo": 25995,
       "12 mo": 25995
     },
-    "monthly": 3250,
-    "display": "From $25,995 down • $3,250/mo",
+    "monthly": 3245,
+    "display": "From $25,995 down • $3,245/mo",
     "location": "—",
-    "notes": "",
+    "notes": "24,000",
     "scgMonthlyByTerm": {
-      "3 mo": 3250,
-      "12 mo": 3250
+      "12 mo": 3245
     },
     "mileage": "24,000",
     "images": [
@@ -114,127 +108,105 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "2019-lamborghini-urus-awd-blue-zpbua1zl6kla00922",
-    "car": "2019 Lamborghini Urus AWD BLUE",
+    "slug": "2019-lamborghini-urus-blue-zpbua1zl5kla01124",
+    "car": "2019 LAMBORGHINI URUS BLUE",
     "terms": [
       "3 mo",
       "12 mo"
     ],
     "down": {
-      "3 mo": 17995,
-      "12 mo": 29900
-    },
-    "monthly": 3995,
-    "display": "From $17,995 down • $3,995/mo",
-    "location": "—",
-    "scgMonthlyByTerm": {
-      "3 mo": 3995,
-      "12 mo": 3995
-    },
-    "scgBuyoutByTerm": {
-      "3 mo": 125000,
-      "12 mo": 119000
-    },
-    "mileage": "111,000",
-    "images": [
-      "/images/cars/2019-lamborghini-urus-awd-blue/4.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-blue/hero.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-blue/2.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-blue/3.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-blue/5.jpg"
-    ]
-  },
-  {
-    "slug": "2019-lamborghini-urus-awd-green-zpbuc3zl4pla22334",
-    "car": "2019 Lamborghini Urus AWD GREEN",
-    "terms": [
-      "3 mo"
-    ],
-    "down": {
-      "3 mo": 26900
-    },
-    "monthly": 5995,
-    "display": "From $26,900 down • $5,995/mo",
-    "location": "New York, NY, United States",
-    "scgMonthlyByTerm": {
-      "3 mo": 5995
-    },
-    "scgBuyoutByTerm": {
-      "3 mo": 250000
-    },
-    "mileage": "38,000",
-    "images": [
-      "/images/cars/2019-lamborghini-urus-awd-green/hero.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-green/2.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-green/3.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-green/4.jpg"
-    ],
-    "video": "/videos/cars/2019-lamborghini-urus-awd-green/hero.mov"
-  },
-  {
-    "slug": "2019-lamborghini-urus-awd-white-zpbua1zl5kla01124",
-    "car": "2019 Lamborghini Urus AWD WHITE",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 19900,
-      "12 mo": 29995
+      "3 mo": 14995,
+      "12 mo": 27995
     },
     "monthly": 4495,
-    "display": "From $19,900 down • $4,495/mo",
+    "display": "From $14,995 down • $4,495/mo",
     "location": "—",
     "scgMonthlyByTerm": {
       "3 mo": 4495,
       "12 mo": 4495
     },
     "scgBuyoutByTerm": {
-      "3 mo": 165000,
-      "12 mo": 150000
+      "3 mo": 164995,
+      "12 mo": 149995
     },
-    "mileage": "40,000",
-    "images": [
-      "/images/cars/2019-lamborghini-urus-awd-white/2.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-white/hero.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-white/3.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-white/4.jpg"
-    ]
+    "mileage": "40,000"
   },
   {
-    "slug": "2021-mercedes-g63-satin-white-13",
-    "car": "2021 Mercedes-AMG G63 SATIN WHITE",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
-    "location": "—",
-    "mileage": "—",
-    "images": [
-      "/images/cars/2021-mercedes-g63-satin-white/hero.jpg",
-      "/images/cars/2021-mercedes-g63-satin-white/2.jpg",
-      "/images/cars/2021-mercedes-g63-satin-white/3.jpg",
-      "/images/cars/2021-mercedes-g63-satin-white/4.jpg"
-    ],
-    "video": "/videos/cars/2021-mercedes-g63-satin-white/hero.mov"
-  },
-  {
-    "slug": "2018-rr-dawn-66l-v12",
-    "car": "2018 Rolls-Royce Dawn",
+    "slug": "2022-lamborghini-urus-green-zpbuc3zl4pla22334",
+    "car": "2022 LAMBORGHINI URUS GREEN",
     "terms": [
       "3 mo",
       "12 mo"
     ],
     "down": {
-      "3 mo": 19995,
+      "3 mo": 17495,
+      "12 mo": 29995
+    },
+    "monthly": 3995,
+    "display": "From $17,495 down • $3,995/mo",
+    "location": "New York, NY, United States",
+    "scgMonthlyByTerm": {
+      "3 mo": 3995,
+      "12 mo": 3995
+    },
+    "scgBuyoutByTerm": {
+      "3 mo": 209995,
+      "12 mo": 199995
+    },
+    "mileage": "38,000"
+  },
+  {
+    "slug": "2019-lamborghini-urus-white-6",
+    "car": "2019 LAMBORGHINI URUS WHITE",
+    "terms": [
+      "12 mo"
+    ],
+    "down": {
+      "12 mo": 29995
+    },
+    "monthly": 3995,
+    "display": "From $29,995 down • $3,995/mo",
+    "location": "—",
+    "scgMonthlyByTerm": {
+      "12 mo": 3995
+    },
+    "mileage": "111,000"
+  },
+  {
+    "slug": "2021-mercedes-g63-199-exclusive-edition-7",
+    "car": "2021 Mercedes G63 1/99 EXCLUSIVE EDITION",
+    "terms": [
+      "12 mo"
+    ],
+    "down": {
+      "12 mo": 19995
+    },
+    "monthly": 4495,
+    "display": "From $19,995 down • $4,495/mo",
+    "location": "—",
+    "notes": "Factory Matte White on Cardinal Red",
+    "scgMonthlyByTerm": {
+      "12 mo": 4495
+    },
+    "scgBuyoutByTerm": {
+      "12 mo": 159995
+    },
+    "mileage": "36,000"
+  },
+  {
+    "slug": "2018-rr-dawn-66l-v12",
+    "car": "2018 Rolls-Royce Dawn",
+    "terms": [
+      "12 mo"
+    ],
+    "down": {
       "12 mo": 19995
     },
     "monthly": 5995,
     "display": "From $19,995 down • $5,995/mo",
     "location": "West Palm FL",
-    "notes": "White Exterior / Handcrafted Red Interior • $235k Purchase Price • 6/12 Month Lease • No Credit or Income Check • Buyout Option at End",
+    "notes": "White Exterior / Handcrafted Red Interior • $235k Purchase Price",
     "scgMonthlyByTerm": {
-      "3 mo": 5995,
       "12 mo": 5995
     },
     "mileage": "19,780",
@@ -254,20 +226,17 @@ export const inventory: InventoryItem[] = [
     "slug": "2018-mercedes-amg-gt-c-21",
     "car": "2018 Mercedes-AMG GT C",
     "terms": [
-      "3 mo",
       "12 mo"
     ],
     "down": {
-      "3 mo": 17995,
       "12 mo": 17995
     },
-    "monthly": 2000,
-    "display": "From $17,995 down • $2,000/mo",
+    "monthly": 1995,
+    "display": "From $17,995 down • $1,995/mo",
     "location": "—",
-    "notes": "C = Competition (highly sought after trim) • Silver Matte Paint • 6/12 Month Lease to Own • No Credit or Income Check • Buyout Option at End of Lease",
+    "notes": "Silver Matte Paint",
     "scgMonthlyByTerm": {
-      "3 mo": 2000,
-      "12 mo": 2000
+      "12 mo": 1995
     },
     "mileage": "45,xxx",
     "images": [
@@ -286,20 +255,17 @@ export const inventory: InventoryItem[] = [
     "slug": "2021-audi-rs-6-avant-22",
     "car": "2021 Audi RS 6 Avant",
     "terms": [
-      "3 mo",
       "12 mo"
     ],
     "down": {
-      "3 mo": 17995,
       "12 mo": 17995
     },
-    "monthly": 2500,
-    "display": "From $17,995 down • $2,500/mo",
+    "monthly": 2495,
+    "display": "From $17,995 down • $2,495/mo",
     "location": "—",
-    "notes": "Full Stealth PPF • 6/12 Month Lease to Own • No Credit or Income Check • Buyout Option at End of Lease",
+    "notes": "Full Stealth PPF",
     "scgMonthlyByTerm": {
-      "3 mo": 2500,
-      "12 mo": 2500
+      "12 mo": 2495
     },
     "mileage": "40,xxx",
     "images": [
@@ -318,20 +284,17 @@ export const inventory: InventoryItem[] = [
     "slug": "2025-rolls-royce-spectre-electric-23",
     "car": "2025 Rolls-Royce Spectre",
     "terms": [
-      "3 mo",
       "12 mo"
     ],
     "down": {
-      "3 mo": 49995,
       "12 mo": 49995
     },
-    "monthly": 9000,
-    "display": "From $49,995 down • $9,000/mo",
+    "monthly": 8995,
+    "display": "From $49,995 down • $8,995/mo",
     "location": "—",
-    "notes": "INSANE SPEC • TEMPESTE GREY • FACTORY BLUE INTERIOR • STARLIGHT DOORS • 6/12 Month Lease to Own • No Credit or Income Check • Buyout Option Available at End",
+    "notes": "INSANE SPEC • TEMPESTE GREY • FACTORY BLUE INTERIOR • STARLIGHT DOORS",
     "scgMonthlyByTerm": {
-      "3 mo": 9000,
-      "12 mo": 9000
+      "12 mo": 8995
     },
     "mileage": "13,xxx",
     "images": [
@@ -344,39 +307,42 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "2021-mercedes-g63-satin-black-12",
-    "car": "2021 Mercedes-AMG G63 SATIN BLACK",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
-    "location": "—",
-    "mileage": "—",
-    "images": [
-      "/images/cars/2021-mercedes-g63-satin-black/hero.jpg",
-      "/images/cars/2021-mercedes-g63-satin-black/2.jpg"
+    "slug": "2020-mercedes-g63-satin-black-wdcyc7hj6lx338220",
+    "car": "2020 Mercedes G63 Satin Black",
+    "terms": [
+      "12 mo"
     ],
-    "video": "/videos/cars/2021-mercedes-g63-satin-black/hero.mov"
+    "down": {
+      "12 mo": 17995
+    },
+    "monthly": 2995,
+    "display": "From $17,995 down • $2,995/mo",
+    "location": "New York, NY, United States",
+    "scgMonthlyByTerm": {
+      "12 mo": 2995
+    },
+    "scgBuyoutByTerm": {
+      "12 mo": 104995
+    },
+    "mileage": "56,000"
   },
   {
     "slug": "2023-lamborghini-urus-performante-zpbuc3zl4pla22334",
     "car": "2023 Lamborghini Urus Performante",
     "terms": [
-      "3 mo"
+      "12 mo"
     ],
     "down": {
-      "3 mo": 26900
+      "12 mo": 34995
     },
-    "monthly": 5995,
-    "display": "From $26,900 down • $5,995/mo",
+    "monthly": 5495,
+    "display": "From $34,995 down • $5,495/mo",
     "location": "New York, NY, United States",
+    "notes": "Satin Black Paint❗️\nTwo Tone Black/Red Interior Tons of Carbon & Alcantara❗️\n6 Month: 5k mile allowance, $5/mile over\n12 Month: 8k mile allowance, $5/mile over",
     "scgMonthlyByTerm": {
-      "3 mo": 5995
+      "12 mo": 5495
     },
-    "scgBuyoutByTerm": {
-      "3 mo": 250000
-    },
-    "mileage": "38,000",
+    "mileage": "31,000",
     "images": [
       "/images/cars/2023-lamborghini-urus-performante/hero.png",
       "/images/cars/2023-lamborghini-urus-performante/2.png",
@@ -388,13 +354,23 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2023-maybach-gls600-blackred-14",
-    "car": "2023 Maybach GLS600 BLACK/RED",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
+    "car": "2023 Maybach GLS600 Black/Red",
+    "terms": [
+      "12 mo"
+    ],
+    "down": {
+      "12 mo": 19995
+    },
+    "monthly": 3595,
+    "display": "From $19,995 down • $3,595/mo",
     "location": "—",
-    "mileage": "—",
+    "scgMonthlyByTerm": {
+      "12 mo": 3595
+    },
+    "scgBuyoutByTerm": {
+      "12 mo": 129995
+    },
+    "mileage": "23,000",
     "images": [
       "/images/cars/2023-maybach-gls600-black-red/hero.jpg",
       "/images/cars/2023-maybach-gls600-black-red/2.jpg",
@@ -405,13 +381,27 @@ export const inventory: InventoryItem[] = [
   },
   {
     "slug": "2021-maybach-gls600-blackgold-15",
-    "car": "2021 Maybach GLS600 BLACK/GOLD",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
-    "location": "—",
-    "mileage": "—",
+    "car": "2021 Maybach GLS600 Black/Gold",
+    "terms": [
+      "3 mo",
+      "12 mo"
+    ],
+    "down": {
+      "3 mo": 12895,
+      "12 mo": 19995
+    },
+    "monthly": 3195,
+    "display": "From $12,895 down • $3,195/mo",
+    "location": "New York, NY, United States",
+    "scgMonthlyByTerm": {
+      "3 mo": 3195,
+      "12 mo": 3595
+    },
+    "scgBuyoutByTerm": {
+      "3 mo": 124995,
+      "12 mo": 114995
+    },
+    "mileage": "36,000",
     "images": [
       "/images/cars/2021-maybach-gls600-black-gold/hero.jpg",
       "/images/cars/2021-maybach-gls600-black-gold/2.jpg",
@@ -423,12 +413,20 @@ export const inventory: InventoryItem[] = [
   {
     "slug": "2025-c8-2lt-16",
     "car": "2025 Corvette C8 2LT",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
+    "terms": [
+      "12 mo"
+    ],
+    "down": {
+      "12 mo": 7995
+    },
+    "monthly": 1645,
+    "display": "From $7,995 down • $1,645/mo",
     "location": "—",
-    "mileage": "—",
+    "notes": "Hysteria Purple❗️Tons of Mods❗️\nLifetime Engine Warranty + 2 Years Left Factory Warranty❗️",
+    "scgMonthlyByTerm": {
+      "12 mo": 1645
+    },
+    "mileage": "9,xxx",
     "images": [
       "/images/cars/2025-c8-2lt/hero.jpg",
       "/images/cars/2025-c8-2lt/2.jpg",
@@ -441,12 +439,22 @@ export const inventory: InventoryItem[] = [
   {
     "slug": "2024-rolls-royce-spectre-24",
     "car": "2024 Rolls-Royce Spectre",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
-    "location": "—",
-    "mileage": "—",
+    "terms": [
+      "12 mo"
+    ],
+    "down": {
+      "12 mo": 38995
+    },
+    "monthly": 6495,
+    "display": "From $38,995 down • $6,495/mo",
+    "location": "Miami, FL",
+    "scgMonthlyByTerm": {
+      "12 mo": 6495
+    },
+    "scgBuyoutByTerm": {
+      "12 mo": 422562
+    },
+    "mileage": "1,096",
     "images": [
       "/images/cars/2024-rolls-royce-spectre/hero.jpg",
       "/images/cars/2024-rolls-royce-spectre/2.jpg",
@@ -456,30 +464,24 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "2021-mercedes-benz-s580-satin-red-18",
-    "car": "2021 Mercedes-Benz S580 SATIN RED",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
-    "location": "—",
-    "mileage": "—",
-    "images": [
-      "/images/cars/2021-mercedes-benz-s580-satin-red/hero.jpg",
-      "/images/cars/2021-mercedes-benz-s580-satin-red/2.jpg",
-      "/images/cars/2021-mercedes-benz-s580-satin-red/3.jpg"
-    ],
-    "video": "/videos/cars/2021-mercedes-benz-s580-satin-red/hero.mp4"
-  },
-  {
     "slug": "2019-ferrari-portofino-19",
     "car": "2019 Ferrari Portofino",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
+    "terms": [
+      "12 mo"
+    ],
+    "down": {
+      "12 mo": 34995
+    },
+    "monthly": 4495,
+    "display": "From $34,995 down • $4,495/mo",
     "location": "—",
-    "mileage": "—",
+    "scgMonthlyByTerm": {
+      "12 mo": 4495
+    },
+    "scgBuyoutByTerm": {
+      "12 mo": 169995
+    },
+    "mileage": "15,500",
     "images": [
       "/images/cars/2019-ferrari-portofino/2.jpg",
       "/images/cars/2019-ferrari-portofino/hero.jpg",
@@ -487,28 +489,25 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "2024-maybach-gls-600-20",
-    "car": "2024 Maybach GLS 600",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
-    "location": "—",
-    "mileage": "—",
-    "images": [
-      "/images/cars/2024-maybach-gls-600/hero.jpg",
-      "/images/cars/2024-maybach-gls-600/2.jpg"
-    ]
-  },
-  {
     "slug": "2021-bmw-m8-competition-gran-coupe-22",
     "car": "2021 BMW M8 Competition Gran Coupe",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
+    "terms": [
+      "12 mo"
+    ],
+    "down": {
+      "12 mo": 16995
+    },
+    "monthly": 2245,
+    "display": "From $16,995 down • $2,245/mo",
     "location": "—",
-    "mileage": "—",
+    "notes": "No Credit or Income Check",
+    "scgMonthlyByTerm": {
+      "12 mo": 2245
+    },
+    "scgBuyoutByTerm": {
+      "12 mo": 64995
+    },
+    "mileage": "31,xxx",
     "images": [
       "/images/cars/2021-bmw-m8-competition-gran-coupe/hero.jpg",
       "/images/cars/2021-bmw-m8-competition-gran-coupe/2.jpg",
@@ -520,87 +519,6 @@ export const inventory: InventoryItem[] = [
       "/images/cars/2021-bmw-m8-competition-gran-coupe/8.jpg",
       "/images/cars/2021-bmw-m8-competition-gran-coupe/9.jpg",
       "/images/cars/2021-bmw-m8-competition-gran-coupe/10.jpg"
-    ]
-  },
-  {
-    "slug": "2021-mercedes-benz-s580-faybach-w1kg7gbxma052327",
-    "car": "2021 Mercedes-Benz S580 'FAYBACH",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 10900,
-      "12 mo": 13900
-    },
-    "monthly": 2495,
-    "display": "From $10,900 down • $2,495/mo",
-    "location": "New York, NY, United States",
-    "scgMonthlyByTerm": {
-      "3 mo": 2495,
-      "12 mo": 2495
-    },
-    "scgBuyoutByTerm": {
-      "3 mo": 65000,
-      "12 mo": 65000
-    },
-    "mileage": "65,000",
-    "images": [
-      "/images/cars/2021-mercedes-benz-s580-faybach/hero.jpg",
-      "/images/cars/2021-mercedes-benz-s580-faybach/2.jpg",
-      "/images/cars/2021-mercedes-benz-s580-faybach/3.jpg"
-    ],
-    "video": "/videos/cars/2021-mercedes-benz-s580-faybach/hero.mov"
-  },
-  {
-    "slug": "2022-mercedes-benz-e450-17",
-    "car": "2022 Mercedes-Benz E450",
-    "terms": [],
-    "down": {},
-    "monthly": 0,
-    "display": "Pricing on request",
-    "location": "—",
-    "mileage": "—",
-    "images": [
-      "/images/cars/2022-mercedes-benz-e450/hero.jpg",
-      "/images/cars/2022-mercedes-benz-e450/2.jpg",
-      "/images/cars/2022-mercedes-benz-e450/3.jpg",
-      "/images/cars/2022-mercedes-benz-e450/4.jpg",
-      "/images/cars/2022-mercedes-benz-e450/5.jpg",
-      "/images/cars/2022-mercedes-benz-e450/6.jpg",
-      "/images/cars/2022-mercedes-benz-e450/7.jpg"
-    ]
-  },
-  {
-    "slug": "2022-mercedes-benz-s580",
-    "car": "2022 Mercedes-Benz S580",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 10900,
-      "12 mo": 12900
-    },
-    "monthly": 2695,
-    "display": "From $10,900 down • $2,695/mo",
-    "location": "New York, NY, United States",
-    "scgMonthlyByTerm": {
-      "3 mo": 2695,
-      "12 mo": 2695
-    },
-    "scgBuyoutByTerm": {
-      "3 mo": 65000,
-      "12 mo": 65000
-    },
-    "mileage": "65,000",
-    "images": [
-      "/images/cars/2022-mercedes-benz-s580/hero.png",
-      "/images/cars/2022-mercedes-benz-s580/2.png",
-      "/images/cars/2022-mercedes-benz-s580/3.png",
-      "/images/cars/2022-mercedes-benz-s580/4.png",
-      "/images/cars/2022-mercedes-benz-s580/5.png",
-      "/images/cars/2022-mercedes-benz-s580/6.png"
     ]
   }
 ];
