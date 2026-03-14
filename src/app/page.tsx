@@ -32,6 +32,17 @@ function getPlaceholderImage(carName: string) {
   return `https://placehold.co/1200x800/101010/e8e8e8?text=${text}`;
 }
 
+function getCardImageSrc(item: { slug: string; car: string; images?: string[] }) {
+  const fallback = item.images?.[0] || getPlaceholderImage(item.car);
+  const overrideBySlug: Record<string, string> = {
+    "2023-lamborghini-urus-performante-zpbuc3zl4pla22334": "/images/cars/2023-lamborghini-urus-performante/2.jpg",
+    "2021-maybach-gls600-blackgold-15": "/images/cars/2021-maybach-gls600-black-gold/3.jpg",
+    "2021-bmw-m8-competition-gran-coupe-22": "/images/cars/2021-bmw-m8-competition-gran-coupe/2.jpg",
+  };
+
+  return overrideBySlug[item.slug] ?? fallback;
+}
+
 function getCardImagePosition(slug: string) {
   const focalBySlug: Record<string, string> = {
     "2020-mclaren-720s-spyder-satin-black": "50% 62%",
@@ -196,7 +207,7 @@ export default function Home() {
               <article>
                 <div className="relative h-[212px] bg-zinc-900 sm:h-[240px]">
                   <Image
-                    src={item.images?.[0] || getPlaceholderImage(item.car)}
+                    src={getCardImageSrc(item)}
                     alt={item.car}
                     fill
                     className="object-cover"
