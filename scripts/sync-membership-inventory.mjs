@@ -5,73 +5,8 @@ const ROOT = process.cwd();
 const INVENTORY_PATH = path.join(ROOT, "src/data/inventory.ts");
 const SOURCE_URL = "https://scg-command-center-site.vercel.app/data/costs-inventory.json";
 
-const CAR_MEDIA = {
-  "2018 ferrari 488 spider": {
-    images: [
-      "/images/cars/2018-ferrari-488-spider/hero.png",
-      "/images/cars/2018-ferrari-488-spider/2.png",
-      "/images/cars/2018-ferrari-488-spider/3.png",
-      "/images/cars/2018-ferrari-488-spider/4.png",
-      "/images/cars/2018-ferrari-488-spider/5.png",
-    ],
-  },
-  "2020 rolls-royce cullinan": {
-    images: [
-      "/images/cars/2020-rolls-royce-cullinan/hero.png",
-      "/images/cars/2020-rolls-royce-cullinan/2.png",
-      "/images/cars/2020-rolls-royce-cullinan/3.png",
-      "/images/cars/2020-rolls-royce-cullinan/4.png",
-      "/images/cars/2020-rolls-royce-cullinan/5.png",
-      "/images/cars/2020-rolls-royce-cullinan/6.png",
-      "/images/cars/2020-rolls-royce-cullinan/7.png",
-    ],
-    video: "/videos/cars/2020-rolls-royce-cullinan/hero.mov",
-  },
-  "2020 rolls-royce cullinan black badge": {
-    images: [
-      "/images/cars/2020-rolls-royce-cullinan-black-badge/hero.png",
-      "/images/cars/2020-rolls-royce-cullinan-black-badge/2.png",
-      "/images/cars/2020-rolls-royce-cullinan-black-badge/3.png",
-    ],
-    video: "/videos/cars/2020-rolls-royce-cullinan-black-badge/hero.mov",
-  },
-  "2021 mercedes-benz s580 black on peanut butter": {
-    images: [
-      "/images/cars/2021-mercedes-benz-s580/hero.png",
-      "/images/cars/2021-mercedes-benz-s580/2.png",
-      "/images/cars/2021-mercedes-benz-s580/3.png",
-    ],
-    video: "/videos/cars/2021-mercedes-benz-s580/hero.mov",
-  },
-  "2022 mercedes-benz s580": {
-    images: [
-      "/images/cars/2022-mercedes-benz-s580/hero.png",
-      "/images/cars/2022-mercedes-benz-s580/2.png",
-      "/images/cars/2022-mercedes-benz-s580/3.png",
-      "/images/cars/2022-mercedes-benz-s580/4.png",
-      "/images/cars/2022-mercedes-benz-s580/5.png",
-      "/images/cars/2022-mercedes-benz-s580/6.png",
-    ],
-  },
-  "2022 rolls-royce ghost black badge": {
-    images: [
-      "/images/cars/ghost-black-badge/hero.jpg",
-      "/images/cars/ghost-black-badge/a.jpg",
-      "/images/cars/ghost-black-badge/b.jpg",
-      "/images/cars/ghost-black-badge/c.jpg",
-    ],
-  },
-  "2023 lamborghini urus performante": {
-    images: [
-      "/images/cars/2023-lamborghini-urus-performante/hero.png",
-      "/images/cars/2023-lamborghini-urus-performante/2.png",
-      "/images/cars/2023-lamborghini-urus-performante/3.png",
-      "/images/cars/2023-lamborghini-urus-performante/4.png",
-      "/images/cars/2023-lamborghini-urus-performante/5.png",
-      "/images/cars/2023-lamborghini-urus-performante/6.png",
-    ],
-  },
-};
+// Intentionally no hard-coded media overrides.
+// We preserve existing gallery/hero media from src/data/inventory.ts to avoid accidental drift.
 
 function slugify(value) {
   return value
@@ -245,9 +180,6 @@ async function main() {
     if (matched?.exterior) item.exterior = matched.exterior;
     if (matched?.interior) item.interior = matched.interior;
 
-    const mediaPreset = CAR_MEDIA[lookupKey];
-    if (mediaPreset?.images?.length) item.images = mediaPreset.images;
-    if (mediaPreset?.video) item.video = mediaPreset.video;
 
     return item;
   });
