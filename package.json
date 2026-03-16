@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/verify-inventory-media.mjs && next build",
     "start": "next start",
     "lint": "eslint",
+    "check:inventory-media": "node scripts/verify-inventory-media.mjs",
+    "guard:text-only": "node scripts/guard-text-only.mjs",
     "sync:membership": "node scripts/sync-membership-inventory.mjs"
   },
   "dependencies": {

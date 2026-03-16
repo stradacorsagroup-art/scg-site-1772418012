@@ -209,7 +209,13 @@ export const inventory: InventoryItem[] = [
     "scgBuyoutByTerm": {
       "12 mo": 159995
     },
-    "mileage": "36,000"
+    "mileage": "36,000",
+    "images": [
+      "/images/cars/2021-mercedes-g63-satin-white/hero.jpg",
+      "/images/cars/2021-mercedes-g63-satin-white/2.jpg",
+      "/images/cars/2021-mercedes-g63-satin-white/3.jpg",
+      "/images/cars/2021-mercedes-g63-satin-white/4.jpg"
+    ]
   },
   {
     "slug": "2018-rr-dawn-66l-v12",
@@ -342,7 +348,11 @@ export const inventory: InventoryItem[] = [
     "scgBuyoutByTerm": {
       "12 mo": 104995
     },
-    "mileage": "56,000"
+    "mileage": "56,000",
+    "images": [
+      "/images/cars/2021-mercedes-g63-satin-black/hero.jpg",
+      "/images/cars/2021-mercedes-g63-satin-black/2.jpg"
+    ]
   },
   {
     "slug": "2023-lamborghini-urus-performante-zpbuc3zl4pla22334",
@@ -362,12 +372,8 @@ export const inventory: InventoryItem[] = [
     },
     "mileage": "31,000",
     "images": [
-      "/images/cars/2023-lamborghini-urus-performante/hero.png",
-      "/images/cars/2023-lamborghini-urus-performante/2.png",
-      "/images/cars/2023-lamborghini-urus-performante/3.png",
-      "/images/cars/2023-lamborghini-urus-performante/4.png",
-      "/images/cars/2023-lamborghini-urus-performante/5.png",
-      "/images/cars/2023-lamborghini-urus-performante/6.png"
+      "/images/cars/2023-lamborghini-urus-performante/hero.jpg",
+      "/images/cars/2023-lamborghini-urus-performante/2.jpg"
     ]
   },
   {
