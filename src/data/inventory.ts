@@ -153,7 +153,13 @@ export const inventory: InventoryItem[] = [
       "3 mo": 209995,
       "12 mo": 199995
     },
-    "mileage": "38,000"
+    "mileage": "38,000",
+    "images": [
+      "/images/cars/2019-lamborghini-urus-awd-green/hero.jpg",
+      "/images/cars/2019-lamborghini-urus-awd-green/2.jpg",
+      "/images/cars/2019-lamborghini-urus-awd-green/3.jpg",
+      "/images/cars/2019-lamborghini-urus-awd-green/4.jpg"
+    ]
   },
   {
     "slug": "2019-lamborghini-urus-white-6",
