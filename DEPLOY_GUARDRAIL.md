@@ -5,7 +5,8 @@
   - `dealhaus.co`
   - `www.dealhaus.co`
 - Pinned deployment: `scg-site-6td86yy38-stradacorsagroup-7833s-projects.vercel.app`
-- Baseline timestamp: `2026-03-14 00:06:46 EDT` (the "12:07 AM" version)
+- Canonical baseline doc: `BASELINE.md`
+- Baseline tag: `baseline-current-live-6td86yy38`
 
 ## Non-Negotiable Flow
 1. **Never deploy directly to live first.**
