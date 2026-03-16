@@ -2,6 +2,7 @@ export type CarsForSaleCard = {
   car: string;
   miles?: string | null;
   vin?: string | null;
+  msrp?: number | null;
   ownerName?: string | null;
   ownerEmail?: string | null;
   notes?: string | null;
