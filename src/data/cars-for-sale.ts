@@ -17,24 +17,26 @@ export const carsForSaleInventory: CarsForSaleCard[] = [
     "car": "2025 Aston Martin DBX",
     "miles": "61,000",
     "vin": "SCATD6C05NU213792",
+    "msrp": 115000,
     "threeMo": {
       "buyout": 115000
     },
     "twelveMo": {
       "buyout": 115000
     },
-    "notes": "\u2014"
+    "notes": "—"
   },
   {
     "car": "2023 Nisan GTR",
     "miles": "61,000",
     "vin": "SCATD6C05NU213792",
+    "msrp": 115000,
     "threeMo": {
       "buyout": 115000
     },
     "twelveMo": {
       "buyout": 115000
     },
-    "notes": "\u2014"
+    "notes": "—"
   }
 ];
