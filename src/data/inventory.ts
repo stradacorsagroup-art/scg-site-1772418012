@@ -160,49 +160,6 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "2021-audi-rs-6-avant-22",
-    "car": "2021 Audi RS 6 Avant",
-    "terms": ["12 mo"],
-    "down": { "12 mo": 17995 },
-    "monthly": 2495,
-    "display": "From $17,995 down • $2,495/mo",
-    "location": "—",
-    "notes": "Full Stealth PPF",
-    "scgMonthlyByTerm": { "12 mo": 2495 },
-    "mileage": "40,xxx",
-    "images": [
-      "/images/cars/2021-audi-rs-6-avant/hero.jpg",
-      "/images/cars/2021-audi-rs-6-avant/2.jpg",
-      "/images/cars/2021-audi-rs-6-avant/3.jpg",
-      "/images/cars/2021-audi-rs-6-avant/4.jpg",
-      "/images/cars/2021-audi-rs-6-avant/5.jpg",
-      "/images/cars/2021-audi-rs-6-avant/6.jpg",
-      "/images/cars/2021-audi-rs-6-avant/7.jpg",
-      "/images/cars/2021-audi-rs-6-avant/8.jpg",
-      "/images/cars/2021-audi-rs-6-avant/9.jpg"
-    ]
-  },
-  {
-    "slug": "2025-rolls-royce-spectre-electric-23",
-    "car": "2025 Rolls-Royce Spectre",
-    "terms": ["12 mo"],
-    "down": { "12 mo": 49995 },
-    "monthly": 8995,
-    "display": "From $49,995 down • $8,995/mo",
-    "location": "—",
-    "notes": "INSANE SPEC • TEMPESTE GREY • FACTORY BLUE INTERIOR • STARLIGHT DOORS",
-    "scgMonthlyByTerm": { "12 mo": 8995 },
-    "mileage": "13,xxx",
-    "images": [
-      "/images/cars/2025-rolls-royce-spectre-electric/hero.jpg",
-      "/images/cars/2025-rolls-royce-spectre-electric/2.jpg",
-      "/images/cars/2025-rolls-royce-spectre-electric/3.jpg",
-      "/images/cars/2025-rolls-royce-spectre-electric/4.jpg",
-      "/images/cars/2025-rolls-royce-spectre-electric/5.jpg",
-      "/images/cars/2025-rolls-royce-spectre-electric/6.jpg"
-    ]
-  },
-  {
     "slug": "2020-mercedes-g63-satin-black-wdcyc7hj6lx338220",
     "car": "2020 Mercedes G63 Satin Black",
     "terms": ["12 mo"],
