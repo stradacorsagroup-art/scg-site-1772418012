@@ -183,8 +183,13 @@ export default function Home() {
           {filtered.map((item) => (
             <Link
               key={item.slug}
-              href={`/inventory/${item.slug}`}
-              className="group block overflow-hidden rounded-2xl border border-zinc-800 bg-[#111] transition duration-200 hover:-translate-y-0.5 hover:border-zinc-600"
+              href={item.sold ? "#" : `/inventory/${item.slug}`}
+              onClick={item.sold ? (e) => e.preventDefault() : undefined}
+              className={`group block overflow-hidden rounded-2xl border bg-[#111] transition duration-200 ${
+                item.sold
+                  ? "cursor-default border-zinc-800 opacity-60"
+                  : "border-zinc-800 hover:-translate-y-0.5 hover:border-zinc-600"
+              }`}
             >
               <article>
                 <div className="relative h-[212px] bg-zinc-900 sm:h-[240px]">
@@ -198,11 +203,17 @@ export default function Home() {
                     quality={95}
                     unoptimized={!item.images?.[0]}
                   />
+                  {item.sold && (
+                    <div className="absolute left-3 top-3 rounded-full bg-red-600 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-white shadow">
+                      Sold
+                    </div>
+                  )}
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-4">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-300">{splitCardTitle(item.car).top}</p>
                     <h4 className="mt-1 line-clamp-2 text-[20px] font-semibold uppercase leading-tight text-white">{splitCardTitle(item.car).model}</h4>
-                    <p className="mt-2 text-[18px] font-semibold text-white">{formatPrice(item.monthly)}/mo</p>
-
+                    {!item.sold && (
+                      <p className="mt-2 text-[18px] font-semibold text-white">{formatPrice(item.monthly)}/mo</p>
+                    )}
                   </div>
                 </div>
               </article>
