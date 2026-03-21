@@ -39,5 +39,18 @@ export const carsForSaleInventory: CarsForSaleCard[] = [
       "buyout": 115000
     },
     "notes": "—"
+  },
+  {
+    "car": "2023 Porsche 911",
+    "miles": "—",
+    "vin": "—",
+    "msrp": 0,
+    "threeMo": {
+      "buyout": 0
+    },
+    "twelveMo": {
+      "buyout": 0
+    },
+    "notes": "—"
   }
 ];
