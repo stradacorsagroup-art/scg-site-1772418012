@@ -55,10 +55,12 @@ function splitCardTitle(car: string) {
 
 export default function Home() {
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
+  const [showSold, setShowSold] = useState(false);
 
   const brandOptions = useMemo(() => {
     const set = new Set<string>();
     inventory.forEach((item) => {
+      if (item.sold) return;
       const tokens = item.car.split(" ");
       const guess = /^\d{4}$/.test(tokens[0]) ? tokens[1] : tokens[0];
       if (guess) set.add(normalizeBrand(guess));
@@ -67,18 +69,26 @@ export default function Home() {
   }, []);
 
   const filtered = useMemo(() => {
+    if (showSold) return inventory.filter((item) => item.sold);
     return inventory.filter((item) => {
+      if (item.sold) return false;
       const tokens = item.car.split(" ");
       const guessedBrand = /^\d{4}$/.test(tokens[0]) ? tokens[1] : tokens[0];
       const normalized = normalizeBrand(guessedBrand);
       return selectedBrands.length === 0 || selectedBrands.includes(normalized);
     });
-  }, [selectedBrands]);
+  }, [selectedBrands, showSold]);
 
   const toggleBrand = (brand: string) => {
+    setShowSold(false);
     setSelectedBrands((prev) =>
       prev.includes(brand) ? prev.filter((b) => b !== brand) : [...prev, brand],
     );
+  };
+
+  const toggleSold = () => {
+    setShowSold((prev) => !prev);
+    setSelectedBrands([]);
   };
 
   return (
@@ -175,6 +185,17 @@ export default function Home() {
                   </button>
                 );
               })}
+              <button
+                type="button"
+                onClick={toggleSold}
+                className={`rounded-full border px-3 py-1.5 text-[13px] font-medium transition ${
+                  showSold
+                    ? "border-red-600 bg-red-600 text-white"
+                    : "border-zinc-700 bg-transparent text-zinc-300 hover:border-red-600 hover:text-red-400"
+                }`}
+              >
+                SOLD
+              </button>
             </div>
           </div>
         </div>
@@ -183,13 +204,8 @@ export default function Home() {
           {filtered.map((item) => (
             <Link
               key={item.slug}
-              href={item.sold ? "#" : `/inventory/${item.slug}`}
-              onClick={item.sold ? (e) => e.preventDefault() : undefined}
-              className={`group block overflow-hidden rounded-2xl border bg-[#111] transition duration-200 ${
-                item.sold
-                  ? "cursor-default border-zinc-800 opacity-60"
-                  : "border-zinc-800 hover:-translate-y-0.5 hover:border-zinc-600"
-              }`}
+              href={`/inventory/${item.slug}`}
+              className="group block overflow-hidden rounded-2xl border border-zinc-800 bg-[#111] transition duration-200 hover:-translate-y-0.5 hover:border-zinc-600"
             >
               <article>
                 <div className="relative h-[212px] bg-zinc-900 sm:h-[240px]">
@@ -204,16 +220,14 @@ export default function Home() {
                     unoptimized={!item.images?.[0]}
                   />
                   {item.sold && (
-                    <div className="absolute left-3 top-3 rounded-full bg-red-600 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-white shadow">
-                      Sold
+                    <div className="absolute left-3 top-3 rounded-md bg-red-600 px-2.5 py-1 text-[11px] font-bold uppercase tracking-widest text-white shadow">
+                      SOLD
                     </div>
                   )}
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-4">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-zinc-300">{splitCardTitle(item.car).top}</p>
                     <h4 className="mt-1 line-clamp-2 text-[20px] font-semibold uppercase leading-tight text-white">{splitCardTitle(item.car).model}</h4>
-                    {!item.sold && (
-                      <p className="mt-2 text-[18px] font-semibold text-white">{formatPrice(item.monthly)}/mo</p>
-                    )}
+                    <p className="mt-2 text-[18px] font-semibold text-white">{formatPrice(item.monthly)}/mo</p>
                   </div>
                 </div>
               </article>
