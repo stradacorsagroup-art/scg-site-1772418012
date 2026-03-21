@@ -90,10 +90,10 @@ export const inventory: InventoryItem[] = [
     "scgBuyoutByTerm": { "3 mo": 164995, "12 mo": 149995 },
     "mileage": "40,000",
     "images": [
+      "/images/cars/2019-lamborghini-urus-awd-blue/4.jpg",
       "/images/cars/2019-lamborghini-urus-awd-blue/hero.jpg",
       "/images/cars/2019-lamborghini-urus-awd-blue/2.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-blue/3.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-blue/4.jpg"
+      "/images/cars/2019-lamborghini-urus-awd-blue/3.jpg"
     ]
   },
   {
@@ -107,9 +107,9 @@ export const inventory: InventoryItem[] = [
     "scgMonthlyByTerm": { "12 mo": 3995 },
     "mileage": "111,000",
     "images": [
+      "/images/cars/2019-lamborghini-urus-awd-white/3.jpg",
       "/images/cars/2019-lamborghini-urus-awd-white/hero.jpg",
       "/images/cars/2019-lamborghini-urus-awd-white/2.jpg",
-      "/images/cars/2019-lamborghini-urus-awd-white/3.jpg",
       "/images/cars/2019-lamborghini-urus-awd-white/4.jpg"
     ]
   },
