@@ -30,8 +30,8 @@ export const inventory: InventoryItem[] = [
     "scgBuyoutByTerm": { "12 mo": 229895 },
     "mileage": "23,000",
     "images": [
-      "/images/cars/2020-mclaren-720s-spider/hero.jpg",
-      "/images/cars/2020-mclaren-720s-spider/2.jpg"
+      "/images/cars/2020-mclaren-720s-spider/2.jpg",
+      "/images/cars/2020-mclaren-720s-spider/hero.jpg"
     ],
     "video": "/videos/cars/2020-mclaren-720s-spider/hero.mov"
   },
@@ -125,9 +125,9 @@ export const inventory: InventoryItem[] = [
     "scgMonthlyByTerm": { "3 mo": 8960, "12 mo": 8960 },
     "mileage": "9,847",
     "images": [
-      "/images/cars/keyvany-keyrus/hero.jpg",
       "/images/cars/keyvany-keyrus/7.jpg",
       "/images/cars/keyvany-keyrus/2.jpg",
+      "/images/cars/keyvany-keyrus/hero.jpg",
       "/images/cars/keyvany-keyrus/3.jpg",
       "/images/cars/keyvany-keyrus/4.jpg",
       "/images/cars/keyvany-keyrus/5.jpg",
@@ -307,8 +307,8 @@ export const inventory: InventoryItem[] = [
     "scgBuyoutByTerm": { "12 mo": 169995 },
     "mileage": "15,500",
     "images": [
-      "/images/cars/2019-ferrari-portofino/hero.jpg",
       "/images/cars/2019-ferrari-portofino/2.jpg",
+      "/images/cars/2019-ferrari-portofino/hero.jpg",
       "/images/cars/2019-ferrari-portofino/3.jpg"
     ]
   },
@@ -369,8 +369,8 @@ export const inventory: InventoryItem[] = [
     "mileage": "19,780",
     "sold": true,
     "images": [
-      "/images/cars/2018-rolls-royce-dawn-66l-v12/hero.jpg",
       "/images/cars/2018-rolls-royce-dawn-66l-v12/4.jpg",
+      "/images/cars/2018-rolls-royce-dawn-66l-v12/hero.jpg",
       "/images/cars/2018-rolls-royce-dawn-66l-v12/2.jpg",
       "/images/cars/2018-rolls-royce-dawn-66l-v12/3.jpg",
       "/images/cars/2018-rolls-royce-dawn-66l-v12/5.jpg",
