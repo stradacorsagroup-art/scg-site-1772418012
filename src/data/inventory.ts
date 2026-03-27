@@ -157,38 +157,6 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "keyvany-keyrus-21",
-    "car": "2021 Lamborghini Urus \"Keyvany Keyrus\"",
-    "terms": [
-      "3 mo",
-      "12 mo"
-    ],
-    "down": {
-      "3 mo": 99995,
-      "12 mo": 144995
-    },
-    "monthly": 8960,
-    "display": "From $99,995 down • $8,960/mo",
-    "location": "Miami, Florida",
-    "notes": "Keyvany Keyrus 1 of 3 imported to North America. Most exclusive custom Urus on the planet. Originally created upon a Pearl Capsule Edition unit from Lamborghini, painted in Green base with heavy Gold metallic flakes. Every piece of bodywork on this vehicle has been hand crafted from the highest Aerograde Carbon Fiber. Only the door shells and roof have remained original aluminum. Full Catless RYFT Titanium Exhaust System with a Stage 2 Tune pushing just around 900 HP. Only Urus seen to shoot 3-4 foot flames. It's sitting on one-off AL13 3-Piece Wheels specially made for this Keyrus, running over $30,000 for the set with tires. Interior is also fully custom down to the floor mats, carbon door sills, and forged carbon fiber steering wheel with the Keyvany crest. Also has a color-changing Starlight Headliner that has twinkle effect, as well as color-changing ambient lighting. + Full Custom Interior",
-    "scgMonthlyByTerm": {
-      "3 mo": 8960,
-      "12 mo": 8960
-    },
-    "mileage": "9,847",
-    "images": [
-      "/images/cars/keyvany-keyrus/7.jpg",
-      "/images/cars/keyvany-keyrus/2.jpg",
-      "/images/cars/keyvany-keyrus/hero.jpg",
-      "/images/cars/keyvany-keyrus/3.jpg",
-      "/images/cars/keyvany-keyrus/4.jpg",
-      "/images/cars/keyvany-keyrus/5.jpg",
-      "/images/cars/keyvany-keyrus/8.jpg",
-      "/images/cars/keyvany-keyrus/9.jpg",
-      "/images/cars/keyvany-keyrus/10.jpg"
-    ]
-  },
-  {
     "slug": "2018-mercedes-amg-gt-c-21",
     "car": "2018 Mercedes-AMG GT C",
     "terms": [
@@ -242,33 +210,6 @@ export const inventory: InventoryItem[] = [
       "/images/cars/2023-maybach-gls600-black-red/3.jpg",
       "/images/cars/2023-maybach-gls600-black-red/4.jpg",
       "/images/cars/2023-maybach-gls600-black-red/5.jpg"
-    ]
-  },
-  {
-    "slug": "2024-rolls-royce-spectre-24",
-    "car": "2024 Rolls-Royce Spectre",
-    "terms": [
-      "12 mo"
-    ],
-    "down": {
-      "12 mo": 38995
-    },
-    "monthly": 6495,
-    "display": "From $38,995 down • $6,495/mo",
-    "location": "Miami, FL",
-    "scgMonthlyByTerm": {
-      "12 mo": 6495
-    },
-    "scgBuyoutByTerm": {
-      "12 mo": 422562
-    },
-    "mileage": "1,096",
-    "images": [
-      "/images/cars/2024-rolls-royce-spectre/hero.jpg",
-      "/images/cars/2024-rolls-royce-spectre/2.jpg",
-      "/images/cars/2024-rolls-royce-spectre/3.jpg",
-      "/images/cars/2024-rolls-royce-spectre/4.jpg",
-      "/images/cars/2024-rolls-royce-spectre/5.jpg"
     ]
   },
   {
