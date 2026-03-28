@@ -157,35 +157,6 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "2018-mercedes-amg-gt-c-21",
-    "car": "2018 Mercedes-AMG GT C",
-    "terms": [
-      "12 mo"
-    ],
-    "down": {
-      "12 mo": 17995
-    },
-    "monthly": 1995,
-    "display": "From $17,995 down • $1,995/mo",
-    "location": "—",
-    "notes": "Silver Matte Paint",
-    "scgMonthlyByTerm": {
-      "12 mo": 1995
-    },
-    "mileage": "45,xxx",
-    "images": [
-      "/images/cars/2018-mercedes-amg-gt-c/hero.jpg",
-      "/images/cars/2018-mercedes-amg-gt-c/2.jpg",
-      "/images/cars/2018-mercedes-amg-gt-c/3.jpg",
-      "/images/cars/2018-mercedes-amg-gt-c/4.jpg",
-      "/images/cars/2018-mercedes-amg-gt-c/6.jpg",
-      "/images/cars/2018-mercedes-amg-gt-c/7.jpg",
-      "/images/cars/2018-mercedes-amg-gt-c/8.jpg",
-      "/images/cars/2018-mercedes-amg-gt-c/9.jpg",
-      "/images/cars/2018-mercedes-amg-gt-c/10.jpg"
-    ]
-  },
-  {
     "slug": "2023-maybach-gls600-blackred-14",
     "car": "2023 Maybach GLS600 Black/Red",
     "terms": [
