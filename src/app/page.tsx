@@ -185,14 +185,7 @@ export default function Home() {
                   </button>
                 );
               })}
-              <button
-                type="button"
-                onClick={toggleSold}
-                className={`rounded-full border px-3 py-1.5 text-[13px] font-medium transition ${
-                  showSold
-                    ? "border-red-600 bg-red-600 text-white"
-                    : "border-zinc-700 bg-transparent text-zinc-300 hover:border-red-600 hover:text-red-400"
-                }`}
+              <!-- SOLD button removed per request -->
               >
                 SOLD
               </button>
