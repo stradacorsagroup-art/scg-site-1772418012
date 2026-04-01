@@ -74,61 +74,6 @@ export const inventory: InventoryItem[] = [
     ]
   },
   {
-    "slug": "2023-maserati-mc20-18",
-    "car": "2023 Maserati MC20",
-    "terms": [
-      "12 mo"
-    ],
-    "down": {
-      "12 mo": 25995
-    },
-    "monthly": 3245,
-    "display": "From $25,995 down • $3,245/mo",
-    "location": "—",
-    "notes": "24,000",
-    "scgMonthlyByTerm": {
-      "12 mo": 3245
-    },
-    "mileage": "24,000",
-    "images": [
-      "/images/cars/2023-maserati-mc20/hero.jpg",
-      "/images/cars/2023-maserati-mc20/2.jpg",
-      "/images/cars/2023-maserati-mc20/3.jpg",
-      "/images/cars/2023-maserati-mc20/4.jpg",
-      "/images/cars/2023-maserati-mc20/5.jpg",
-      "/images/cars/2023-maserati-mc20/6.jpg",
-      "/images/cars/2023-maserati-mc20/7.jpg",
-      "/images/cars/2023-maserati-mc20/8.jpg",
-      "/images/cars/2023-maserati-mc20/9.jpg",
-      "/images/cars/2023-maserati-mc20/10.jpg"
-    ]
-  },
-  {
-    "slug": "2019-ferrari-portofino-19",
-    "car": "2019 Ferrari Portofino",
-    "terms": [
-      "12 mo"
-    ],
-    "down": {
-      "12 mo": 34995
-    },
-    "monthly": 4495,
-    "display": "From $34,995 down • $4,495/mo",
-    "location": "—",
-    "scgMonthlyByTerm": {
-      "12 mo": 4495
-    },
-    "scgBuyoutByTerm": {
-      "12 mo": 169995
-    },
-    "mileage": "15,500",
-    "images": [
-      "/images/cars/2019-ferrari-portofino/2.jpg",
-      "/images/cars/2019-ferrari-portofino/hero.jpg",
-      "/images/cars/2019-ferrari-portofino/3.jpg"
-    ]
-  },
-  {
     "slug": "2022-lamborghini-urus-green-zpbuc3zl4pla22334",
     "car": "2022 LAMBORGHINI URUS GREEN",
     "terms": [
