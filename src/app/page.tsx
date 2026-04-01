@@ -185,10 +185,7 @@ export default function Home() {
                   </button>
                 );
               })}
-              <!-- SOLD button removed per request -->
-              >
-                SOLD
-              </button>
+
             </div>
           </div>
         </div>
