@@ -59,6 +59,7 @@ export default function ApplyPage() {
 
         <div className="max-w-5xl rounded-2xl border border-zinc-800 bg-[#111] p-4 shadow-sm sm:p-6">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-zinc-400">Reserve Request</p>
+          <p className="mb-3 text-sm text-zinc-400">Source a specific vehicle - allow 1-2 business days for cash/financing deals. 7-10 business days for no credit sourcing.</p>
           <TypeformEmbed formId="01KKA3DY6M02S2NW3H707ES59Y" />
         </div>
       </section>
